@@ -1,0 +1,34 @@
+[project]
+name = "huni-api"
+version = "0.1.0"
+description = "Huni API: neighbourhood-fit explorer for Kota Bandung"
+requires-python = ">=3.13"
+dependencies = [
+    "django>=6.1.2",
+    "django-ninja>=1.7.1",
+    "geopandas>=1.2.0",
+    "psycopg[binary]>=3.3.6",
+    "pyproj>=3.8.0",
+    "shapely>=2.2.0",
+]
+
+[tool.uv]
+package = false
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+    "pytest-django>=4.14.0",
+    "ruff>=0.17.1",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py313"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "DJ"]
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "config.settings"
+testpaths = ["tests"]
