@@ -9,6 +9,7 @@ const area: AreaProperties = {
   id: "gedebage",
   name: "Gedebage",
   level: "kecamatan",
+  parent: null,
   labelPoint: [107.69, -6.952],
   scores: { parks: 40, schools: 60, angkot: 50, dailyNeeds: 70, commute: 80 },
   floodRisk: "high",

@@ -1,57 +1,29 @@
-// DEMO DATA for building the UI. The polygons are Voronoi cells around rough kecamatan
-// centres, clipped to a hand-drawn outline of Kota Bandung. They are NOT real boundaries,
-// and the scores are generated, not measured. Replace with GET /api/areas.
-import { Delaunay } from "d3-delaunay";
-import type { AreaCollection, AreaFeature, CriterionKey, FloodRisk } from "../api/types";
-import { bbox, clipByConvex, type Point, type Ring } from "../lib/geometry";
+// DEMO DATA for building the UI. The boundaries are real (OpenStreetMap, see
+// boundaries.README.md); the scores are generated, not measured. Replace with GET /api/areas.
+import type { MultiPolygon, Polygon } from "geojson";
+import type {
+  AreaCollection,
+  AreaFeature,
+  AreaLevel,
+  CriterionKey,
+  FloodRisk,
+} from "../api/types";
+import { planarArea, type Point } from "../lib/geometry";
+import boundaries from "./boundaries.json";
 
-/** Rough outline of Kota Bandung, [lon, lat]. */
-export const KOTA_OUTLINE: Ring = [
-  [107.545, -6.905], [107.56, -6.89], [107.575, -6.87], [107.585, -6.85], [107.6, -6.84],
-  [107.615, -6.845], [107.625, -6.86], [107.64, -6.87], [107.66, -6.885], [107.68, -6.89],
-  [107.7, -6.895], [107.72, -6.898], [107.738, -6.905], [107.735, -6.925], [107.722, -6.94],
-  [107.705, -6.955], [107.69, -6.965], [107.665, -6.965], [107.64, -6.97], [107.615, -6.965],
-  [107.595, -6.962], [107.575, -6.955], [107.555, -6.945], [107.545, -6.93], [107.545, -6.905],
-];
-
-/** The 30 kecamatan of Kota Bandung with approximate centres, [lon, lat]. */
-const KECAMATAN: [string, Point][] = [
-  ["Andir", [107.57, -6.912]],
-  ["Antapani", [107.663, -6.912]],
-  ["Arcamanik", [107.677, -6.922]],
-  ["Astanaanyar", [107.598, -6.928]],
-  ["Babakan Ciparay", [107.572, -6.94]],
-  ["Bandung Kidul", [107.63, -6.958]],
-  ["Bandung Kulon", [107.557, -6.925]],
-  ["Bandung Wetan", [107.618, -6.902]],
-  ["Batununggal", [107.637, -6.934]],
-  ["Bojongloa Kaler", [107.585, -6.931]],
-  ["Bojongloa Kidul", [107.593, -6.951]],
-  ["Buahbatu", [107.65, -6.95]],
-  ["Cibeunying Kaler", [107.638, -6.888]],
-  ["Cibeunying Kidul", [107.647, -6.904]],
-  ["Cibiru", [107.722, -6.914]],
-  ["Cicendo", [107.585, -6.904]],
-  ["Cidadap", [107.606, -6.858]],
-  ["Cinambo", [107.698, -6.928]],
-  ["Coblong", [107.616, -6.884]],
-  ["Gedebage", [107.69, -6.952]],
-  ["Kiaracondong", [107.65, -6.922]],
-  ["Lengkong", [107.622, -6.933]],
-  ["Mandalajati", [107.672, -6.9]],
-  ["Panyileukan", [107.711, -6.935]],
-  ["Rancasari", [107.669, -6.945]],
-  ["Regol", [107.609, -6.944]],
-  ["Sukajadi", [107.594, -6.885]],
-  ["Sukasari", [107.584, -6.866]],
-  ["Sumur Bandung", [107.611, -6.917]],
-  ["Ujungberung", [107.7, -6.908]],
-];
+interface BoundaryRecord {
+  name: string;
+  kecamatan?: string;
+  labelPoint: number[];
+  geometry: { type: string; coordinates: unknown };
+}
 
 const CITY_CENTRE: Point = [107.61, -6.915];
+const CRITERIA: CriterionKey[] = ["parks", "schools", "angkot", "dailyNeeds", "commute"];
+const FLOOD_ORDER: FloodRisk[] = ["low", "moderate", "high"];
 
-export function areaId(name: string): string {
-  return name.toLowerCase().replace(/\s+/g, "-");
+export function areaId(level: AreaLevel, name: string): string {
+  return `${level === "kecamatan" ? "kec" : "kel"}-${name.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`;
 }
 
 /** Deterministic noise in [-1, 1] so the demo looks the same on every load. */
@@ -82,33 +54,62 @@ function mockFloodRisk([lon, lat]: Point): FloodRisk {
   return "low";
 }
 
-function buildMockAreas(): AreaCollection {
-  const [minX, minY, maxX, maxY] = bbox([KOTA_OUTLINE]);
-  const voronoi = Delaunay.from(KECAMATAN.map(([, centre]) => centre)).voronoi([
-    minX - 0.01,
-    minY - 0.01,
-    maxX + 0.01,
-    maxY + 0.01,
-  ]);
+function buildMockAreas() {
+  const kecamatanRecords = boundaries.kecamatan as BoundaryRecord[];
+  const kelurahanRecords = boundaries.kelurahan as BoundaryRecord[];
 
-  const features: AreaFeature[] = KECAMATAN.map(([name, centre], index) => {
-    const cell = voronoi.cellPolygon(index) as Ring;
+  const kelurahan: AreaFeature[] = kelurahanRecords.map((record) => {
+    const labelPoint = record.labelPoint as Point;
+    const parentName = record.kecamatan!;
     return {
       type: "Feature",
-      id: areaId(name),
-      geometry: { type: "Polygon", coordinates: [clipByConvex(KOTA_OUTLINE, cell)] },
+      id: areaId("kelurahan", record.name),
+      geometry: record.geometry as Polygon | MultiPolygon,
       properties: {
-        id: areaId(name),
-        name,
-        level: "kecamatan",
-        labelPoint: centre,
-        scores: mockScores(name, centre),
-        floodRisk: mockFloodRisk(centre),
+        id: areaId("kelurahan", record.name),
+        name: record.name,
+        level: "kelurahan",
+        parent: { id: areaId("kecamatan", parentName), name: parentName },
+        labelPoint,
+        scores: mockScores(record.name, labelPoint),
+        floodRisk: mockFloodRisk(labelPoint),
       },
     };
   });
 
-  return { type: "FeatureCollection", features };
+  // Like the real thing will be: a kecamatan's score is the area-weighted mean of its parts.
+  const kecamatan: AreaFeature[] = kecamatanRecords.map((record) => {
+    const id = areaId("kecamatan", record.name);
+    const parts = kelurahan.filter((k) => k.properties.parent?.id === id);
+    const weights = parts.map((k) => planarArea(k.geometry));
+    const total = weights.reduce((a, b) => a + b, 0);
+    const mean = (value: (k: AreaFeature) => number) =>
+      parts.reduce((sum, k, i) => sum + value(k) * weights[i], 0) / total;
+
+    return {
+      type: "Feature",
+      id,
+      geometry: record.geometry as Polygon | MultiPolygon,
+      properties: {
+        id,
+        name: record.name,
+        level: "kecamatan",
+        parent: null,
+        labelPoint: record.labelPoint as Point,
+        scores: Object.fromEntries(
+          CRITERIA.map((key) => [key, Math.round(mean((k) => k.properties.scores[key]))]),
+        ) as Record<CriterionKey, number>,
+        floodRisk:
+          FLOOD_ORDER[Math.round(mean((k) => FLOOD_ORDER.indexOf(k.properties.floodRisk)))],
+      },
+    };
+  });
+
+  const collection = (features: AreaFeature[]): AreaCollection => ({
+    type: "FeatureCollection",
+    features,
+  });
+  return { kecamatan: collection(kecamatan), kelurahan: collection(kelurahan) };
 }
 
-export const mockAreas = buildMockAreas();
+export const mockAreas: Record<AreaLevel, AreaCollection> = buildMockAreas();

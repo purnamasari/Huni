@@ -1,37 +1,56 @@
 // DEMO gazetteer for search. Real results will come from GET /api/places.
-import type { PlaceResult } from "../api/types";
-import { areaId, mockAreas } from "./areas";
+import type { AreaFeature, PlaceResult } from "../api/types";
+import { contains, type Point } from "../lib/geometry";
+import { mockAreas } from "./areas";
 
 const KOTA = "Kota Bandung";
 
+/** Find the kelurahan a point is in, the way the backend would with ST_Contains. */
+function kelurahanAt(point: Point): AreaFeature | undefined {
+  return mockAreas.kelurahan.features.find((f) => contains(f.geometry, point));
+}
+
+function inKota(id: string, name: string, kind: PlaceResult["kind"], point: Point): PlaceResult {
+  const area = kelurahanAt(point);
+  return {
+    id,
+    name,
+    kind,
+    context: area ? `${area.properties.name}, ${area.properties.parent?.name}` : KOTA,
+    point,
+    insideKota: true,
+    areaId: area?.properties.id ?? null,
+  };
+}
+
 const PLACES: PlaceResult[] = [
-  {
-    id: "kel-dago",
-    name: "Dago",
-    kind: "kelurahan",
-    context: `Coblong, ${KOTA}`,
-    point: [107.6175, -6.8865],
-    insideKota: true,
-    areaId: areaId("Coblong"),
-  },
-  {
-    id: "area-dago-atas",
-    name: "Dago Atas",
-    kind: "area",
-    context: `Coblong, ${KOTA}`,
-    point: [107.6205, -6.8705],
-    insideKota: true,
-    areaId: areaId("Coblong"),
-  },
-  {
-    id: "street-ir-h-juanda",
-    name: "Jl. Ir. H. Juanda (Jl. Dago)",
-    kind: "street",
-    context: `Coblong, ${KOTA}`,
-    point: [107.6133, -6.8935],
-    insideKota: true,
-    areaId: areaId("Coblong"),
-  },
+  ...mockAreas.kecamatan.features.map(
+    ({ properties: { id, name, labelPoint } }): PlaceResult => ({
+      id: `place-${id}`,
+      name,
+      kind: "kecamatan",
+      context: KOTA,
+      point: labelPoint,
+      insideKota: true,
+      areaId: id,
+    }),
+  ),
+  ...mockAreas.kelurahan.features.map(
+    ({ properties: { id, name, labelPoint, parent } }): PlaceResult => ({
+      id: `place-${id}`,
+      name,
+      kind: "kelurahan",
+      context: `${parent?.name}, ${KOTA}`,
+      point: labelPoint,
+      insideKota: true,
+      areaId: id,
+    }),
+  ),
+  inKota("area-dago-atas", "Dago Atas", "area", [107.6205, -6.8705]),
+  inKota("street-ir-h-juanda", "Jl. Ir. H. Juanda (Jl. Dago)", "street", [107.6133, -6.8935]),
+  inKota("landmark-leuwi-panjang", "Terminal Leuwi Panjang", "landmark", [107.5955, -6.9455]),
+  inKota("landmark-gedung-sate", "Gedung Sate", "landmark", [107.6187, -6.9025]),
+  inKota("landmark-itb", "Institut Teknologi Bandung", "landmark", [107.6105, -6.8915]),
   {
     id: "area-dago-pakar",
     name: "Dago Pakar",
@@ -50,71 +69,6 @@ const PLACES: PlaceResult[] = [
     insideKota: false,
     areaId: null,
   },
-  {
-    id: "kel-ciumbuleuit",
-    name: "Ciumbuleuit",
-    kind: "kelurahan",
-    context: `Cidadap, ${KOTA}`,
-    point: [107.6045, -6.8735],
-    insideKota: true,
-    areaId: areaId("Cidadap"),
-  },
-  {
-    id: "kel-pasteur",
-    name: "Pasteur",
-    kind: "kelurahan",
-    context: `Sukajadi, ${KOTA}`,
-    point: [107.5935, -6.8935],
-    insideKota: true,
-    areaId: areaId("Sukajadi"),
-  },
-  {
-    id: "kel-margasari",
-    name: "Margasari",
-    kind: "kelurahan",
-    context: `Buahbatu, ${KOTA}`,
-    point: [107.6555, -6.9515],
-    insideKota: true,
-    areaId: areaId("Buahbatu"),
-  },
-  {
-    id: "landmark-leuwi-panjang",
-    name: "Terminal Leuwi Panjang",
-    kind: "landmark",
-    context: `Bojongloa Kidul, ${KOTA}`,
-    point: [107.5955, -6.9455],
-    insideKota: true,
-    areaId: areaId("Bojongloa Kidul"),
-  },
-  {
-    id: "landmark-gedung-sate",
-    name: "Gedung Sate",
-    kind: "landmark",
-    context: `Bandung Wetan, ${KOTA}`,
-    point: [107.6187, -6.9025],
-    insideKota: true,
-    areaId: areaId("Bandung Wetan"),
-  },
-  {
-    id: "landmark-itb",
-    name: "Institut Teknologi Bandung",
-    kind: "landmark",
-    context: `Coblong, ${KOTA}`,
-    point: [107.6105, -6.8915],
-    insideKota: true,
-    areaId: areaId("Coblong"),
-  },
-  ...mockAreas.features.map(
-    ({ properties: { id, name, labelPoint } }): PlaceResult => ({
-      id: `kec-${id}`,
-      name,
-      kind: "kecamatan",
-      context: KOTA,
-      point: labelPoint,
-      insideKota: true,
-      areaId: id,
-    }),
-  ),
 ];
 
 const normalise = (text: string) => text.toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();

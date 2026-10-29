@@ -1,19 +1,24 @@
 import { useEffect, useMemo, useState } from "react";
 import { fetchAreas } from "./api/client";
-import type { AreaCollection, CriterionKey, PlaceResult } from "./api/types";
+import type { AreaCollection, AreaLevel, CriterionKey, PlaceResult } from "./api/types";
 import { AreaDetail, OutsideDetail } from "./components/DetailPanel";
 import { Header } from "./components/Header";
 import { InfoPage } from "./components/InfoPage";
 import { IntroPanel } from "./components/IntroPanel";
 import { Legend } from "./components/Legend";
-import { type Focus, type MapAreas, MapView } from "./components/MapView";
+import { type Focus, type MapAreas, type MapLevels, MapView } from "./components/MapView";
 import { CRITERIA } from "./criteria";
 import { overallScore } from "./lib/scoring";
 import { useHashPage } from "./useHashPage";
 
+const isArea = (place: PlaceResult) => place.kind === "kecamatan" || place.kind === "kelurahan";
+
 export function App() {
   const page = useHashPage();
-  const [areas, setAreas] = useState<AreaCollection | null>(null);
+  const [areas, setAreas] = useState<Record<AreaLevel, AreaCollection | null>>({
+    kecamatan: null,
+    kelurahan: null,
+  });
   const [loadError, setLoadError] = useState(false);
   const [selected, setSelected] = useState<ReadonlySet<CriterionKey>>(
     () => new Set(CRITERIA.map((c) => c.key)),
@@ -25,19 +30,21 @@ export function App() {
 
   useEffect(() => {
     const controller = new AbortController();
-    fetchAreas(controller.signal)
-      .then(setAreas)
-      .catch(() => {
-        if (!controller.signal.aborted) setLoadError(true);
-      });
+    for (const level of ["kecamatan", "kelurahan"] as const) {
+      fetchAreas(level, controller.signal)
+        .then((collection) => setAreas((current) => ({ ...current, [level]: collection })))
+        .catch(() => {
+          if (!controller.signal.aborted) setLoadError(true);
+        });
+    }
     return () => controller.abort();
   }, []);
 
-  const mapAreas = useMemo<MapAreas | null>(
-    () =>
-      areas && {
+  const mapLevels = useMemo<MapLevels>(() => {
+    const toMap = (collection: AreaCollection | null): MapAreas | null =>
+      collection && {
         type: "FeatureCollection",
-        features: areas.features.map(({ geometry, properties }) => ({
+        features: collection.features.map(({ geometry, properties }) => ({
           type: "Feature",
           geometry,
           properties: {
@@ -48,19 +55,21 @@ export function App() {
             labelPoint: properties.labelPoint,
           },
         })),
-      },
-    [areas, selected],
-  );
+      };
+    return { kecamatan: toMap(areas.kecamatan), kelurahan: toMap(areas.kelurahan) };
+  }, [areas, selected]);
 
   const ranked = useMemo(
     () =>
-      (mapAreas?.features ?? [])
+      (mapLevels.kecamatan?.features ?? [])
         .map(({ properties: { id, name, score } }) => ({ id, name, score }))
         .sort((a, b) => (b.score ?? -1) - (a.score ?? -1) || a.name.localeCompare(b.name)),
-    [mapAreas],
+    [mapLevels],
   );
 
-  const selectedArea = areas?.features.find((f) => f.properties.id === selectedId)?.properties;
+  const selectedArea = [areas.kecamatan, areas.kelurahan]
+    .flatMap((collection) => collection?.features ?? [])
+    .find((f) => f.properties.id === selectedId)?.properties;
 
   const selectArea = (id: string | null, { fly = false } = {}) => {
     setSelectedId(id);
@@ -73,7 +82,7 @@ export function App() {
     setPlace(result);
     setSelectedId(result.areaId);
     setFocus(
-      result.kind === "kecamatan" && result.areaId
+      (result.kind === "kecamatan" || result.kind === "kelurahan") && result.areaId
         ? { key: Date.now(), kind: "area", id: result.areaId }
         : { key: Date.now(), kind: "point", point: result.point },
     );
@@ -97,13 +106,13 @@ export function App() {
   return (
     <div className="app">
       <MapView
-        areas={mapAreas}
+        levels={mapLevels}
         selectedId={selectedId}
         // On narrow screens the detail sheet covers the bottom half, so bring the area into view.
         onSelectArea={(id) => selectArea(id, { fly: window.innerWidth < 900 })}
         showFlood={showFlood}
         focus={focus}
-        placePoint={place && place.kind !== "kecamatan" ? place.point : null}
+        placePoint={place && !isArea(place) ? place.point : null}
         panelOpen={panelOpen}
       />
       <Header page={page} onSelectPlace={selectPlace} />

@@ -14,6 +14,8 @@ export interface AreaProperties {
   id: string;
   name: string;
   level: AreaLevel;
+  /** The kecamatan a kelurahan belongs to; null for a kecamatan. */
+  parent: { id: string; name: string } | null;
   /** A point inside the polygon for the map label, as [lon, lat]. */
   labelPoint: [number, number];
   /** Averages of the hexagon scores inside this area. */
@@ -23,7 +25,7 @@ export interface AreaProperties {
 
 export type AreaGeometry = Polygon | MultiPolygon;
 export type AreaFeature = Feature<AreaGeometry, AreaProperties>;
-/** GET /api/areas?level=kecamatan (WGS84 GeoJSON, clipped to the Kota boundary). */
+/** GET /api/areas?level=kecamatan|kelurahan (WGS84 GeoJSON, clipped to the Kota boundary). */
 export type AreaCollection = FeatureCollection<AreaGeometry, AreaProperties>;
 
 export type PlaceKind = "kecamatan" | "kelurahan" | "area" | "street" | "landmark";

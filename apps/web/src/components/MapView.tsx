@@ -11,7 +11,7 @@ import {
 } from "maplibre-gl";
 import workerUrl from "maplibre-gl/dist/maplibre-gl-worker.mjs?url";
 import { useEffect, useRef, useState } from "react";
-import type { FloodRisk } from "../api/types";
+import type { AreaLevel, FloodRisk } from "../api/types";
 import { inkOn, NO_SCORE_COLOR, SCORE_RAMP, SCORE_STOPS, scoreColor } from "../colors";
 
 // MapLibre finds its worker relative to its own module URL, which breaks once Vite
@@ -32,13 +32,15 @@ export interface MapAreaProperties {
 
 export type MapAreas = FeatureCollection<Geometry, MapAreaProperties>;
 
+export type MapLevels = Record<AreaLevel, MapAreas | null>;
+
 /** A request to move the camera; `key` changes on every request. */
 export type Focus =
   | { key: number; kind: "area"; id: string }
   | { key: number; kind: "point"; point: [number, number] };
 
 interface Props {
-  areas: MapAreas | null;
+  levels: MapLevels;
   selectedId: string | null;
   onSelectArea: (id: string | null) => void;
   showFlood: boolean;
@@ -46,6 +48,17 @@ interface Props {
   placePoint: [number, number] | null;
   panelOpen: boolean;
 }
+
+const LEVELS: AreaLevel[] = ["kecamatan", "kelurahan"];
+
+/** Kecamatan below this zoom, kelurahan from it. One level at a time, never mixed. */
+export const KELURAHAN_ZOOM = 12.5;
+
+/** Below these zooms only the score badges show; the names would pile up. */
+const NAME_ZOOM: Record<AreaLevel, number> = { kecamatan: 11.6, kelurahan: 13.6 };
+
+const zoomRange = (level: AreaLevel) =>
+  level === "kecamatan" ? { maxzoom: KELURAHAN_ZOOM } : { minzoom: KELURAHAN_ZOOM };
 
 const fillColor = [
   "case",
@@ -72,9 +85,9 @@ function cameraPadding(panelOpen: boolean) {
   return { top: 100, bottom: 40, left: 470, right: panelOpen ? 400 : 60 };
 }
 
-function areaBounds(areas: MapAreas, id?: string): LngLatBounds | null {
+function areaBounds(areas: (MapAreas | null)[], id?: string): LngLatBounds | null {
   const bounds = new LngLatBounds();
-  for (const feature of areas.features) {
+  for (const feature of areas.flatMap((a) => a?.features ?? [])) {
     if (id && feature.properties.id !== id) continue;
     const { geometry } = feature;
     const polygons =
@@ -91,7 +104,7 @@ function areaBounds(areas: MapAreas, id?: string): LngLatBounds | null {
 }
 
 export function MapView({
-  areas,
+  levels,
   selectedId,
   onSelectArea,
   showFlood,
@@ -105,11 +118,13 @@ export function MapView({
   const placeMarker = useRef<Marker | null>(null);
   const onSelectRef = useRef(onSelectArea);
   const panelOpenRef = useRef(panelOpen);
+  const levelsRef = useRef(levels);
   const [ready, setReady] = useState(false);
   const fittedOnce = useRef(false);
 
   onSelectRef.current = onSelectArea;
   panelOpenRef.current = panelOpen;
+  levelsRef.current = levels;
 
   useEffect(() => {
     if (!container.current) return;
@@ -136,69 +151,100 @@ export function MapView({
         ?.querySelector(".maplibregl-compact-show")
         ?.classList.remove("maplibregl-compact-show");
       map.addImage("flood-hatch", hatchPattern());
-      map.addSource("areas", {
-        type: "geojson",
-        data: { type: "FeatureCollection", features: [] },
-        promoteId: "id",
-      });
-      map.addLayer({
-        id: "areas-fill",
-        type: "fill",
-        source: "areas",
-        paint: {
-          "fill-color": fillColor as never,
-          "fill-opacity": ["case", ["boolean", ["feature-state", "hover"], false], 0.82, 0.62],
-        },
-      });
-      map.addLayer({
-        id: "areas-flood",
-        type: "fill",
-        source: "areas",
-        filter: ["in", ["get", "floodRisk"], ["literal", ["moderate", "high"]]],
-        layout: { visibility: "none" },
-        paint: {
-          "fill-pattern": "flood-hatch",
-          "fill-opacity": ["match", ["get", "floodRisk"], "high", 0.9, 0.45],
-        },
-      });
-      map.addLayer({
-        id: "areas-outline",
-        type: "line",
-        source: "areas",
-        paint: { "line-color": "#ffffff", "line-width": 1.5 },
-      });
-      map.addLayer({
-        id: "areas-selected",
-        type: "line",
-        source: "areas",
-        filter: ["==", ["get", "id"], ""],
-        paint: { "line-color": "#14231a", "line-width": 3 },
-      });
 
-      let hovered: string | number | undefined;
-      map.on("mousemove", "areas-fill", (event) => {
-        const id = event.features?.[0]?.id;
-        if (id === hovered) return;
-        if (hovered !== undefined) map.setFeatureState({ source: "areas", id: hovered }, { hover: false });
-        hovered = id;
-        if (id !== undefined) map.setFeatureState({ source: "areas", id }, { hover: true });
-        map.getCanvas().style.cursor = "pointer";
+      for (const level of LEVELS) {
+        map.addSource(level, {
+          type: "geojson",
+          data: { type: "FeatureCollection", features: [] },
+          promoteId: "id",
+        });
+        map.addLayer({
+          id: `${level}-fill`,
+          type: "fill",
+          source: level,
+          ...zoomRange(level),
+          paint: {
+            "fill-color": fillColor as never,
+            "fill-opacity": ["case", ["boolean", ["feature-state", "hover"], false], 0.85, 0.65],
+          },
+        });
+        map.addLayer({
+          id: `${level}-flood`,
+          type: "fill",
+          source: level,
+          ...zoomRange(level),
+          filter: ["in", ["get", "floodRisk"], ["literal", ["moderate", "high"]]],
+          layout: { visibility: "none" },
+          paint: {
+            "fill-pattern": "flood-hatch",
+            "fill-opacity": ["match", ["get", "floodRisk"], "high", 0.9, 0.45],
+          },
+        });
+      }
+      map.addLayer({
+        id: "kelurahan-outline",
+        type: "line",
+        source: "kelurahan",
+        minzoom: KELURAHAN_ZOOM,
+        paint: { "line-color": "#ffffff", "line-width": 0.8 },
       });
-      map.on("mouseleave", "areas-fill", () => {
-        if (hovered !== undefined) map.setFeatureState({ source: "areas", id: hovered }, { hover: false });
-        hovered = undefined;
-        map.getCanvas().style.cursor = "";
+      // Kecamatan borders stay visible over the kelurahan for context, just heavier.
+      map.addLayer({
+        id: "kecamatan-outline",
+        type: "line",
+        source: "kecamatan",
+        paint: {
+          "line-color": "#ffffff",
+          "line-width": ["step", ["zoom"], 1.2, KELURAHAN_ZOOM, 2.4],
+        },
       });
+      for (const level of LEVELS) {
+        map.addLayer({
+          id: `${level}-selected`,
+          type: "line",
+          source: level,
+          filter: ["==", ["get", "id"], ""],
+          paint: { "line-color": "#14231a", "line-width": 3 },
+        });
+      }
+
+      const hovered: Partial<Record<AreaLevel, string | number>> = {};
+      const setHover = (level: AreaLevel, id: string | number | undefined) => {
+        if (hovered[level] === id) return;
+        if (hovered[level] !== undefined) {
+          map.setFeatureState({ source: level, id: hovered[level] }, { hover: false });
+        }
+        hovered[level] = id;
+        if (id !== undefined) map.setFeatureState({ source: level, id }, { hover: true });
+      };
+      for (const level of LEVELS) {
+        map.on("mousemove", `${level}-fill`, (event) => {
+          setHover(level, event.features?.[0]?.id);
+          map.getCanvas().style.cursor = "pointer";
+        });
+        map.on("mouseleave", `${level}-fill`, () => {
+          setHover(level, undefined);
+          map.getCanvas().style.cursor = "";
+        });
+      }
       map.on("click", (event) => {
-        const [feature] = map.queryRenderedFeatures(event.point, { layers: ["areas-fill"] });
+        const [feature] = map.queryRenderedFeatures(event.point, {
+          layers: LEVELS.map((level) => `${level}-fill`),
+        });
         onSelectRef.current(feature ? String(feature.id) : null);
       });
 
-      // Names crowd each other when zoomed out; keep just the score badges then.
-      const updateDensity = () =>
-        container.current?.classList.toggle("labels-compact", map.getZoom() < 11.6);
-      map.on("zoom", updateDensity);
-      updateDensity();
+      // Data attributes rather than classes: React owns the container's className.
+      const updateLabelDensity = () => {
+        const element = container.current;
+        if (!element) return;
+        const zoom = map.getZoom();
+        const level: AreaLevel = zoom < KELURAHAN_ZOOM ? "kecamatan" : "kelurahan";
+        element.dataset.level = level;
+        element.dataset.compact = String(zoom < NAME_ZOOM[level]);
+      };
+      map.on("zoom", updateLabelDensity);
+      updateLabelDensity();
 
       setReady(true);
     });
@@ -214,32 +260,38 @@ export function MapView({
   // Data and labels.
   useEffect(() => {
     const map = mapRef.current;
-    if (!ready || !map || !areas) return;
-    (map.getSource("areas") as GeoJSONSource).setData(areas);
+    if (!ready || !map) return;
 
     const seen = new Set<string>();
-    for (const { properties } of areas.features) {
-      const { id, name, score, labelPoint } = properties;
-      seen.add(id);
-      let label = labels.current.get(id);
-      if (!label) {
-        const element = document.createElement("button");
-        element.type = "button";
-        element.className = "area-label";
-        element.innerHTML = `<span class="area-label-name"></span><span class="score-badge"></span>`;
-        element.querySelector(".area-label-name")!.textContent = name;
-        element.addEventListener("click", (event) => {
-          event.stopPropagation();
-          onSelectRef.current(id);
-        });
-        const marker = new Marker({ element, anchor: "center" }).setLngLat(labelPoint).addTo(map);
-        label = { marker, badge: element.querySelector(".score-badge") as HTMLElement };
-        labels.current.set(id, label);
+    for (const level of LEVELS) {
+      const areas = levels[level];
+      if (!areas) continue;
+      (map.getSource(level) as GeoJSONSource).setData(areas);
+
+      for (const { properties } of areas.features) {
+        const { id, name, score, labelPoint } = properties;
+        seen.add(id);
+        let label = labels.current.get(id);
+        if (!label) {
+          const element = document.createElement("button");
+          element.type = "button";
+          element.className = "area-label";
+          element.dataset.level = level;
+          element.innerHTML = `<span class="area-label-name"></span><span class="score-badge"></span>`;
+          element.querySelector(".area-label-name")!.textContent = name;
+          element.addEventListener("click", (event) => {
+            event.stopPropagation();
+            onSelectRef.current(id);
+          });
+          const marker = new Marker({ element, anchor: "center" }).setLngLat(labelPoint).addTo(map);
+          label = { marker, badge: element.querySelector(".score-badge") as HTMLElement };
+          labels.current.set(id, label);
+        }
+        label.badge.textContent = score === null ? "–" : String(score);
+        label.badge.style.background = scoreColor(score);
+        label.badge.style.color = inkOn(score);
+        label.marker.getElement().setAttribute("aria-label", `${name}, score ${score ?? "none"}`);
       }
-      label.badge.textContent = score === null ? "–" : String(score);
-      label.badge.style.background = scoreColor(score);
-      label.badge.style.color = inkOn(score);
-      label.marker.getElement().setAttribute("aria-label", `${name}, score ${score ?? "none"}`);
     }
     for (const [id, label] of labels.current) {
       if (!seen.has(id)) {
@@ -248,17 +300,19 @@ export function MapView({
       }
     }
 
-    if (!fittedOnce.current) {
-      const bounds = areaBounds(areas);
+    if (!fittedOnce.current && levels.kecamatan) {
+      const bounds = areaBounds([levels.kecamatan]);
       if (bounds) map.fitBounds(bounds, { padding: cameraPadding(panelOpenRef.current), duration: 0 });
       fittedOnce.current = true;
     }
-  }, [ready, areas]);
+  }, [ready, levels]);
 
   useEffect(() => {
     const map = mapRef.current;
     if (!ready || !map) return;
-    map.setFilter("areas-selected", ["==", ["get", "id"], selectedId ?? ""]);
+    for (const level of LEVELS) {
+      map.setFilter(`${level}-selected`, ["==", ["get", "id"], selectedId ?? ""]);
+    }
     for (const [id, label] of labels.current) {
       label.marker.getElement().classList.toggle("is-selected", id === selectedId);
     }
@@ -267,7 +321,9 @@ export function MapView({
   useEffect(() => {
     const map = mapRef.current;
     if (!ready || !map) return;
-    map.setLayoutProperty("areas-flood", "visibility", showFlood ? "visible" : "none");
+    for (const level of LEVELS) {
+      map.setLayoutProperty(`${level}-flood`, "visibility", showFlood ? "visible" : "none");
+    }
   }, [ready, showFlood]);
 
   useEffect(() => {
@@ -275,13 +331,14 @@ export function MapView({
     if (!ready || !map || !focus) return;
     const padding = cameraPadding(panelOpenRef.current);
     if (focus.kind === "point") {
-      map.easeTo({ center: focus.point, zoom: 13, padding, duration: 800 });
+      map.easeTo({ center: focus.point, zoom: 14, padding, duration: 800 });
       return;
     }
-    const bounds = areas && areaBounds(areas, focus.id);
-    if (bounds) map.fitBounds(bounds, { padding, maxZoom: 14, duration: 800 });
-    // Only a new focus request moves the camera, not a score recalculation, so `areas` is
-    // deliberately not a dependency.
+    // Read the latest areas from a ref: only a new focus request moves the camera, not a
+    // score recalculation.
+    const { kecamatan, kelurahan } = levelsRef.current;
+    const bounds = areaBounds([kecamatan, kelurahan], focus.id);
+    if (bounds) map.fitBounds(bounds, { padding, maxZoom: 14.5, duration: 800 });
   }, [ready, focus]);
 
   useEffect(() => {

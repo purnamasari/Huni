@@ -512,11 +512,16 @@ p {
   box-shadow: 0 0 0 2px #fff;
 }
 
-.labels-compact .area-label-name {
+.map[data-level="kecamatan"] .area-label[data-level="kelurahan"],
+.map[data-level="kelurahan"] .area-label[data-level="kecamatan"] {
   display: none;
 }
 
-.labels-compact .area-label .score-badge {
+.map[data-compact="true"] .area-label:not(.is-selected) .area-label-name {
+  display: none;
+}
+
+.map[data-compact="true"] .area-label .score-badge {
   min-width: 24px;
   padding: 0 4px;
   font-size: 11px;

@@ -32,9 +32,9 @@ function About() {
         geospatial backend work with Django, GeoDjango and PostGIS.
       </p>
       <p>
-        <strong>Everything on the map right now is demo data.</strong> The boundaries are rough
-        shapes around each kecamatan, not official ones, and the scores are generated. They will be
-        replaced as each backend slice lands.
+        <strong>The scores on the map right now are demo data.</strong> They are generated, not
+        measured, and will be replaced as each backend slice lands. The kecamatan and kelurahan
+        boundaries come from OpenStreetMap.
       </p>
     </>
   );
@@ -45,8 +45,9 @@ function Methodology() {
     <ul>
       <li>Scores are computed on a hexagon grid covering Kota Bandung.</li>
       <li>
-        Zoomed out, the map shows kecamatan averages of those hexagons. Kecamatan and kelurahan are
-        different levels, and Huni never mixes them on one map.
+        The map shows kecamatan averages of those hexagons when zoomed out, and kelurahan averages
+        when zoomed in. Kecamatan and kelurahan are different levels, so the map only ever shows
+        one of them at a time.
       </li>
       <li>Every criterion is normalised to 0–100, where higher is always better.</li>
       <li>The overall score is the average of the criteria you pick.</li>
@@ -75,8 +76,9 @@ function DataSources() {
       </dl>
       <p className="muted">
         These are the planned sources. Huni only uses data it may store and show on a MapLibre
-        map, which rules out Google Places. Basemap © OpenFreeMap, © OpenMapTiles, data ©
-        OpenStreetMap contributors.
+        map, which rules out Google Places. Kecamatan and kelurahan boundaries © OpenStreetMap
+        contributors (ODbL). Basemap © OpenFreeMap, © OpenMapTiles, data © OpenStreetMap
+        contributors.
       </p>
     </>
   );

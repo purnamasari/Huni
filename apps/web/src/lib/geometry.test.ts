@@ -1,21 +1,21 @@
+import type { Polygon } from "geojson";
 import { expect, test } from "vitest";
-import { clipByConvex, ringArea, type Ring } from "./geometry";
+import { contains, planarArea } from "./geometry";
 
-const square = (x: number, y: number, size: number): Ring => [
-  [x, y], [x + size, y], [x + size, y + size], [x, y + size], [x, y],
-];
+const squareWithHole: Polygon = {
+  type: "Polygon",
+  coordinates: [
+    [[0, 0], [4, 0], [4, 4], [0, 4], [0, 0]],
+    [[1, 1], [1, 2], [2, 2], [2, 1], [1, 1]],
+  ],
+};
 
-test("clipping two overlapping squares keeps only the overlap", () => {
-  const clipped = clipByConvex(square(0, 0, 2), square(1, 1, 2));
-  expect(ringArea(clipped)).toBeCloseTo(1);
-  expect(clipped[0]).toEqual(clipped[clipped.length - 1]);
+test("contains respects holes", () => {
+  expect(contains(squareWithHole, [3, 3])).toBe(true);
+  expect(contains(squareWithHole, [1.5, 1.5])).toBe(false);
+  expect(contains(squareWithHole, [5, 1])).toBe(false);
 });
 
-test("clip ring orientation doesn't matter", () => {
-  const clockwise = [...square(1, 1, 2)].reverse();
-  expect(ringArea(clipByConvex(square(0, 0, 2), clockwise))).toBeCloseTo(1);
-});
-
-test("disjoint polygons clip to nothing", () => {
-  expect(clipByConvex(square(0, 0, 1), square(5, 5, 1))).toEqual([]);
+test("planar area subtracts holes", () => {
+  expect(planarArea(squareWithHole)).toBeCloseTo(15);
 });

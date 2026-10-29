@@ -24,7 +24,11 @@ export function AreaDetail({ area, place, selected, onClose }: AreaProps) {
         <X size={20} />
       </button>
 
-      <p className="detail-kicker">Kecamatan · Kota Bandung</p>
+      <p className="detail-kicker">
+        {area.level === "kelurahan"
+          ? `Kelurahan · ${area.parent?.name}`
+          : "Kecamatan · Kota Bandung"}
+      </p>
       <div className="detail-title">
         <h2>{area.name}</h2>
         <span
@@ -35,7 +39,7 @@ export function AreaDetail({ area, place, selected, onClose }: AreaProps) {
           {score ?? "–"} / 100
         </span>
       </div>
-      {place && place.areaId === area.id && place.kind !== "kecamatan" && (
+      {place && place.areaId === area.id && place.kind !== area.level && (
         <p className="detail-place">
           <MapPin size={14} aria-hidden="true" /> {place.name} is in {area.name}.
         </p>
@@ -100,7 +104,8 @@ export function AreaDetail({ area, place, selected, onClose }: AreaProps) {
         </dl>
       )}
       <p className="detail-footnote">
-        Demo data: boundaries and scores are mock values until the backend is ready.
+        Demo data: the scores are mock values until the backend is ready. Boundaries ©
+        OpenStreetMap contributors.
       </p>
     </aside>
   );
