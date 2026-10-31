@@ -21,7 +21,7 @@ cp .env.example .env
 docker compose up --build
 ```
 
-- Web: http://localhost:5173. Map centred on Bandung, with an API health indicator.
+- Web: http://localhost:5173. The neighbourhood map (demo data for now), with an API health indicator in the header.
 - API: http://localhost:8000/api/health. OpenAPI docs at http://localhost:8000/api/docs.
 - PostGIS: `localhost:5432` (credentials in `.env`)
 
@@ -55,11 +55,23 @@ uv run --env-file ../../.env pytest
 pnpm typecheck && pnpm test && pnpm build
 ```
 
+## Frontend and mock data
+
+The web app follows the design mockup: a choropleth of scores, criteria toggles, search, a detail panel and a flood-risk overlay. It shows kecamatan when zoomed out and kelurahan when zoomed in, never both at once. Until the backend serves real data it runs on **demo data** (`apps/web/src/mocks/`): the boundaries are real (OpenStreetMap, see [`boundaries.README.md`](apps/web/src/mocks/boundaries.README.md)), but the scores are generated.
+
+The responses the web app expects are typed in [`apps/web/src/api/types.ts`](apps/web/src/api/types.ts):
+
+- `GET /api/areas?level=kecamatan|kelurahan`: GeoJSON FeatureCollection (WGS84) with `id`, `name`, `level`, `parent`, `labelPoint`, per-criterion `scores` (0–100, higher is better) and `floodRisk`.
+- `GET /api/places?q=…`: search results, each with `insideKota` and the `areaId` it falls in.
+
+Set `VITE_USE_MOCK_DATA=false` to switch to the API. The overall score is the mean of the criteria the user picks, computed in the browser so toggling is instant.
+
 ## Configuration
 
 Everything comes from the root `.env` (see [`.env.example`](.env.example)):
 
 - `POSTGRES_*`: database connection. The PostGIS container uses the same values.
 - `DJANGO_DEBUG`, `DJANGO_SECRET_KEY`, `DJANGO_ALLOWED_HOSTS`
-- `VITE_BASEMAP_STYLE_URL`: any MapLibre style JSON. Defaults to OpenFreeMap "liberty".
+- `VITE_BASEMAP_STYLE_URL`: any MapLibre style JSON. Defaults to OpenFreeMap "positron".
+- `VITE_USE_MOCK_DATA`: `true` (default) serves demo data; `false` calls the API.
 - `API_PROXY_TARGET`: where the Vite dev server sends `/api` requests.
