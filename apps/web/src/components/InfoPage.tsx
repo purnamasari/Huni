@@ -1,14 +1,14 @@
 import { X } from "lucide-react";
-import type { Page } from "../useHashPage";
+import type { InfoPageName } from "../useHashPage";
 import { CRITERIA, FLOOD } from "../criteria";
 
-const TITLES: Record<Exclude<Page, "map">, string> = {
+const TITLES: Record<InfoPageName, string> = {
   about: "About Huni",
   methodology: "Methodology",
   data: "Data sources",
 };
 
-export function InfoPage({ page }: { page: Exclude<Page, "map"> }) {
+export function InfoPage({ page }: { page: InfoPageName }) {
   return (
     <div className="info-backdrop">
       <article className="info card" aria-labelledby="info-title">
@@ -79,6 +79,15 @@ function DataSources() {
         map, which rules out Google Places. Kecamatan and kelurahan boundaries © OpenStreetMap
         contributors (ODbL). Basemap © OpenFreeMap, © OpenMapTiles, data © OpenStreetMap
         contributors.
+      </p>
+      <p className="muted">
+        Trip planning uses the angkot, bus and train routes published by Transport for Bandung,
+        drawn on OpenStreetMap roads. Fares, frequencies and hours are estimates for now.
+      </p>
+      <p className="muted">
+        Place search uses Mapbox (© Mapbox) and, for streets, Photon by komoot with data ©
+        OpenStreetMap contributors (ODbL). Searches go through Huni's server, so your IP address
+        isn't passed on. Your location is only used in your browser, when you ask for it.
       </p>
     </>
   );

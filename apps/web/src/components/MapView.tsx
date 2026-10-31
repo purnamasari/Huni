@@ -11,7 +11,7 @@ import {
 } from "maplibre-gl";
 import workerUrl from "maplibre-gl/dist/maplibre-gl-worker.mjs?url";
 import { useEffect, useRef, useState } from "react";
-import type { AreaLevel, FloodRisk } from "../api/types";
+import type { AreaLevel, FloodRisk, TripLeg } from "../api/types";
 import { inkOn, NO_SCORE_COLOR, SCORE_RAMP, SCORE_STOPS, scoreColor } from "../colors";
 
 // MapLibre finds its worker relative to its own module URL, which breaks once Vite
@@ -28,6 +28,10 @@ export interface MapAreaProperties {
   score: number | null;
   floodRisk: FloodRisk;
   labelPoint: [number, number];
+  /** Badge text instead of the score, e.g. "32m" in commute mode. */
+  badge?: string;
+  /** Read out instead of "score N". */
+  badgeLabel?: string;
 }
 
 export type MapAreas = FeatureCollection<Geometry, MapAreaProperties>;
@@ -47,7 +51,18 @@ interface Props {
   focus: Focus | null;
   placePoint: [number, number] | null;
   panelOpen: boolean;
+  /** Trip end points (origin first) and the legs of the chosen options, drawn over the scores. */
+  trip?: Trip | null;
+  /** While set, a map click picks a trip point instead of selecting an area. */
+  onPickPoint?: ((point: [number, number], name?: string) => void) | null;
 }
+
+export interface Trip {
+  points: ([number, number] | null)[];
+  legs: TripLeg[];
+}
+
+const WALK_COLOR = "#14231a";
 
 const LEVELS: AreaLevel[] = ["kecamatan", "kelurahan"];
 
@@ -111,18 +126,22 @@ export function MapView({
   focus,
   placePoint,
   panelOpen,
+  trip = null,
+  onPickPoint = null,
 }: Props) {
   const container = useRef<HTMLDivElement>(null);
   const mapRef = useRef<MapLibreMap | null>(null);
   const labels = useRef(new Map<string, { marker: Marker; badge: HTMLElement }>());
   const placeMarker = useRef<Marker | null>(null);
   const onSelectRef = useRef(onSelectArea);
+  const onPickRef = useRef(onPickPoint);
   const panelOpenRef = useRef(panelOpen);
   const levelsRef = useRef(levels);
   const [ready, setReady] = useState(false);
   const fittedOnce = useRef(false);
 
   onSelectRef.current = onSelectArea;
+  onPickRef.current = onPickPoint;
   panelOpenRef.current = panelOpen;
   levelsRef.current = levels;
 
@@ -220,14 +239,49 @@ export function MapView({
       for (const level of LEVELS) {
         map.on("mousemove", `${level}-fill`, (event) => {
           setHover(level, event.features?.[0]?.id);
-          map.getCanvas().style.cursor = "pointer";
+          map.getCanvas().style.cursor = onPickRef.current ? "crosshair" : "pointer";
         });
         map.on("mouseleave", `${level}-fill`, () => {
           setHover(level, undefined);
-          map.getCanvas().style.cursor = "";
+          map.getCanvas().style.cursor = onPickRef.current ? "crosshair" : "";
         });
       }
+      map.addSource("trip", { type: "geojson", data: { type: "FeatureCollection", features: [] } });
+      const ride = ["!=", ["get", "mode"], "walk"] as const;
+      map.addLayer({
+        id: "trip-ride-casing",
+        type: "line",
+        source: "trip",
+        filter: ride as never,
+        layout: { "line-cap": "round", "line-join": "round" },
+        paint: { "line-color": "#ffffff", "line-width": 9 },
+      });
+      map.addLayer({
+        id: "trip-ride",
+        type: "line",
+        source: "trip",
+        filter: ride as never,
+        layout: { "line-cap": "round", "line-join": "round" },
+        paint: { "line-color": ["get", "color"], "line-width": 5 },
+      });
+      map.addLayer({
+        id: "trip-walk",
+        type: "line",
+        source: "trip",
+        filter: ["==", ["get", "mode"], "walk"],
+        layout: { "line-cap": "round" },
+        paint: { "line-color": WALK_COLOR, "line-width": 3, "line-dasharray": [0.5, 2] },
+      });
+
       map.on("click", (event) => {
+        if (onPickRef.current) {
+          // Name the point after the neighbourhood it falls in, when there is one.
+          const [area] = map.queryRenderedFeatures(event.point, {
+            layers: LEVELS.map((level) => `${level}-fill`),
+          });
+          onPickRef.current([event.lngLat.lng, event.lngLat.lat], area?.properties?.name);
+          return;
+        }
         const [feature] = map.queryRenderedFeatures(event.point, {
           layers: LEVELS.map((level) => `${level}-fill`),
         });
@@ -269,7 +323,7 @@ export function MapView({
       (map.getSource(level) as GeoJSONSource).setData(areas);
 
       for (const { properties } of areas.features) {
-        const { id, name, score, labelPoint } = properties;
+        const { id, name, score, labelPoint, badge, badgeLabel } = properties;
         seen.add(id);
         let label = labels.current.get(id);
         if (!label) {
@@ -281,16 +335,19 @@ export function MapView({
           element.querySelector(".area-label-name")!.textContent = name;
           element.addEventListener("click", (event) => {
             event.stopPropagation();
-            onSelectRef.current(id);
+            if (onPickRef.current) onPickRef.current(labelPoint, name);
+            else onSelectRef.current(id);
           });
           const marker = new Marker({ element, anchor: "center" }).setLngLat(labelPoint).addTo(map);
           label = { marker, badge: element.querySelector(".score-badge") as HTMLElement };
           labels.current.set(id, label);
         }
-        label.badge.textContent = score === null ? "–" : String(score);
+        label.badge.textContent = badge ?? (score === null ? "–" : String(score));
         label.badge.style.background = scoreColor(score);
         label.badge.style.color = inkOn(score);
-        label.marker.getElement().setAttribute("aria-label", `${name}, score ${score ?? "none"}`);
+        label.marker
+          .getElement()
+          .setAttribute("aria-label", `${name}, ${badgeLabel ?? `score ${score ?? "none"}`}`);
       }
     }
     for (const [id, label] of labels.current) {
@@ -349,6 +406,57 @@ export function MapView({
       ? new Marker({ color: "#14231a" }).setLngLat(placePoint).addTo(map)
       : null;
   }, [ready, placePoint]);
+
+  // While a route is drawn, fade the colours under it so the route reads; picking a trip
+  // point gets a crosshair.
+  const fade = (trip?.legs.length ?? 0) > 0;
+  useEffect(() => {
+    const map = mapRef.current;
+    if (!ready || !map) return;
+    for (const level of LEVELS) {
+      map.setPaintProperty(`${level}-fill`, "fill-opacity", [
+        "case",
+        ["boolean", ["feature-state", "hover"], false],
+        fade ? 0.45 : 0.85,
+        fade ? 0.3 : 0.65,
+      ]);
+    }
+    map.getCanvas().style.cursor = onPickPoint ? "crosshair" : "";
+  }, [ready, fade, onPickPoint]);
+
+  const legs = trip?.legs;
+  useEffect(() => {
+    const map = mapRef.current;
+    if (!ready || !map) return;
+    (map.getSource("trip") as GeoJSONSource).setData({
+      type: "FeatureCollection",
+      features: (legs ?? []).map((leg) => ({
+        type: "Feature",
+        geometry: leg.geometry,
+        properties: { mode: leg.mode, color: leg.route?.color ?? WALK_COLOR },
+      })),
+    });
+    if (legs?.length) {
+      const bounds = new LngLatBounds();
+      for (const leg of legs) for (const [lon, lat] of leg.geometry.coordinates) bounds.extend([lon, lat]);
+      map.fitBounds(bounds, { padding: cameraPadding(panelOpenRef.current), maxZoom: 15, duration: 800 });
+    }
+  }, [ready, legs]);
+
+  const tripPoints = trip?.points;
+  useEffect(() => {
+    const map = mapRef.current;
+    if (!ready || !map || !tripPoints) return;
+    const markers = tripPoints.flatMap((point, i) => {
+      if (!point) return [];
+      const element = document.createElement("span");
+      element.className = "trip-letter trip-marker";
+      element.dataset.origin = String(i === 0);
+      element.textContent = String.fromCharCode(65 + i);
+      return [new Marker({ element }).setLngLat(point).addTo(map)];
+    });
+    return () => markers.forEach((marker) => marker.remove());
+  }, [ready, tripPoints]);
 
   return (
     <div

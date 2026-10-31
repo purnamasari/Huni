@@ -33,6 +33,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "django.contrib.gis",
     "core",
+    "transit",
 ]
 
 MIDDLEWARE = [
@@ -62,3 +63,16 @@ USE_I18N = False
 USE_TZ = True
 
 STATIC_URL = "static/"
+
+# Source datasets (see data/README.md). The repo's data/ folder locally, /data in Compose.
+DATA_DIR = Path(os.environ.get("DATA_DIR") or BASE_DIR.parent.parent / "data")
+
+# Address search (see geocoding/providers.py). The public Photon server is free but asks
+# for fair use; point GEOCODER_URL at your own Photon for heavier traffic.
+GEOCODER_URL = os.environ.get("GEOCODER_URL") or "https://photon.komoot.io"
+GEOCODER_USER_AGENT = (
+    os.environ.get("GEOCODER_USER_AGENT") or "Huni/0.1 (+https://github.com/purnamasari/Huni)"
+)
+GEOCODER_TIMEOUT_S = float(os.environ.get("GEOCODER_TIMEOUT_S") or 4)
+# Optional: Mapbox Search Box for places (shops, markets, offices). Server-side only.
+MAPBOX_ACCESS_TOKEN = os.environ.get("MAPBOX_ACCESS_TOKEN") or ""
