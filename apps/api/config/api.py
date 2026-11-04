@@ -1,7 +1,12 @@
 from django.db import DatabaseError, connection
 from ninja import NinjaAPI, Schema, Status
 
+from geocoding.api import router as geocoding_router
+from transit.api import router as transit_router
+
 api = NinjaAPI(title="Huni API", version="0.1.0")
+api.add_router("/transit", transit_router)
+api.add_router("/geocode", geocoding_router)
 
 
 class HealthOut(Schema):

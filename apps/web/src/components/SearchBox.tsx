@@ -1,7 +1,11 @@
-import { ArrowUpLeft, MapPin, Search, X } from "lucide-react";
-import { useEffect, useId, useState } from "react";
-import { searchPlaces } from "../api/client";
+import { ArrowUpLeft, Search, X } from "lucide-react";
+import { useEffect, useId, useRef, useState } from "react";
 import type { PlaceResult } from "../api/types";
+import { canLocate } from "../lib/location";
+import { usePlaceSearch } from "../usePlaceSearch";
+import { CurrentLocationOption } from "./CurrentLocationOption";
+import { PlaceIcon } from "./PlaceIcon";
+import { SearchCredit } from "./SearchCredit";
 
 const KIND_LABELS: Record<PlaceResult["kind"], string> = {
   kecamatan: "Kecamatan",
@@ -9,6 +13,9 @@ const KIND_LABELS: Record<PlaceResult["kind"], string> = {
   area: "Area",
   street: "Street",
   landmark: "Landmark",
+  address: "Address",
+  point: "Exact point",
+  stop: "Transit stop",
 };
 
 interface Props {
@@ -17,28 +24,14 @@ interface Props {
 
 export function SearchBox({ onSelect }: Props) {
   const [query, setQuery] = useState("");
-  const [results, setResults] = useState<PlaceResult[]>([]);
+  const { results, searchingAddresses } = usePlaceSearch(query);
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState(0);
   const listId = useId();
+  const locate = useRef<(() => void) | null>(null);
+  const empty = query.trim() === "";
 
-  useEffect(() => {
-    const controller = new AbortController();
-    const timer = setTimeout(() => {
-      searchPlaces(query, controller.signal)
-        .then((found) => {
-          setResults(found);
-          setActive(0);
-        })
-        .catch(() => {
-          if (!controller.signal.aborted) setResults([]);
-        });
-    }, 120);
-    return () => {
-      clearTimeout(timer);
-      controller.abort();
-    };
-  }, [query]);
+  useEffect(() => setActive(0), [results]);
 
   const choose = (place: PlaceResult) => {
     setQuery(place.name);
@@ -54,6 +47,9 @@ export function SearchBox({ onSelect }: Props) {
     } else if (event.key === "ArrowUp") {
       event.preventDefault();
       setActive((i) => Math.max(i - 1, 0));
+    } else if (event.key === "Enter" && open && empty) {
+      event.preventDefault();
+      locate.current?.();
     } else if (event.key === "Enter" && open && results[active]) {
       event.preventDefault();
       choose(results[active]);
@@ -62,7 +58,8 @@ export function SearchBox({ onSelect }: Props) {
     }
   };
 
-  const showList = open && query.trim() !== "";
+  // Empty and focused: offer the current location.
+  const showList = open && (!empty || canLocate());
 
   return (
     <div className="search">
@@ -70,11 +67,13 @@ export function SearchBox({ onSelect }: Props) {
       <input
         type="search"
         role="combobox"
-        aria-label="Search neighbourhoods, streets or landmarks"
+        aria-label="Search neighbourhoods, addresses, landmarks or coordinates"
         aria-expanded={showList}
         aria-controls={listId}
-        aria-activedescendant={showList && results[active] ? `${listId}-${active}` : undefined}
-        placeholder="Search neighbourhoods, streets, or landmarks…"
+        aria-activedescendant={
+          !showList ? undefined : empty ? `${listId}-here` : results[active] && `${listId}-${active}`
+        }
+        placeholder="Search places, addresses, or paste coordinates…"
         value={query}
         onChange={(event) => {
           setQuery(event.target.value);
@@ -96,7 +95,18 @@ export function SearchBox({ onSelect }: Props) {
       )}
       {showList && (
         <ul className="search-results" id={listId} role="listbox">
-          {results.length === 0 && <li className="search-empty">No places found</li>}
+          {empty && (
+            <CurrentLocationOption
+              id={`${listId}-here`}
+              highlighted
+              onHighlight={() => {}}
+              onLocated={choose}
+              locateRef={locate}
+            />
+          )}
+          {!empty && results.length === 0 && !searchingAddresses && (
+            <li className="search-empty">No places found</li>
+          )}
           {results.map((place, index) => (
             <li
               key={place.id}
@@ -108,7 +118,7 @@ export function SearchBox({ onSelect }: Props) {
               onClick={() => choose(place)}
               onMouseEnter={() => setActive(index)}
             >
-              <MapPin size={18} className="search-result-pin" aria-hidden="true" />
+              <PlaceIcon kind={place.kind} />
               <span className="search-result-text">
                 <span className="search-result-name">{place.name}</span>
                 <span className="search-result-context">
@@ -121,6 +131,8 @@ export function SearchBox({ onSelect }: Props) {
               )}
             </li>
           ))}
+          {searchingAddresses && <li className="search-empty">Searching addresses…</li>}
+          <SearchCredit results={results} />
         </ul>
       )}
     </div>

@@ -1,18 +1,39 @@
-import { ChevronDown, CircleCheck, MapPin, TriangleAlert, X } from "lucide-react";
+import { ChevronDown, ChevronRight, CircleCheck, MapPin, Route, TriangleAlert, X } from "lucide-react";
 import { useState } from "react";
 import type { AreaProperties, CriterionKey, PlaceResult } from "../api/types";
 import { inkOn, scoreColor } from "../colors";
 import { CRITERIA, FLOOD, FLOOD_LABELS } from "../criteria";
+import { formatDuration } from "../lib/format";
 import { overallScore, summarise } from "../lib/scoring";
+
+/** The commute from this area to where the user goes most days, if they set it. */
+export interface AreaCommute {
+  destination: string;
+  minutes: number | null;
+  transfers: number | null;
+  walkOnly: boolean;
+  departAt: string;
+}
 
 interface AreaProps {
   area: AreaProperties;
   place: PlaceResult | null;
   selected: ReadonlySet<CriterionKey>;
   onClose: () => void;
+  /** Null until the user sets where they go most days. */
+  commute?: AreaCommute | null;
+  /** Opens Commute mode from this area. */
+  onCommute?: () => void;
 }
 
-export function AreaDetail({ area, place, selected, onClose }: AreaProps) {
+export function AreaDetail({
+  area,
+  place,
+  selected,
+  onClose,
+  commute = null,
+  onCommute,
+}: AreaProps) {
   const [showSources, setShowSources] = useState(false);
   const score = overallScore(area.scores, selected);
   const flagged = area.floodRisk !== "low";
@@ -46,6 +67,16 @@ export function AreaDetail({ area, place, selected, onClose }: AreaProps) {
       )}
       <p className="detail-summary">{summarise(area.scores, selected)}</p>
 
+      {onCommute && (
+        <button type="button" className="commute-link" onClick={onCommute}>
+          <span className="explore-icon" aria-hidden="true">
+            <Route size={20} />
+          </span>
+          <CommuteText commute={commute} />
+          <ChevronRight size={20} aria-hidden="true" />
+        </button>
+      )}
+
       <h3>Score breakdown</h3>
       <ul className="breakdown">
         {CRITERIA.map(({ key, label, icon: Icon }) => {
@@ -57,6 +88,9 @@ export function AreaDetail({ area, place, selected, onClose }: AreaProps) {
               <span className="breakdown-label">
                 {label}
                 {!included && <span className="breakdown-note">not in score</span>}
+                {included && key === "commute" && commute && (
+                  <span className="breakdown-note">to {commute.destination}</span>
+                )}
               </span>
               <span
                 className="bar"
@@ -108,6 +142,40 @@ export function AreaDetail({ area, place, selected, onClose }: AreaProps) {
         OpenStreetMap contributors.
       </p>
     </aside>
+  );
+}
+
+function CommuteText({ commute }: { commute: AreaCommute | null }) {
+  if (!commute) {
+    return (
+      <span className="explore-text">
+        <strong>How long is your commute from here?</strong>
+        <span>Set where you go most days, like work or campus.</span>
+      </span>
+    );
+  }
+  if (commute.minutes === null) {
+    return (
+      <span className="explore-text">
+        <strong>No route to {commute.destination}</strong>
+        <span>Nothing gets there by {commute.departAt}. See other times.</span>
+      </span>
+    );
+  }
+  const how = commute.walkOnly
+    ? "on foot"
+    : commute.transfers
+      ? `${commute.transfers} transfer${commute.transfers > 1 ? "s" : ""}`
+      : "no transfers";
+  return (
+    <span className="explore-text">
+      <strong>
+        {formatDuration(commute.minutes)} to {commute.destination}
+      </strong>
+      <span>
+        {how}, leaving at {commute.departAt}. See the route.
+      </span>
+    </span>
   );
 }
 

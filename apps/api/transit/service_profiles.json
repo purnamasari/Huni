@@ -1,0 +1,80 @@
+{
+  "_comment": "Service defaults per mode, applied by the route import. Every value here is a PLACEHOLDER until checked against an operator source. Fix a single route under 'routes' (keyed by its exact route name), set 'placeholder': false once the numbers are verified, then re-run import_routes.",
+  "walk": {
+    "speed_kmh": 4.5,
+    "max_access_m": 800,
+    "max_access_fallback_m": 1500,
+    "max_transfer_m": 250,
+    "max_direct_walk_m": 2000,
+    "detour_factor": 1.3
+  },
+  "modes": {
+    "angkot": {
+      "boarding": "hail",
+      "stop_spacing_m": 250,
+      "fare_base_idr": 4000,
+      "fare_per_km_idr": 250,
+      "fare_max_idr": 10000,
+      "avg_speed_kmh": 14,
+      "headway_min": 8,
+      "service_start": "05:00",
+      "service_end": "21:00"
+    },
+    "minibus": {
+      "boarding": "hail",
+      "stop_spacing_m": 400,
+      "fare_base_idr": 5000,
+      "fare_per_km_idr": 500,
+      "fare_max_idr": 25000,
+      "avg_speed_kmh": 22,
+      "headway_min": 20,
+      "service_start": "05:00",
+      "service_end": "19:00"
+    },
+    "bus": {
+      "boarding": "stops",
+      "stop_spacing_m": 500,
+      "fare_base_idr": 4900,
+      "fare_per_km_idr": 0,
+      "fare_max_idr": null,
+      "avg_speed_kmh": 18,
+      "headway_min": 15,
+      "service_start": "05:00",
+      "service_end": "21:00"
+    },
+    "feeder": {
+      "boarding": "stops",
+      "stop_spacing_m": 500,
+      "fare_base_idr": 4900,
+      "fare_per_km_idr": 0,
+      "fare_max_idr": null,
+      "avg_speed_kmh": 16,
+      "headway_min": 20,
+      "service_start": "05:30",
+      "service_end": "20:00"
+    },
+    "shuttle": {
+      "boarding": "stops",
+      "stop_spacing_m": 500,
+      "fare_base_idr": 0,
+      "fare_per_km_idr": 0,
+      "fare_max_idr": null,
+      "avg_speed_kmh": 20,
+      "headway_min": 30,
+      "service_start": "06:00",
+      "service_end": "21:00"
+    },
+    "rail": {
+      "boarding": "stops",
+      "stop_spacing_m": 3000,
+      "fare_base_idr": 5000,
+      "fare_per_km_idr": 0,
+      "fare_max_idr": null,
+      "avg_speed_kmh": 45,
+      "headway_min": 60,
+      "service_start": "04:30",
+      "service_end": "21:00"
+    }
+  },
+  "routes": {}
+}

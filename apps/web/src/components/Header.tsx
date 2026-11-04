@@ -32,7 +32,10 @@ export function Header({ page, onSelectPlace }: Props) {
           <a
             key={item.page}
             href={item.page === "map" ? "#/" : `#/${item.page}`}
-            aria-current={page === item.page ? "page" : undefined}
+            // Commute is a mode of the map, so "Map" stays current.
+            aria-current={
+              page === item.page || (item.page === "map" && page === "commute") ? "page" : undefined
+            }
           >
             {item.label}
           </a>

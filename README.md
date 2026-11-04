@@ -44,6 +44,41 @@ pnpm install
 pnpm dev
 ```
 
+## Transit routes and trip planning
+
+Put the Transport for Bandung route exports in `data/raw/` (see [`data/README.md`](data/README.md)), then:
+
+```sh
+docker compose run --rm api python manage.py import_routes
+# or: uv run --env-file ../../.env python manage.py import_routes --shp path.zip --kml path.zip
+```
+
+The import rebuilds each route in travel order, places boarding points and prints a QA report
+(also at `/api/transit/imports/latest`). Fares, speeds, headways and hours are placeholders per
+mode in [`apps/api/transit/service_profiles.json`](apps/api/transit/service_profiles.json);
+edit it and re-run the import to change them.
+
+- `POST /api/transit/plan`: ranked trip options from an origin through one or more destinations
+- `GET /api/transit/routes`: every route as GeoJSON; `/routes/{id}` for stops, service and QA
+- `POST /api/transit/commute`: travel time from many origins (e.g. every neighbourhood) to one destination, in one search
+- `GET /api/transit/places?q=`: search named stops and terminals
+
+How it works and what can go wrong: [`docs/notes/0001-transit-routes-and-trip-planning.md`](docs/notes/0001-transit-routes-and-trip-planning.md).
+
+## Search, current location and trip order
+
+The search box (and the Commute fields) take place names, addresses, exact points and your location:
+
+- **Coordinates** pasted as `-6.9147, 107.6098`, a Google Maps link (`…/@-6.9147,107.6098,17z`) or `6°54'53"S 107°36'35"E` go straight to that point, with no lookup.
+- **Places and addresses** come from `GET /api/geocode?q=…`, which combines two providers, because neither covers Bandung alone:
+  - [Mapbox Search Box](https://docs.mapbox.com/api/search/search-box/) (set `MAPBOX_ACCESS_TOKEN`): shops, markets, campuses and offices, with street addresses. It has no streets or house addresses for Indonesia.
+  - [Photon](https://photon.komoot.io) (OpenStreetMap, no key): streets and areas, and street names for dropped pins (`GET /api/geocode/reverse`).
+
+  The browser asks each with `&source=mapbox|photon` and shows results as they arrive. Mapbox results are never cached (its terms allow temporary use only); Photon's are cached for a day. Both are credited under the results.
+- **Your current location**: focus an empty search field and pick "Your current location". The browser asks for permission; the position stays in the browser apart from the trip requests.
+
+In Commute, drag a row by its handle (or focus the handle and use the arrow keys) to reorder From, stops and destination; **Reverse** flips the whole trip.
+
 ## Checks (same as CI)
 
 ```sh
@@ -64,7 +99,7 @@ The responses the web app expects are typed in [`apps/web/src/api/types.ts`](app
 - `GET /api/areas?level=kecamatan|kelurahan`: GeoJSON FeatureCollection (WGS84) with `id`, `name`, `level`, `parent`, `labelPoint`, per-criterion `scores` (0–100, higher is better) and `floodRisk`.
 - `GET /api/places?q=…`: search results, each with `insideKota` and the `areaId` it falls in.
 
-Set `VITE_USE_MOCK_DATA=false` to switch to the API. The overall score is the mean of the criteria the user picks, computed in the browser so toggling is instant.
+The **Commute** mode (`#/commute`, switched at the top of the left column) and the "Work commute" score always call the real `/api/transit/*` endpoints, so import the routes first (see above). Set `VITE_USE_MOCK_DATA=false` to switch to the API. The overall score is the mean of the criteria the user picks, computed in the browser so toggling is instant.
 
 ## Configuration
 
@@ -75,3 +110,5 @@ Everything comes from the root `.env` (see [`.env.example`](.env.example)):
 - `VITE_BASEMAP_STYLE_URL`: any MapLibre style JSON. Defaults to OpenFreeMap "positron".
 - `VITE_USE_MOCK_DATA`: `true` (default) serves demo data; `false` calls the API.
 - `API_PROXY_TARGET`: where the Vite dev server sends `/api` requests.
+- `GEOCODER_URL`: the Photon server for street search. Defaults to the public `https://photon.komoot.io`.
+- `MAPBOX_ACCESS_TOKEN`: optional; adds Mapbox place search. Used by the API only, never sent to the browser.

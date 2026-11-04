@@ -1,8 +1,14 @@
 import { useEffect, useState } from "react";
 
-export type Page = "map" | "about" | "methodology" | "data";
+export type Page = "map" | "commute" | "about" | "methodology" | "data";
 
-const PAGES: Page[] = ["about", "methodology", "data"];
+/** The text pages shown over the map. "map" and "commute" are the two map modes. */
+export type InfoPageName = Exclude<Page, "map" | "commute">;
+
+export const isInfoPage = (page: Page): page is InfoPageName =>
+  page !== "map" && page !== "commute";
+
+const PAGES: Page[] = ["commute", "about", "methodology", "data"];
 
 function pageFromHash(): Page {
   const name = window.location.hash.replace(/^#\/?/, "");
