@@ -1,0 +1,5204 @@
+{
+  "meta": {
+    "retrieved": "2026-11-15",
+    "estate_count": 50,
+    "regions": [
+      {
+        "id": "garut",
+        "name": "Garut",
+        "estate_count": 27,
+        "bbox": [
+          107.88898,
+          -7.18288,
+          107.99836,
+          -7.05426
+        ],
+        "kecamatan": [
+          {
+            "name": "Cibatu",
+            "kabupaten": "Kabupaten Garut",
+            "estate_count": 7
+          },
+          {
+            "name": "Leles",
+            "kabupaten": "Kabupaten Garut",
+            "estate_count": 9
+          },
+          {
+            "name": "Wanaraja",
+            "kabupaten": "Kabupaten Garut",
+            "estate_count": 11
+          }
+        ]
+      },
+      {
+        "id": "bandung",
+        "name": "Bandung Raya",
+        "estate_count": 23,
+        "bbox": [
+          107.43832,
+          -7.06892,
+          107.85065,
+          -6.83204
+        ],
+        "kecamatan": [
+          {
+            "name": "Baleendah",
+            "kabupaten": "Kabupaten Bandung",
+            "estate_count": 2
+          },
+          {
+            "name": "Batujajar",
+            "kabupaten": "Kabupaten Bandung Barat",
+            "estate_count": 1
+          },
+          {
+            "name": "Cangkuang",
+            "kabupaten": "Kabupaten Bandung",
+            "estate_count": 2
+          },
+          {
+            "name": "Cicalengka",
+            "kabupaten": "Kabupaten Bandung",
+            "estate_count": 2
+          },
+          {
+            "name": "Cihampelas",
+            "kabupaten": "Kabupaten Bandung Barat",
+            "estate_count": 2
+          },
+          {
+            "name": "Cikancung",
+            "kabupaten": "Kabupaten Bandung",
+            "estate_count": 1
+          },
+          {
+            "name": "Cililin",
+            "kabupaten": "Kabupaten Bandung Barat",
+            "estate_count": 1
+          },
+          {
+            "name": "Ciparay",
+            "kabupaten": "Kabupaten Bandung",
+            "estate_count": 3
+          },
+          {
+            "name": "Cipatat",
+            "kabupaten": "Kabupaten Bandung Barat",
+            "estate_count": 1
+          },
+          {
+            "name": "Ibun",
+            "kabupaten": "Kabupaten Bandung",
+            "estate_count": 1
+          },
+          {
+            "name": "Majalaya",
+            "kabupaten": "Kabupaten Bandung",
+            "estate_count": 3
+          },
+          {
+            "name": "Padalarang",
+            "kabupaten": "Kabupaten Bandung Barat",
+            "estate_count": 1
+          },
+          {
+            "name": "Paseh",
+            "kabupaten": "Kabupaten Bandung",
+            "estate_count": 1
+          },
+          {
+            "name": "Rancaekek",
+            "kabupaten": "Kabupaten Bandung",
+            "estate_count": 2
+          }
+        ]
+      }
+    ],
+    "price_ceilings": [
+      {
+        "price_idr": 166000000,
+        "period": "sejak 2024",
+        "basis": "Kepmen PUPR 689/KPTS/M/2023, masih berlaku pada 2026"
+      },
+      {
+        "price_idr": 162000000,
+        "period": "2023",
+        "basis": "Kepmen PUPR 689/KPTS/M/2023"
+      },
+      {
+        "price_idr": 150500000,
+        "period": "sebelum Juni 2023",
+        "basis": "batas harga sebelumnya"
+      }
+    ],
+    "kpr": {
+      "annual_rate": 0.05,
+      "min_down_payment": 0.01,
+      "tenor_years": [
+        10,
+        15,
+        20,
+        30,
+        40
+      ],
+      "default_tenor_years": 20
+    },
+    "sources": [
+      {
+        "topic": "Batas harga jual rumah subsidi",
+        "title": "Harga Rumah Subsidi Diusulkan Naik di 2026, Cek Daftar yang Berlaku Saat Ini",
+        "publisher": "Bisnis.com, 4 Januari 2026",
+        "url": "https://ekonomi.bisnis.com/read/20260104/47/1941442/harga-rumah-subsidi-diusulkan-naik-di-2026-cek-daftar-yang-berlaku-saat-ini"
+      },
+      {
+        "topic": "Tenor KPR subsidi hingga 40 tahun, bunga tetap 5%",
+        "title": "Resmi! Tenor KPR Rumah Subsidi & Rusun Diperpanjang Sampai 40 Tahun",
+        "publisher": "Bisnis.com, 25 Juni 2026",
+        "url": "https://ekonomi.bisnis.com/read/20260625/47/1983246/resmi-tenor-kpr-rumah-subsidi-rusun-diperpanjang-sampai-40-tahun"
+      },
+      {
+        "topic": "Akad KPR FLPP hanya untuk rumah siap huni",
+        "title": "Akad Kredit FLPP hanya Boleh Dilakukan saat Rumah Siap Huni",
+        "publisher": "Metrotvnews.com",
+        "url": "https://www.metrotvnews.com/read/N4EC4YrG-akad-kredit-flpp-hanya-boleh-dilakukan-saat-rumah-siap-huni"
+      },
+      {
+        "topic": "Arti jumlah unit di Sikumbang",
+        "title": "Tutorial Mencari Rumah Lewat Laman SiKumbang",
+        "publisher": "detikJabar, Februari 2026",
+        "url": "https://www.detik.com/jabar/berita/d-8349563/tutorial-mencari-rumah-lewat-laman-sikumbang"
+      }
+    ],
+    "method": {
+      "access": {
+        "road": {
+          "weight": 0.4,
+          "full_m": 200,
+          "zero_m": 2500
+        },
+        "centre": {
+          "weight": 0.25,
+          "full_m": 500,
+          "zero_m": 6000
+        },
+        "city": {
+          "weight": 0.2,
+          "full_m": 3000,
+          "zero_m": 25000
+        },
+        "station": {
+          "weight": 0.15,
+          "full_m": 500,
+          "zero_m": 6000
+        }
+      },
+      "flood": [
+        {
+          "max_exposure": 0.0,
+          "level": 5
+        },
+        {
+          "max_exposure": 0.1,
+          "level": 4
+        },
+        {
+          "max_exposure": 0.3,
+          "level": 3
+        },
+        {
+          "max_exposure": 0.55,
+          "level": 2
+        }
+      ],
+      "occupancy": [
+        {
+          "min_share": 0.9,
+          "level": 5
+        },
+        {
+          "min_share": 0.7,
+          "level": 4
+        },
+        {
+          "min_share": 0.4,
+          "level": 3
+        },
+        {
+          "min_share": 0.1,
+          "level": 2
+        }
+      ],
+      "construction": [
+        {
+          "min_share": 0.95,
+          "level": 5
+        },
+        {
+          "min_share": 0.6,
+          "level": 4
+        },
+        {
+          "min_share": 0.2,
+          "level": 3
+        }
+      ]
+    }
+  },
+  "estates": [
+    {
+      "id": "aka-sindangsuka-cibatu",
+      "source_id": "GRT1220042024T001",
+      "name": "AKA Sindangsuka Cibatu",
+      "developer": "PT AKA Rafasya Putra",
+      "association": "APERSI",
+      "region": "garut",
+      "kabupaten": "Kabupaten Garut",
+      "kecamatan": "Cibatu",
+      "desa": "Sindangsuka",
+      "address": "Kantor pemasaran: Blok A No. 6, Sindangsuka, Cibatu",
+      "lon": 107.98214,
+      "lat": -7.05611,
+      "location_precision": "desa",
+      "registered_year": 2024,
+      "units": {
+        "subsidized_available": 3,
+        "subsidized_sold": 100,
+        "commercial_available": 0,
+        "commercial_sold": 0
+      },
+      "price_from_idr": 166000000,
+      "price_to_idr": 166000000,
+      "listings": [
+        {
+          "name": "Tipe 30/60",
+          "subsidized": true,
+          "price_idr": 166000000,
+          "building_m2": 30,
+          "land_m2": 60,
+          "bedrooms": 2,
+          "bathrooms": 1,
+          "specs": ""
+        }
+      ],
+      "ratings": {
+        "access": {
+          "level": 3,
+          "score": 58,
+          "road": {
+            "name": "Jalan Kihajar Dewantara",
+            "class": "primary",
+            "distance_m": 231,
+            "score": 99
+          },
+          "centre": {
+            "name": "Cibatu",
+            "distance_m": 4914,
+            "score": 20
+          },
+          "city": {
+            "name": "Alun-Alun Garut",
+            "distance_m": 19845,
+            "score": 23
+          },
+          "station": {
+            "name": "Warungbandrek",
+            "distance_m": 2910,
+            "score": 56
+          }
+        },
+        "flood": {
+          "level": 3,
+          "exposure": 0.175,
+          "hazard_share": 0.213,
+          "max_class": "high",
+          "share": {
+            "low": 0.016,
+            "high": 0.115,
+            "moderate": 0.082
+          },
+          "samples": 61,
+          "radius_m": 1000,
+          "max_index": 0.817,
+          "flash_share": 0.115,
+          "river_share": 0.115
+        },
+        "occupancy": {
+          "level": 5,
+          "sold": 100,
+          "total": 103,
+          "share": 0.971
+        },
+        "construction": {
+          "level": 5,
+          "sold": 100,
+          "total": 103,
+          "share": 0.971
+        },
+        "overall": 4.0
+      },
+      "caveats": [],
+      "source_url": "https://sikumbang.tapera.go.id/lokasi-perumahan/GRT1220042024T001",
+      "retrieved": "2026-11-15",
+      "distance_m": null
+    },
+    {
+      "id": "al-faatihah-residence",
+      "source_id": "GRT1220082023T001",
+      "name": "Al Faatihah Residence",
+      "developer": "Alfaatihah Indonesia Raya",
+      "association": null,
+      "region": "garut",
+      "kabupaten": "Kabupaten Garut",
+      "kecamatan": "Cibatu",
+      "desa": "Karyamukti",
+      "address": "",
+      "lon": 107.99836,
+      "lat": -7.08339,
+      "location_precision": "desa",
+      "registered_year": 2023,
+      "units": null,
+      "price_from_idr": null,
+      "price_to_idr": null,
+      "listings": [],
+      "ratings": {
+        "access": {
+          "level": 3,
+          "score": 43,
+          "road": {
+            "name": "Jalan Kihajar Dewantara",
+            "class": "primary",
+            "distance_m": 1844,
+            "score": 29
+          },
+          "centre": {
+            "name": "Cibatu",
+            "distance_m": 2640,
+            "score": 61
+          },
+          "city": {
+            "name": "Alun-Alun Garut",
+            "distance_m": 18196,
+            "score": 31
+          },
+          "station": {
+            "name": "Warungbandrek",
+            "distance_m": 2275,
+            "score": 68
+          }
+        },
+        "flood": {
+          "level": 5,
+          "exposure": 0.0,
+          "hazard_share": 0.0,
+          "max_class": null,
+          "share": {
+            "low": 0.0,
+            "high": 0.0,
+            "moderate": 0.0
+          },
+          "samples": 61,
+          "radius_m": 1000,
+          "max_index": null,
+          "flash_share": 0.0,
+          "river_share": 0.0
+        },
+        "occupancy": {
+          "level": null
+        },
+        "construction": {
+          "level": null
+        },
+        "overall": 4.0
+      },
+      "caveats": [
+        "Rincian unit dan tipe belum terbaca: hanya halaman site plan Sikumbang yang tersedia."
+      ],
+      "source_url": "https://sikumbang.tapera.go.id/lokasi-perumahan/GRT1220082023T001",
+      "retrieved": "2026-11-15",
+      "distance_m": null
+    },
+    {
+      "id": "bukit-biduri-indah",
+      "source_id": "GRT1220082022T001",
+      "name": "Bukit Biduri Indah",
+      "developer": "Biduri Adi Pratama",
+      "association": "HIMPERRA",
+      "region": "garut",
+      "kabupaten": "Kabupaten Garut",
+      "kecamatan": "Cibatu",
+      "desa": "Karyamukti",
+      "address": "",
+      "lon": 107.99836,
+      "lat": -7.08339,
+      "location_precision": "desa",
+      "registered_year": 2022,
+      "units": {
+        "subsidized_available": 2,
+        "subsidized_sold": 46,
+        "commercial_available": null,
+        "commercial_sold": null
+      },
+      "price_from_idr": 145000000,
+      "price_to_idr": 150000000,
+      "listings": [
+        {
+          "name": "Tipe A 36/72",
+          "subsidized": true,
+          "price_idr": 150000000,
+          "building_m2": 36,
+          "land_m2": 72,
+          "bedrooms": null,
+          "bathrooms": null,
+          "specs": ""
+        },
+        {
+          "name": "Tipe B, C, D 36/72",
+          "subsidized": true,
+          "price_idr": 145000000,
+          "building_m2": 36,
+          "land_m2": 72,
+          "bedrooms": null,
+          "bathrooms": null,
+          "specs": ""
+        }
+      ],
+      "ratings": {
+        "access": {
+          "level": 3,
+          "score": 43,
+          "road": {
+            "name": "Jalan Kihajar Dewantara",
+            "class": "primary",
+            "distance_m": 1844,
+            "score": 29
+          },
+          "centre": {
+            "name": "Cibatu",
+            "distance_m": 2640,
+            "score": 61
+          },
+          "city": {
+            "name": "Alun-Alun Garut",
+            "distance_m": 18196,
+            "score": 31
+          },
+          "station": {
+            "name": "Warungbandrek",
+            "distance_m": 2275,
+            "score": 68
+          }
+        },
+        "flood": {
+          "level": 5,
+          "exposure": 0.0,
+          "hazard_share": 0.0,
+          "max_class": null,
+          "share": {
+            "low": 0.0,
+            "high": 0.0,
+            "moderate": 0.0
+          },
+          "samples": 61,
+          "radius_m": 1000,
+          "max_index": null,
+          "flash_share": 0.0,
+          "river_share": 0.0
+        },
+        "occupancy": {
+          "level": 5,
+          "sold": 46,
+          "total": 48,
+          "share": 0.958
+        },
+        "construction": {
+          "level": 5,
+          "sold": 46,
+          "total": 48,
+          "share": 0.958
+        },
+        "overall": 4.5
+      },
+      "caveats": [],
+      "source_url": "https://sikumbang.tapera.go.id/lokasi-perumahan/GRT1220082022T001",
+      "retrieved": "2026-11-15",
+      "distance_m": null
+    },
+    {
+      "id": "bukit-rovita-indah",
+      "source_id": "GRT1220022025T001",
+      "name": "Bukit Rovita Indah",
+      "developer": "Rovita Propertindo Sukses",
+      "association": "APERSI",
+      "region": "garut",
+      "kabupaten": "Kabupaten Garut",
+      "kecamatan": "Cibatu",
+      "desa": "Mekarsari",
+      "address": "Kantor pemasaran: Jl. Raya Nasional III, Kp. Bunisari No. 3, Mekarsari, Cibatu",
+      "lon": 107.99732,
+      "lat": -7.05426,
+      "location_precision": "desa",
+      "registered_year": 2025,
+      "units": {
+        "subsidized_available": 315,
+        "subsidized_sold": 0,
+        "commercial_available": 15,
+        "commercial_sold": 0
+      },
+      "price_from_idr": 166000000,
+      "price_to_idr": 166000000,
+      "listings": [
+        {
+          "name": "Tipe 36/60",
+          "subsidized": true,
+          "price_idr": 166000000,
+          "building_m2": 36,
+          "land_m2": 60,
+          "bedrooms": null,
+          "bathrooms": null,
+          "specs": ""
+        }
+      ],
+      "ratings": {
+        "access": {
+          "level": 3,
+          "score": 57,
+          "road": {
+            "name": "Jalan Raya Limbangan - Malangbong",
+            "class": "trunk",
+            "distance_m": 306,
+            "score": 95
+          },
+          "centre": {
+            "name": "Cibatu",
+            "distance_m": 5401,
+            "score": 11
+          },
+          "city": {
+            "name": "Alun-Alun Garut",
+            "distance_m": 20830,
+            "score": 19
+          },
+          "station": {
+            "name": "Warungbandrek",
+            "distance_m": 1578,
+            "score": 80
+          }
+        },
+        "flood": {
+          "level": 3,
+          "exposure": 0.153,
+          "hazard_share": 0.213,
+          "max_class": "high",
+          "share": {
+            "low": 0.016,
+            "high": 0.049,
+            "moderate": 0.148
+          },
+          "samples": 61,
+          "radius_m": 1000,
+          "max_index": 1.0,
+          "flash_share": 0.098,
+          "river_share": 0.148
+        },
+        "occupancy": {
+          "level": 1,
+          "sold": 0,
+          "total": 330,
+          "share": 0.0
+        },
+        "construction": {
+          "level": 1,
+          "sold": 0,
+          "total": 330,
+          "share": 0.0
+        },
+        "overall": 2.0
+      },
+      "caveats": [],
+      "source_url": "https://sikumbang.tapera.go.id/lokasi-perumahan/GRT1220022025T001",
+      "retrieved": "2026-11-15",
+      "distance_m": null
+    },
+    {
+      "id": "bunar-indah",
+      "source_id": "GRT1220032020T001",
+      "name": "Bunar Indah",
+      "developer": "PT Lebak Nangka Al Nusantara",
+      "association": "APERSI",
+      "region": "garut",
+      "kabupaten": "Kabupaten Garut",
+      "kecamatan": "Cibatu",
+      "desa": "Cibunar",
+      "address": "",
+      "lon": 107.981,
+      "lat": -7.08086,
+      "location_precision": "desa",
+      "registered_year": 2020,
+      "units": {
+        "subsidized_available": 0,
+        "subsidized_sold": 102,
+        "commercial_available": null,
+        "commercial_sold": null
+      },
+      "price_from_idr": 130000000,
+      "price_to_idr": 130000000,
+      "listings": [
+        {
+          "name": "Tipe 36/72",
+          "subsidized": true,
+          "price_idr": 130000000,
+          "building_m2": 36,
+          "land_m2": 72,
+          "bedrooms": null,
+          "bathrooms": null,
+          "specs": ""
+        },
+        {
+          "name": "Tipe 45/108",
+          "subsidized": false,
+          "price_idr": 100000000,
+          "building_m2": 45,
+          "land_m2": 108,
+          "bedrooms": null,
+          "bathrooms": null,
+          "specs": ""
+        }
+      ],
+      "ratings": {
+        "access": {
+          "level": 4,
+          "score": 75,
+          "road": {
+            "name": "Jalan Kihajar Dewantara",
+            "class": "primary",
+            "distance_m": 25,
+            "score": 100
+          },
+          "centre": {
+            "name": "Cibatu",
+            "distance_m": 2176,
+            "score": 70
+          },
+          "city": {
+            "name": "Alun-Alun Garut",
+            "distance_m": 17377,
+            "score": 35
+          },
+          "station": {
+            "name": "Cibatu",
+            "distance_m": 2128,
+            "score": 70
+          }
+        },
+        "flood": {
+          "level": 3,
+          "exposure": 0.104,
+          "hazard_share": 0.148,
+          "max_class": "high",
+          "share": {
+            "low": 0.033,
+            "high": 0.049,
+            "moderate": 0.066
+          },
+          "samples": 61,
+          "radius_m": 1000,
+          "max_index": 0.929,
+          "flash_share": 0.115,
+          "river_share": 0.098
+        },
+        "occupancy": {
+          "level": 5,
+          "sold": 102,
+          "total": 102,
+          "share": 1.0
+        },
+        "construction": {
+          "level": 5,
+          "sold": 102,
+          "total": 102,
+          "share": 1.0
+        },
+        "overall": 4.2
+      },
+      "caveats": [
+        "Harga berasal dari registrasi 2020 dan tampak belum diperbarui.",
+        "Sikumbang juga mencatat tipe 22/65 seharga Rp45 juta; angka itu tampak keliru dan tidak ditampilkan."
+      ],
+      "source_url": "https://sikumbang.tapera.go.id/lokasi-perumahan/GRT1220032020T001",
+      "retrieved": "2026-11-15",
+      "distance_m": null
+    },
+    {
+      "id": "graha-paramarta",
+      "source_id": "GRT1220032023T001",
+      "name": "Graha Paramarta",
+      "developer": "PT Paramarta Birru Pratama",
+      "association": "APERSI",
+      "region": "garut",
+      "kabupaten": "Kabupaten Garut",
+      "kecamatan": "Cibatu",
+      "desa": "Cibunar",
+      "address": "Kantor pemasaran: Blok C1-9, Cibunar, Cibatu",
+      "lon": 107.981,
+      "lat": -7.08086,
+      "location_precision": "desa",
+      "registered_year": 2023,
+      "units": {
+        "subsidized_available": 38,
+        "subsidized_sold": 3,
+        "commercial_available": 0,
+        "commercial_sold": 0
+      },
+      "price_from_idr": 150000000,
+      "price_to_idr": 150000000,
+      "listings": [
+        {
+          "name": "Tipe Standard 36/60",
+          "subsidized": true,
+          "price_idr": 150000000,
+          "building_m2": 36,
+          "land_m2": 60,
+          "bedrooms": 2,
+          "bathrooms": 1,
+          "specs": ""
+        }
+      ],
+      "ratings": {
+        "access": {
+          "level": 4,
+          "score": 75,
+          "road": {
+            "name": "Jalan Kihajar Dewantara",
+            "class": "primary",
+            "distance_m": 25,
+            "score": 100
+          },
+          "centre": {
+            "name": "Cibatu",
+            "distance_m": 2176,
+            "score": 70
+          },
+          "city": {
+            "name": "Alun-Alun Garut",
+            "distance_m": 17377,
+            "score": 35
+          },
+          "station": {
+            "name": "Cibatu",
+            "distance_m": 2128,
+            "score": 70
+          }
+        },
+        "flood": {
+          "level": 3,
+          "exposure": 0.104,
+          "hazard_share": 0.148,
+          "max_class": "high",
+          "share": {
+            "low": 0.033,
+            "high": 0.049,
+            "moderate": 0.066
+          },
+          "samples": 61,
+          "radius_m": 1000,
+          "max_index": 0.929,
+          "flash_share": 0.115,
+          "river_share": 0.098
+        },
+        "occupancy": {
+          "level": 1,
+          "sold": 3,
+          "total": 41,
+          "share": 0.073
+        },
+        "construction": {
+          "level": 2,
+          "sold": 3,
+          "total": 41,
+          "share": 0.073
+        },
+        "overall": 2.5
+      },
+      "caveats": [],
+      "source_url": "https://sikumbang.tapera.go.id/lokasi-perumahan/GRT1220032023T001",
+      "retrieved": "2026-11-15",
+      "distance_m": null
+    },
+    {
+      "id": "green-wanakerta",
+      "source_id": "GRT1220112022T001",
+      "name": "Green Wanakerta",
+      "developer": "Askara Berkah Saudara",
+      "association": null,
+      "region": "garut",
+      "kabupaten": "Kabupaten Garut",
+      "kecamatan": "Cibatu",
+      "desa": "Wanakerta",
+      "address": "",
+      "lon": 107.98723,
+      "lat": -7.10405,
+      "location_precision": "desa",
+      "registered_year": 2022,
+      "units": null,
+      "price_from_idr": null,
+      "price_to_idr": null,
+      "listings": [],
+      "ratings": {
+        "access": {
+          "level": 5,
+          "score": 86,
+          "road": {
+            "name": "Jalan Letjen H. Mashudi",
+            "class": "secondary",
+            "distance_m": 47,
+            "score": 100
+          },
+          "centre": {
+            "name": "Cibatu",
+            "distance_m": 724,
+            "score": 96
+          },
+          "city": {
+            "name": "Alun-Alun Garut",
+            "distance_m": 15626,
+            "score": 43
+          },
+          "station": {
+            "name": "Cibatu",
+            "distance_m": 971,
+            "score": 91
+          }
+        },
+        "flood": {
+          "level": 5,
+          "exposure": 0.0,
+          "hazard_share": 0.0,
+          "max_class": null,
+          "share": {
+            "low": 0.0,
+            "high": 0.0,
+            "moderate": 0.0
+          },
+          "samples": 61,
+          "radius_m": 1000,
+          "max_index": null,
+          "flash_share": 0.0,
+          "river_share": 0.0
+        },
+        "occupancy": {
+          "level": null
+        },
+        "construction": {
+          "level": null
+        },
+        "overall": 5.0
+      },
+      "caveats": [
+        "Rincian unit dan tipe belum terbaca: hanya halaman site plan Sikumbang yang tersedia."
+      ],
+      "source_url": "https://sikumbang.tapera.go.id/lokasi-perumahan/GRT1220112022T001",
+      "retrieved": "2026-11-15",
+      "distance_m": null
+    },
+    {
+      "id": "bumi-margaluyu-indah",
+      "source_id": "GRT0920092020T001",
+      "name": "Bumi Margaluyu Indah",
+      "developer": "PT Karya Keluarga Bersama",
+      "association": "ASPRUMNAS",
+      "region": "garut",
+      "kabupaten": "Kabupaten Garut",
+      "kecamatan": "Leles",
+      "desa": "Margaluyu",
+      "address": "",
+      "lon": 107.91178,
+      "lat": -7.11624,
+      "location_precision": "desa",
+      "registered_year": 2020,
+      "units": {
+        "subsidized_available": 111,
+        "subsidized_sold": 60,
+        "commercial_available": 17,
+        "commercial_sold": 0
+      },
+      "price_from_idr": 148000000,
+      "price_to_idr": 148000000,
+      "listings": [
+        {
+          "name": "Rumah subsidi 30/60",
+          "subsidized": true,
+          "price_idr": 148000000,
+          "building_m2": 30,
+          "land_m2": 60,
+          "bedrooms": null,
+          "bathrooms": null,
+          "specs": ""
+        },
+        {
+          "name": "Ruko",
+          "subsidized": false,
+          "price_idr": 175000000,
+          "building_m2": 31,
+          "land_m2": 24,
+          "bedrooms": null,
+          "bathrooms": null,
+          "specs": ""
+        }
+      ],
+      "ratings": {
+        "access": {
+          "level": 4,
+          "score": 76,
+          "road": {
+            "name": null,
+            "class": "primary",
+            "distance_m": 537,
+            "score": 85
+          },
+          "centre": {
+            "name": "Leles",
+            "distance_m": 1413,
+            "score": 83
+          },
+          "city": {
+            "name": "Alun-Alun Garut",
+            "distance_m": 11131,
+            "score": 63
+          },
+          "station": {
+            "name": "Karangsari",
+            "distance_m": 2917,
+            "score": 56
+          }
+        },
+        "flood": {
+          "level": 5,
+          "exposure": 0.0,
+          "hazard_share": 0.0,
+          "max_class": null,
+          "share": {
+            "low": 0.0,
+            "high": 0.0,
+            "moderate": 0.0
+          },
+          "samples": 61,
+          "radius_m": 1000,
+          "max_index": null,
+          "flash_share": 0.0,
+          "river_share": 0.0
+        },
+        "occupancy": {
+          "level": 2,
+          "sold": 60,
+          "total": 188,
+          "share": 0.319
+        },
+        "construction": {
+          "level": 3,
+          "sold": 60,
+          "total": 188,
+          "share": 0.319
+        },
+        "overall": 3.5
+      },
+      "caveats": [],
+      "source_url": "https://sikumbang.tapera.go.id/lokasi-perumahan/GRT0920092020T001",
+      "retrieved": "2026-11-15",
+      "distance_m": null
+    },
+    {
+      "id": "ghani-margaluyu-residence",
+      "source_id": "GRT0920092024T002",
+      "name": "Ghani Margaluyu Residence",
+      "developer": "PT Ghani Rahma Lesmana",
+      "association": "APERSI",
+      "region": "garut",
+      "kabupaten": "Kabupaten Garut",
+      "kecamatan": "Leles",
+      "desa": "Margaluyu",
+      "address": "",
+      "lon": 107.91178,
+      "lat": -7.11624,
+      "location_precision": "desa",
+      "registered_year": 2024,
+      "units": {
+        "subsidized_available": 238,
+        "subsidized_sold": 11,
+        "commercial_available": null,
+        "commercial_sold": null
+      },
+      "price_from_idr": 166000000,
+      "price_to_idr": 166000000,
+      "listings": [
+        {
+          "name": "Tipe 36/60 (PMK 2024)",
+          "subsidized": true,
+          "price_idr": 166000000,
+          "building_m2": 36,
+          "land_m2": 60,
+          "bedrooms": 2,
+          "bathrooms": 1,
+          "specs": ""
+        }
+      ],
+      "ratings": {
+        "access": {
+          "level": 4,
+          "score": 76,
+          "road": {
+            "name": null,
+            "class": "primary",
+            "distance_m": 537,
+            "score": 85
+          },
+          "centre": {
+            "name": "Leles",
+            "distance_m": 1413,
+            "score": 83
+          },
+          "city": {
+            "name": "Alun-Alun Garut",
+            "distance_m": 11131,
+            "score": 63
+          },
+          "station": {
+            "name": "Karangsari",
+            "distance_m": 2917,
+            "score": 56
+          }
+        },
+        "flood": {
+          "level": 5,
+          "exposure": 0.0,
+          "hazard_share": 0.0,
+          "max_class": null,
+          "share": {
+            "low": 0.0,
+            "high": 0.0,
+            "moderate": 0.0
+          },
+          "samples": 61,
+          "radius_m": 1000,
+          "max_index": null,
+          "flash_share": 0.0,
+          "river_share": 0.0
+        },
+        "occupancy": {
+          "level": 1,
+          "sold": 11,
+          "total": 249,
+          "share": 0.044
+        },
+        "construction": {
+          "level": 2,
+          "sold": 11,
+          "total": 249,
+          "share": 0.044
+        },
+        "overall": 3.0
+      },
+      "caveats": [],
+      "source_url": "https://sikumbang.tapera.go.id/lokasi-perumahan/GRT0920092024T002",
+      "retrieved": "2026-11-15",
+      "distance_m": null
+    },
+    {
+      "id": "grand-tunas-regency",
+      "source_id": "GRT0920092023T002",
+      "name": "Grand Tunas Regency",
+      "developer": "Tunas Prima Buana",
+      "association": "REI",
+      "region": "garut",
+      "kabupaten": "Kabupaten Garut",
+      "kecamatan": "Leles",
+      "desa": "Margaluyu",
+      "address": "Kantor pemasaran: Jl. Pasopati RT 002 RW 005, Margaluyu, Leles",
+      "lon": 107.91178,
+      "lat": -7.11624,
+      "location_precision": "desa",
+      "registered_year": 2023,
+      "units": {
+        "subsidized_available": 196,
+        "subsidized_sold": 14,
+        "commercial_available": 33,
+        "commercial_sold": 0
+      },
+      "price_from_idr": 162000000,
+      "price_to_idr": 162000000,
+      "listings": [
+        {
+          "name": "Tipe 30",
+          "subsidized": true,
+          "price_idr": 162000000,
+          "building_m2": 30,
+          "land_m2": 60,
+          "bedrooms": 2,
+          "bathrooms": 1,
+          "specs": ""
+        },
+        {
+          "name": "Tipe 36",
+          "subsidized": false,
+          "price_idr": 250000000,
+          "building_m2": 36,
+          "land_m2": 72,
+          "bedrooms": null,
+          "bathrooms": null,
+          "specs": ""
+        }
+      ],
+      "ratings": {
+        "access": {
+          "level": 4,
+          "score": 76,
+          "road": {
+            "name": null,
+            "class": "primary",
+            "distance_m": 537,
+            "score": 85
+          },
+          "centre": {
+            "name": "Leles",
+            "distance_m": 1413,
+            "score": 83
+          },
+          "city": {
+            "name": "Alun-Alun Garut",
+            "distance_m": 11131,
+            "score": 63
+          },
+          "station": {
+            "name": "Karangsari",
+            "distance_m": 2917,
+            "score": 56
+          }
+        },
+        "flood": {
+          "level": 5,
+          "exposure": 0.0,
+          "hazard_share": 0.0,
+          "max_class": null,
+          "share": {
+            "low": 0.0,
+            "high": 0.0,
+            "moderate": 0.0
+          },
+          "samples": 61,
+          "radius_m": 1000,
+          "max_index": null,
+          "flash_share": 0.0,
+          "river_share": 0.0
+        },
+        "occupancy": {
+          "level": 1,
+          "sold": 14,
+          "total": 243,
+          "share": 0.058
+        },
+        "construction": {
+          "level": 2,
+          "sold": 14,
+          "total": 243,
+          "share": 0.058
+        },
+        "overall": 3.0
+      },
+      "caveats": [],
+      "source_url": "https://sikumbang.tapera.go.id/lokasi-perumahan/GRT0920092023T002",
+      "retrieved": "2026-11-15",
+      "distance_m": null
+    },
+    {
+      "id": "griya-rengganis",
+      "source_id": "GRT0920082023T001",
+      "name": "Griya Rengganis",
+      "developer": "Bumi Sekar Rengganis",
+      "association": null,
+      "region": "garut",
+      "kabupaten": "Kabupaten Garut",
+      "kecamatan": "Leles",
+      "desa": "Kandangmukti",
+      "address": "",
+      "lon": 107.88898,
+      "lat": -7.10328,
+      "location_precision": "desa",
+      "registered_year": 2023,
+      "units": null,
+      "price_from_idr": null,
+      "price_to_idr": null,
+      "listings": [],
+      "ratings": {
+        "access": {
+          "level": 4,
+          "score": 68,
+          "road": {
+            "name": "Jalan Otto Iskandar Dinata",
+            "class": "primary",
+            "distance_m": 1008,
+            "score": 65
+          },
+          "centre": {
+            "name": "Leles",
+            "distance_m": 1489,
+            "score": 82
+          },
+          "city": {
+            "name": "Alun-Alun Garut",
+            "distance_m": 12583,
+            "score": 56
+          },
+          "station": {
+            "name": "Leles",
+            "distance_m": 2402,
+            "score": 65
+          }
+        },
+        "flood": {
+          "level": 3,
+          "exposure": 0.137,
+          "hazard_share": 0.197,
+          "max_class": "high",
+          "share": {
+            "low": 0.049,
+            "high": 0.066,
+            "moderate": 0.082
+          },
+          "samples": 61,
+          "radius_m": 1000,
+          "max_index": 0.935,
+          "flash_share": 0.164,
+          "river_share": 0.049
+        },
+        "occupancy": {
+          "level": null
+        },
+        "construction": {
+          "level": null
+        },
+        "overall": 3.5
+      },
+      "caveats": [
+        "Rincian unit dan tipe belum terbaca: hanya halaman site plan Sikumbang yang tersedia."
+      ],
+      "source_url": "https://sikumbang.tapera.go.id/lokasi-perumahan/GRT0920082023T001",
+      "retrieved": "2026-11-15",
+      "distance_m": null
+    },
+    {
+      "id": "hijra-pasopati-land",
+      "source_id": "GRT0920092024T001",
+      "name": "Hijra Pasopati Land",
+      "developer": "Hijra Amanah Property",
+      "association": "APERSI",
+      "region": "garut",
+      "kabupaten": "Kabupaten Garut",
+      "kecamatan": "Leles",
+      "desa": "Margaluyu",
+      "address": "",
+      "lon": 107.91178,
+      "lat": -7.11624,
+      "location_precision": "desa",
+      "registered_year": 2024,
+      "units": {
+        "subsidized_available": 44,
+        "subsidized_sold": 169,
+        "commercial_available": 0,
+        "commercial_sold": 0
+      },
+      "price_from_idr": 166000000,
+      "price_to_idr": 166000000,
+      "listings": [
+        {
+          "name": "Tipe 36/60",
+          "subsidized": true,
+          "price_idr": 166000000,
+          "building_m2": 36,
+          "land_m2": 60,
+          "bedrooms": 2,
+          "bathrooms": 1,
+          "specs": ""
+        }
+      ],
+      "ratings": {
+        "access": {
+          "level": 4,
+          "score": 76,
+          "road": {
+            "name": null,
+            "class": "primary",
+            "distance_m": 537,
+            "score": 85
+          },
+          "centre": {
+            "name": "Leles",
+            "distance_m": 1413,
+            "score": 83
+          },
+          "city": {
+            "name": "Alun-Alun Garut",
+            "distance_m": 11131,
+            "score": 63
+          },
+          "station": {
+            "name": "Karangsari",
+            "distance_m": 2917,
+            "score": 56
+          }
+        },
+        "flood": {
+          "level": 5,
+          "exposure": 0.0,
+          "hazard_share": 0.0,
+          "max_class": null,
+          "share": {
+            "low": 0.0,
+            "high": 0.0,
+            "moderate": 0.0
+          },
+          "samples": 61,
+          "radius_m": 1000,
+          "max_index": null,
+          "flash_share": 0.0,
+          "river_share": 0.0
+        },
+        "occupancy": {
+          "level": 4,
+          "sold": 169,
+          "total": 213,
+          "share": 0.793
+        },
+        "construction": {
+          "level": 4,
+          "sold": 169,
+          "total": 213,
+          "share": 0.793
+        },
+        "overall": 4.2
+      },
+      "caveats": [],
+      "source_url": "https://sikumbang.tapera.go.id/lokasi-perumahan/GRT0920092024T001",
+      "retrieved": "2026-11-15",
+      "distance_m": null
+    },
+    {
+      "id": "renjana-pasopati",
+      "source_id": "GRT0920062024T001",
+      "name": "Renjana Pasopati",
+      "developer": "PT Terra Renjana Adyatama",
+      "association": "ASPRUMNAS",
+      "region": "garut",
+      "kabupaten": "Kabupaten Garut",
+      "kecamatan": "Leles",
+      "desa": "Cangkuang",
+      "address": "",
+      "lon": 107.91117,
+      "lat": -7.10312,
+      "location_precision": "desa",
+      "registered_year": 2024,
+      "units": {
+        "subsidized_available": 56,
+        "subsidized_sold": 76,
+        "commercial_available": 3,
+        "commercial_sold": 0
+      },
+      "price_from_idr": 166000000,
+      "price_to_idr": 166000000,
+      "listings": [
+        {
+          "name": "Tipe 34/60",
+          "subsidized": true,
+          "price_idr": 166000000,
+          "building_m2": 34,
+          "land_m2": 60,
+          "bedrooms": 2,
+          "bathrooms": 1,
+          "specs": ""
+        },
+        {
+          "name": "Tipe 36/60",
+          "subsidized": false,
+          "price_idr": 250000000,
+          "building_m2": 36,
+          "land_m2": 60,
+          "bedrooms": null,
+          "bathrooms": null,
+          "specs": ""
+        }
+      ],
+      "ratings": {
+        "access": {
+          "level": 4,
+          "score": 70,
+          "road": {
+            "name": null,
+            "class": "primary",
+            "distance_m": 902,
+            "score": 69
+          },
+          "centre": {
+            "name": "Leles",
+            "distance_m": 1415,
+            "score": 83
+          },
+          "city": {
+            "name": "Alun-Alun Garut",
+            "distance_m": 12570,
+            "score": 56
+          },
+          "station": {
+            "name": "Karangsari",
+            "distance_m": 2268,
+            "score": 68
+          }
+        },
+        "flood": {
+          "level": 4,
+          "exposure": 0.06,
+          "hazard_share": 0.082,
+          "max_class": "high",
+          "share": {
+            "low": 0.016,
+            "high": 0.033,
+            "moderate": 0.033
+          },
+          "samples": 61,
+          "radius_m": 1000,
+          "max_index": 0.791,
+          "flash_share": 0.049,
+          "river_share": 0.082
+        },
+        "occupancy": {
+          "level": 3,
+          "sold": 76,
+          "total": 135,
+          "share": 0.563
+        },
+        "construction": {
+          "level": 3,
+          "sold": 76,
+          "total": 135,
+          "share": 0.563
+        },
+        "overall": 3.5
+      },
+      "caveats": [
+        "Luas bangunan tipe 34/60 tercatat 34 m² di satu entri Sikumbang dan 30 m² di entri lain."
+      ],
+      "source_url": "https://sikumbang.tapera.go.id/lokasi-perumahan/GRT0920062024T001",
+      "retrieved": "2026-11-15",
+      "distance_m": null
+    },
+    {
+      "id": "ridwan-regency-leles",
+      "source_id": "GRT0920062024T002",
+      "name": "Ridwan Regency Leles",
+      "developer": "PT Ridwan Berkah Jaya",
+      "association": "APERSI",
+      "region": "garut",
+      "kabupaten": "Kabupaten Garut",
+      "kecamatan": "Leles",
+      "desa": "Cangkuang",
+      "address": "Kantor pemasaran: Blok A, Cangkuang, Leles",
+      "lon": 107.91117,
+      "lat": -7.10312,
+      "location_precision": "desa",
+      "registered_year": 2024,
+      "units": {
+        "subsidized_available": 49,
+        "subsidized_sold": 159,
+        "commercial_available": 0,
+        "commercial_sold": 0
+      },
+      "price_from_idr": 166000000,
+      "price_to_idr": 166000000,
+      "listings": [
+        {
+          "name": "Tipe 34",
+          "subsidized": true,
+          "price_idr": 166000000,
+          "building_m2": 34,
+          "land_m2": 60,
+          "bedrooms": 2,
+          "bathrooms": 2,
+          "specs": "Atap spandek pasir, dinding bata merah, lantai keramik, pondasi batu belah"
+        }
+      ],
+      "ratings": {
+        "access": {
+          "level": 4,
+          "score": 70,
+          "road": {
+            "name": null,
+            "class": "primary",
+            "distance_m": 902,
+            "score": 69
+          },
+          "centre": {
+            "name": "Leles",
+            "distance_m": 1415,
+            "score": 83
+          },
+          "city": {
+            "name": "Alun-Alun Garut",
+            "distance_m": 12570,
+            "score": 56
+          },
+          "station": {
+            "name": "Karangsari",
+            "distance_m": 2268,
+            "score": 68
+          }
+        },
+        "flood": {
+          "level": 4,
+          "exposure": 0.06,
+          "hazard_share": 0.082,
+          "max_class": "high",
+          "share": {
+            "low": 0.016,
+            "high": 0.033,
+            "moderate": 0.033
+          },
+          "samples": 61,
+          "radius_m": 1000,
+          "max_index": 0.791,
+          "flash_share": 0.049,
+          "river_share": 0.082
+        },
+        "occupancy": {
+          "level": 4,
+          "sold": 159,
+          "total": 208,
+          "share": 0.764
+        },
+        "construction": {
+          "level": 4,
+          "sold": 159,
+          "total": 208,
+          "share": 0.764
+        },
+        "overall": 4.0
+      },
+      "caveats": [],
+      "source_url": "https://sikumbang.tapera.go.id/lokasi-perumahan/GRT0920062024T002",
+      "retrieved": "2026-11-15",
+      "distance_m": null
+    },
+    {
+      "id": "sindangsuka-regency",
+      "source_id": "GRT0920042024T001",
+      "name": "Sindangsuka Regency",
+      "developer": "Cahaya Lestari Land",
+      "association": "APERSI",
+      "region": "garut",
+      "kabupaten": "Kabupaten Garut",
+      "kecamatan": "Leles",
+      "desa": "Sukarame",
+      "address": "Kantor pemasaran: Jl. Desa Sukarame No. 68, Leles",
+      "lon": 107.92714,
+      "lat": -7.11816,
+      "location_precision": "desa",
+      "registered_year": 2024,
+      "units": {
+        "subsidized_available": 61,
+        "subsidized_sold": 5,
+        "commercial_available": 0,
+        "commercial_sold": 0
+      },
+      "price_from_idr": 166000000,
+      "price_to_idr": 166000000,
+      "listings": [
+        {
+          "name": "Tipe 30",
+          "subsidized": true,
+          "price_idr": 166000000,
+          "building_m2": 30,
+          "land_m2": 60,
+          "bedrooms": 2,
+          "bathrooms": 1,
+          "specs": ""
+        }
+      ],
+      "ratings": {
+        "access": {
+          "level": 4,
+          "score": 75,
+          "road": {
+            "name": null,
+            "class": "primary",
+            "distance_m": 282,
+            "score": 96
+          },
+          "centre": {
+            "name": "Leles",
+            "distance_m": 3072,
+            "score": 53
+          },
+          "city": {
+            "name": "Alun-Alun Garut",
+            "distance_m": 11224,
+            "score": 63
+          },
+          "station": {
+            "name": "Karangsari",
+            "distance_m": 2242,
+            "score": 68
+          }
+        },
+        "flood": {
+          "level": 4,
+          "exposure": 0.033,
+          "hazard_share": 0.033,
+          "max_class": "high",
+          "share": {
+            "low": 0.0,
+            "high": 0.033,
+            "moderate": 0.0
+          },
+          "samples": 61,
+          "radius_m": 1000,
+          "max_index": 0.833,
+          "flash_share": 0.0,
+          "river_share": 0.033
+        },
+        "occupancy": {
+          "level": 1,
+          "sold": 5,
+          "total": 66,
+          "share": 0.076
+        },
+        "construction": {
+          "level": 2,
+          "sold": 5,
+          "total": 66,
+          "share": 0.076
+        },
+        "overall": 2.8
+      },
+      "caveats": [],
+      "source_url": "https://sikumbang.tapera.go.id/lokasi-perumahan/GRT0920042024T001",
+      "retrieved": "2026-11-15",
+      "distance_m": null
+    },
+    {
+      "id": "tamaland",
+      "source_id": "GRT0920092025T001",
+      "name": "Tamaland",
+      "developer": "PT Ingsu Tama Lubista",
+      "association": "ASPRUMNAS",
+      "region": "garut",
+      "kabupaten": "Kabupaten Garut",
+      "kecamatan": "Leles",
+      "desa": "Margaluyu",
+      "address": "",
+      "lon": 107.91178,
+      "lat": -7.11624,
+      "location_precision": "desa",
+      "registered_year": 2025,
+      "units": {
+        "subsidized_available": 243,
+        "subsidized_sold": 0,
+        "commercial_available": 163,
+        "commercial_sold": 0
+      },
+      "price_from_idr": 166000000,
+      "price_to_idr": 166000000,
+      "listings": [
+        {
+          "name": "Tipe Meru 32/60",
+          "subsidized": true,
+          "price_idr": 166000000,
+          "building_m2": 32,
+          "land_m2": 60,
+          "bedrooms": 2,
+          "bathrooms": 1,
+          "specs": ""
+        }
+      ],
+      "ratings": {
+        "access": {
+          "level": 4,
+          "score": 76,
+          "road": {
+            "name": null,
+            "class": "primary",
+            "distance_m": 537,
+            "score": 85
+          },
+          "centre": {
+            "name": "Leles",
+            "distance_m": 1413,
+            "score": 83
+          },
+          "city": {
+            "name": "Alun-Alun Garut",
+            "distance_m": 11131,
+            "score": 63
+          },
+          "station": {
+            "name": "Karangsari",
+            "distance_m": 2917,
+            "score": 56
+          }
+        },
+        "flood": {
+          "level": 5,
+          "exposure": 0.0,
+          "hazard_share": 0.0,
+          "max_class": null,
+          "share": {
+            "low": 0.0,
+            "high": 0.0,
+            "moderate": 0.0
+          },
+          "samples": 61,
+          "radius_m": 1000,
+          "max_index": null,
+          "flash_share": 0.0,
+          "river_share": 0.0
+        },
+        "occupancy": {
+          "level": 1,
+          "sold": 0,
+          "total": 406,
+          "share": 0.0
+        },
+        "construction": {
+          "level": 1,
+          "sold": 0,
+          "total": 406,
+          "share": 0.0
+        },
+        "overall": 2.8
+      },
+      "caveats": [],
+      "source_url": "https://sikumbang.tapera.go.id/lokasi-perumahan/GRT0920092025T001",
+      "retrieved": "2026-11-15",
+      "distance_m": null
+    },
+    {
+      "id": "aka-kanaya-wanaraja",
+      "source_id": "GRT0320082023T003",
+      "name": "Aka Kanaya Wanaraja",
+      "developer": "Kanaya Arafah Putri",
+      "association": "APERSI",
+      "region": "garut",
+      "kabupaten": "Kabupaten Garut",
+      "kecamatan": "Wanaraja",
+      "desa": "Sindangratu",
+      "address": "Kantor pemasaran: Blok A-2, Jl. Ciamana, Sindangratu, Wanaraja",
+      "lon": 107.9974,
+      "lat": -7.18288,
+      "location_precision": "desa",
+      "registered_year": 2023,
+      "units": {
+        "subsidized_available": 1,
+        "subsidized_sold": 101,
+        "commercial_available": 0,
+        "commercial_sold": 0
+      },
+      "price_from_idr": 150500000,
+      "price_to_idr": 162000000,
+      "listings": [
+        {
+          "name": "Tipe 30 New",
+          "subsidized": true,
+          "price_idr": 162000000,
+          "building_m2": 30,
+          "land_m2": 60,
+          "bedrooms": 2,
+          "bathrooms": 1,
+          "specs": ""
+        },
+        {
+          "name": "Tipe 30/60",
+          "subsidized": true,
+          "price_idr": 150500000,
+          "building_m2": 30,
+          "land_m2": 60,
+          "bedrooms": 2,
+          "bathrooms": 1,
+          "specs": ""
+        }
+      ],
+      "ratings": {
+        "access": {
+          "level": 3,
+          "score": 48,
+          "road": {
+            "name": "Jalan KH. Yusuf Tauzirie",
+            "class": "secondary",
+            "distance_m": 1974,
+            "score": 23
+          },
+          "centre": {
+            "name": "Wanaraja",
+            "distance_m": 2040,
+            "score": 72
+          },
+          "city": {
+            "name": "Alun-Alun Garut",
+            "distance_m": 11229,
+            "score": 63
+          },
+          "station": {
+            "name": "Wanaraja",
+            "distance_m": 3036,
+            "score": 54
+          }
+        },
+        "flood": {
+          "level": 4,
+          "exposure": 0.088,
+          "hazard_share": 0.099,
+          "max_class": "high",
+          "share": {
+            "low": 0.0,
+            "high": 0.066,
+            "moderate": 0.033
+          },
+          "samples": 61,
+          "radius_m": 1000,
+          "max_index": 0.958,
+          "flash_share": 0.098,
+          "river_share": 0.0
+        },
+        "occupancy": {
+          "level": 5,
+          "sold": 101,
+          "total": 102,
+          "share": 0.99
+        },
+        "construction": {
+          "level": 5,
+          "sold": 101,
+          "total": 102,
+          "share": 0.99
+        },
+        "overall": 4.2
+      },
+      "caveats": [],
+      "source_url": "https://sikumbang.tapera.go.id/lokasi-perumahan/GRT0320082023T003",
+      "retrieved": "2026-11-15",
+      "distance_m": null
+    },
+    {
+      "id": "aulia-wanaraja",
+      "source_id": "GRT0320012020T001",
+      "name": "Aulia Wanaraja",
+      "developer": "Aulia Mitra Kreasi",
+      "association": "APERSI",
+      "region": "garut",
+      "kabupaten": "Kabupaten Garut",
+      "kecamatan": "Wanaraja",
+      "desa": "Wanaraja",
+      "address": "",
+      "lon": 107.98169,
+      "lat": -7.17321,
+      "location_precision": "desa",
+      "registered_year": 2020,
+      "units": {
+        "subsidized_available": 10,
+        "subsidized_sold": 229,
+        "commercial_available": 22,
+        "commercial_sold": 39
+      },
+      "price_from_idr": 150000000,
+      "price_to_idr": 166000000,
+      "listings": [
+        {
+          "name": "Tipe 36/72 (PMK 2024)",
+          "subsidized": true,
+          "price_idr": 166000000,
+          "building_m2": 36,
+          "land_m2": 72,
+          "bedrooms": null,
+          "bathrooms": null,
+          "specs": ""
+        },
+        {
+          "name": "Tipe 36/72",
+          "subsidized": true,
+          "price_idr": 150000000,
+          "building_m2": 36,
+          "land_m2": 72,
+          "bedrooms": null,
+          "bathrooms": null,
+          "specs": ""
+        },
+        {
+          "name": "Tipe 36/72",
+          "subsidized": false,
+          "price_idr": 217800000,
+          "building_m2": 36,
+          "land_m2": 72,
+          "bedrooms": null,
+          "bathrooms": null,
+          "specs": ""
+        },
+        {
+          "name": "Tipe 42/72",
+          "subsidized": false,
+          "price_idr": 261150000,
+          "building_m2": 42,
+          "land_m2": 72,
+          "bedrooms": null,
+          "bathrooms": null,
+          "specs": ""
+        },
+        {
+          "name": "Tipe 45/84",
+          "subsidized": false,
+          "price_idr": 282050000,
+          "building_m2": 45,
+          "land_m2": 84,
+          "bedrooms": null,
+          "bathrooms": null,
+          "specs": ""
+        },
+        {
+          "name": "Tipe 40/70",
+          "subsidized": false,
+          "price_idr": 291400000,
+          "building_m2": 40,
+          "land_m2": 70,
+          "bedrooms": null,
+          "bathrooms": null,
+          "specs": ""
+        }
+      ],
+      "ratings": {
+        "access": {
+          "level": 5,
+          "score": 92,
+          "road": {
+            "name": "Jalan KH. Yusuf Tauzirie",
+            "class": "secondary",
+            "distance_m": 57,
+            "score": 100
+          },
+          "centre": {
+            "name": "Wanaraja",
+            "distance_m": 0,
+            "score": 100
+          },
+          "city": {
+            "name": "Alun-Alun Garut",
+            "distance_m": 10067,
+            "score": 68
+          },
+          "station": {
+            "name": "Wanaraja",
+            "distance_m": 1077,
+            "score": 90
+          }
+        },
+        "flood": {
+          "level": 3,
+          "exposure": 0.148,
+          "hazard_share": 0.23,
+          "max_class": "high",
+          "share": {
+            "low": 0.066,
+            "high": 0.049,
+            "moderate": 0.115
+          },
+          "samples": 61,
+          "radius_m": 1000,
+          "max_index": 1.0,
+          "flash_share": 0.213,
+          "river_share": 0.016
+        },
+        "occupancy": {
+          "level": 4,
+          "sold": 268,
+          "total": 300,
+          "share": 0.893
+        },
+        "construction": {
+          "level": 4,
+          "sold": 268,
+          "total": 300,
+          "share": 0.893
+        },
+        "overall": 4.0
+      },
+      "caveats": [],
+      "source_url": "https://sikumbang.tapera.go.id/lokasi-perumahan/GRT0320012020T001",
+      "retrieved": "2026-11-15",
+      "distance_m": null
+    },
+    {
+      "id": "bumi-sindangratu-indah",
+      "source_id": "GRT0320082022T001",
+      "name": "Bumi Sindangratu Indah",
+      "developer": "PT Patraya Cipta Sarana",
+      "association": "APERSI",
+      "region": "garut",
+      "kabupaten": "Kabupaten Garut",
+      "kecamatan": "Wanaraja",
+      "desa": "Sindangratu",
+      "address": "Kantor pemasaran: Perum Bumi Sindangratu Indah Blok A No. 19, Sindangratu",
+      "lon": 107.9974,
+      "lat": -7.18288,
+      "location_precision": "desa",
+      "registered_year": 2022,
+      "units": {
+        "subsidized_available": 5,
+        "subsidized_sold": 81,
+        "commercial_available": 0,
+        "commercial_sold": 0
+      },
+      "price_from_idr": 148000000,
+      "price_to_idr": 148000000,
+      "listings": [
+        {
+          "name": "Tipe 36/60",
+          "subsidized": true,
+          "price_idr": 148000000,
+          "building_m2": 36,
+          "land_m2": 60,
+          "bedrooms": 2,
+          "bathrooms": 1,
+          "specs": ""
+        }
+      ],
+      "ratings": {
+        "access": {
+          "level": 3,
+          "score": 48,
+          "road": {
+            "name": "Jalan KH. Yusuf Tauzirie",
+            "class": "secondary",
+            "distance_m": 1974,
+            "score": 23
+          },
+          "centre": {
+            "name": "Wanaraja",
+            "distance_m": 2040,
+            "score": 72
+          },
+          "city": {
+            "name": "Alun-Alun Garut",
+            "distance_m": 11229,
+            "score": 63
+          },
+          "station": {
+            "name": "Wanaraja",
+            "distance_m": 3036,
+            "score": 54
+          }
+        },
+        "flood": {
+          "level": 4,
+          "exposure": 0.088,
+          "hazard_share": 0.099,
+          "max_class": "high",
+          "share": {
+            "low": 0.0,
+            "high": 0.066,
+            "moderate": 0.033
+          },
+          "samples": 61,
+          "radius_m": 1000,
+          "max_index": 0.958,
+          "flash_share": 0.098,
+          "river_share": 0.0
+        },
+        "occupancy": {
+          "level": 5,
+          "sold": 81,
+          "total": 86,
+          "share": 0.942
+        },
+        "construction": {
+          "level": 4,
+          "sold": 81,
+          "total": 86,
+          "share": 0.942
+        },
+        "overall": 4.0
+      },
+      "caveats": [],
+      "source_url": "https://sikumbang.tapera.go.id/lokasi-perumahan/GRT0320082022T001",
+      "retrieved": "2026-11-15",
+      "distance_m": null
+    },
+    {
+      "id": "dinamika-lestari-residence",
+      "source_id": "GRT0320082022T002",
+      "name": "Dinamika Lestari Residence",
+      "developer": "Artha Dinamika Property",
+      "association": "APERSI",
+      "region": "garut",
+      "kabupaten": "Kabupaten Garut",
+      "kecamatan": "Wanaraja",
+      "desa": "Sindangratu",
+      "address": "",
+      "lon": 107.9974,
+      "lat": -7.18288,
+      "location_precision": "desa",
+      "registered_year": 2022,
+      "units": {
+        "subsidized_available": 4,
+        "subsidized_sold": 16,
+        "commercial_available": null,
+        "commercial_sold": null
+      },
+      "price_from_idr": 150500000,
+      "price_to_idr": 150500000,
+      "listings": [
+        {
+          "name": "Subsidi 34/60",
+          "subsidized": true,
+          "price_idr": 150500000,
+          "building_m2": 34,
+          "land_m2": 60,
+          "bedrooms": 2,
+          "bathrooms": 1,
+          "specs": ""
+        },
+        {
+          "name": "Komersil 42/84",
+          "subsidized": false,
+          "price_idr": 300000000,
+          "building_m2": 42,
+          "land_m2": 84,
+          "bedrooms": 2,
+          "bathrooms": 1,
+          "specs": ""
+        },
+        {
+          "name": "Ruko",
+          "subsidized": false,
+          "price_idr": 450000000,
+          "building_m2": 80,
+          "land_m2": 40,
+          "bedrooms": null,
+          "bathrooms": 2,
+          "specs": ""
+        }
+      ],
+      "ratings": {
+        "access": {
+          "level": 3,
+          "score": 48,
+          "road": {
+            "name": "Jalan KH. Yusuf Tauzirie",
+            "class": "secondary",
+            "distance_m": 1974,
+            "score": 23
+          },
+          "centre": {
+            "name": "Wanaraja",
+            "distance_m": 2040,
+            "score": 72
+          },
+          "city": {
+            "name": "Alun-Alun Garut",
+            "distance_m": 11229,
+            "score": 63
+          },
+          "station": {
+            "name": "Wanaraja",
+            "distance_m": 3036,
+            "score": 54
+          }
+        },
+        "flood": {
+          "level": 4,
+          "exposure": 0.088,
+          "hazard_share": 0.099,
+          "max_class": "high",
+          "share": {
+            "low": 0.0,
+            "high": 0.066,
+            "moderate": 0.033
+          },
+          "samples": 61,
+          "radius_m": 1000,
+          "max_index": 0.958,
+          "flash_share": 0.098,
+          "river_share": 0.0
+        },
+        "occupancy": {
+          "level": 4,
+          "sold": 16,
+          "total": 20,
+          "share": 0.8
+        },
+        "construction": {
+          "level": 4,
+          "sold": 16,
+          "total": 20,
+          "share": 0.8
+        },
+        "overall": 3.8
+      },
+      "caveats": [],
+      "source_url": "https://sikumbang.tapera.go.id/lokasi-perumahan/GRT0320082022T002",
+      "retrieved": "2026-11-15",
+      "distance_m": null
+    },
+    {
+      "id": "dinamika-lestari-residence-registrasi-2023",
+      "source_id": "GRT0320082023T001",
+      "name": "Dinamika Lestari Residence (registrasi 2023)",
+      "developer": "Artha Dinamika Property",
+      "association": "APERSI",
+      "region": "garut",
+      "kabupaten": "Kabupaten Garut",
+      "kecamatan": "Wanaraja",
+      "desa": "Sindangratu",
+      "address": "",
+      "lon": 107.9974,
+      "lat": -7.18288,
+      "location_precision": "desa",
+      "registered_year": 2023,
+      "units": {
+        "subsidized_available": 0,
+        "subsidized_sold": 1,
+        "commercial_available": null,
+        "commercial_sold": null
+      },
+      "price_from_idr": 150500000,
+      "price_to_idr": 150500000,
+      "listings": [
+        {
+          "name": "Subsidi 34/60",
+          "subsidized": true,
+          "price_idr": 150500000,
+          "building_m2": 34,
+          "land_m2": 60,
+          "bedrooms": 2,
+          "bathrooms": 1,
+          "specs": ""
+        }
+      ],
+      "ratings": {
+        "access": {
+          "level": 3,
+          "score": 48,
+          "road": {
+            "name": "Jalan KH. Yusuf Tauzirie",
+            "class": "secondary",
+            "distance_m": 1974,
+            "score": 23
+          },
+          "centre": {
+            "name": "Wanaraja",
+            "distance_m": 2040,
+            "score": 72
+          },
+          "city": {
+            "name": "Alun-Alun Garut",
+            "distance_m": 11229,
+            "score": 63
+          },
+          "station": {
+            "name": "Wanaraja",
+            "distance_m": 3036,
+            "score": 54
+          }
+        },
+        "flood": {
+          "level": 4,
+          "exposure": 0.088,
+          "hazard_share": 0.099,
+          "max_class": "high",
+          "share": {
+            "low": 0.0,
+            "high": 0.066,
+            "moderate": 0.033
+          },
+          "samples": 61,
+          "radius_m": 1000,
+          "max_index": 0.958,
+          "flash_share": 0.098,
+          "river_share": 0.0
+        },
+        "occupancy": {
+          "level": 5,
+          "sold": 1,
+          "total": 1,
+          "share": 1.0
+        },
+        "construction": {
+          "level": 5,
+          "sold": 1,
+          "total": 1,
+          "share": 1.0
+        },
+        "overall": 4.2
+      },
+      "caveats": [
+        "Registrasi kedua untuk perumahan yang sama; hanya 1 unit tercatat."
+      ],
+      "source_url": "https://sikumbang.tapera.go.id/lokasi-perumahan/GRT0320082023T001",
+      "retrieved": "2026-11-15",
+      "distance_m": null
+    },
+    {
+      "id": "ghani-cinunuk-indah",
+      "source_id": "GRT0320012022T001",
+      "name": "Ghani Cinunuk Indah",
+      "developer": "Ghani Rahma Lesmana",
+      "association": "APERSI",
+      "region": "garut",
+      "kabupaten": "Kabupaten Garut",
+      "kecamatan": "Wanaraja",
+      "desa": "Wanaraja",
+      "address": "Kantor pemasaran: Perumahan Aulia Wanaraja Blok D No. 09, RT 001 RW 009, Desa Wanaraja",
+      "lon": 107.98169,
+      "lat": -7.17321,
+      "location_precision": "desa",
+      "registered_year": 2022,
+      "units": {
+        "subsidized_available": 19,
+        "subsidized_sold": 90,
+        "commercial_available": null,
+        "commercial_sold": null
+      },
+      "price_from_idr": 150500000,
+      "price_to_idr": 150500000,
+      "listings": [
+        {
+          "name": "Tipe 36/60",
+          "subsidized": true,
+          "price_idr": 150500000,
+          "building_m2": 36,
+          "land_m2": 60,
+          "bedrooms": 2,
+          "bathrooms": 1,
+          "specs": ""
+        }
+      ],
+      "ratings": {
+        "access": {
+          "level": 5,
+          "score": 92,
+          "road": {
+            "name": "Jalan KH. Yusuf Tauzirie",
+            "class": "secondary",
+            "distance_m": 57,
+            "score": 100
+          },
+          "centre": {
+            "name": "Wanaraja",
+            "distance_m": 0,
+            "score": 100
+          },
+          "city": {
+            "name": "Alun-Alun Garut",
+            "distance_m": 10067,
+            "score": 68
+          },
+          "station": {
+            "name": "Wanaraja",
+            "distance_m": 1077,
+            "score": 90
+          }
+        },
+        "flood": {
+          "level": 3,
+          "exposure": 0.148,
+          "hazard_share": 0.23,
+          "max_class": "high",
+          "share": {
+            "low": 0.066,
+            "high": 0.049,
+            "moderate": 0.115
+          },
+          "samples": 61,
+          "radius_m": 1000,
+          "max_index": 1.0,
+          "flash_share": 0.213,
+          "river_share": 0.016
+        },
+        "occupancy": {
+          "level": 4,
+          "sold": 90,
+          "total": 109,
+          "share": 0.826
+        },
+        "construction": {
+          "level": 4,
+          "sold": 90,
+          "total": 109,
+          "share": 0.826
+        },
+        "overall": 4.0
+      },
+      "caveats": [],
+      "source_url": "https://sikumbang.tapera.go.id/lokasi-perumahan/GRT0320012022T001",
+      "retrieved": "2026-11-15",
+      "distance_m": null
+    },
+    {
+      "id": "mughni-wanamekar-asri",
+      "source_id": "GRT0320022020T002",
+      "name": "Mughni Wanamekar Asri",
+      "developer": null,
+      "association": null,
+      "region": "garut",
+      "kabupaten": "Kabupaten Garut",
+      "kecamatan": "Wanaraja",
+      "desa": "Wanamekar",
+      "address": "Jalan Bebedahan, Wanamekar, Wanaraja",
+      "lon": 107.98133,
+      "lat": -7.17785,
+      "location_precision": "desa",
+      "registered_year": 2020,
+      "units": null,
+      "price_from_idr": null,
+      "price_to_idr": null,
+      "listings": [],
+      "ratings": {
+        "access": {
+          "level": 5,
+          "score": 90,
+          "road": {
+            "name": "Jalan KH. Yusuf Tauzirie",
+            "class": "secondary",
+            "distance_m": 242,
+            "score": 98
+          },
+          "centre": {
+            "name": "Wanaraja",
+            "distance_m": 515,
+            "score": 100
+          },
+          "city": {
+            "name": "Alun-Alun Garut",
+            "distance_m": 9798,
+            "score": 69
+          },
+          "station": {
+            "name": "Wanaraja",
+            "distance_m": 1527,
+            "score": 81
+          }
+        },
+        "flood": {
+          "level": 3,
+          "exposure": 0.17,
+          "hazard_share": 0.263,
+          "max_class": "high",
+          "share": {
+            "low": 0.082,
+            "high": 0.066,
+            "moderate": 0.115
+          },
+          "samples": 61,
+          "radius_m": 1000,
+          "max_index": 1.0,
+          "flash_share": 0.262,
+          "river_share": 0.0
+        },
+        "occupancy": {
+          "level": null
+        },
+        "construction": {
+          "level": null
+        },
+        "overall": 4.0
+      },
+      "caveats": [
+        "Rincian unit dan tipe belum terbaca dari Sikumbang."
+      ],
+      "source_url": "https://sikumbang.tapera.go.id/lokasi-perumahan/GRT0320022020T002",
+      "retrieved": "2026-11-15",
+      "distance_m": null
+    },
+    {
+      "id": "syifa-graha-wanamekar",
+      "source_id": "GRT0320022023T001",
+      "name": "Syifa Graha Wanamekar",
+      "developer": "Kaylla Putra Pratama",
+      "association": "APERSI",
+      "region": "garut",
+      "kabupaten": "Kabupaten Garut",
+      "kecamatan": "Wanaraja",
+      "desa": "Wanamekar",
+      "address": "",
+      "lon": 107.98133,
+      "lat": -7.17785,
+      "location_precision": "desa",
+      "registered_year": 2023,
+      "units": {
+        "subsidized_available": 59,
+        "subsidized_sold": 77,
+        "commercial_available": 1,
+        "commercial_sold": 2
+      },
+      "price_from_idr": 150500000,
+      "price_to_idr": 150500000,
+      "listings": [
+        {
+          "name": "Subsidi 30/60",
+          "subsidized": true,
+          "price_idr": 150500000,
+          "building_m2": 30,
+          "land_m2": 60,
+          "bedrooms": 2,
+          "bathrooms": 1,
+          "specs": ""
+        }
+      ],
+      "ratings": {
+        "access": {
+          "level": 5,
+          "score": 90,
+          "road": {
+            "name": "Jalan KH. Yusuf Tauzirie",
+            "class": "secondary",
+            "distance_m": 242,
+            "score": 98
+          },
+          "centre": {
+            "name": "Wanaraja",
+            "distance_m": 515,
+            "score": 100
+          },
+          "city": {
+            "name": "Alun-Alun Garut",
+            "distance_m": 9798,
+            "score": 69
+          },
+          "station": {
+            "name": "Wanaraja",
+            "distance_m": 1527,
+            "score": 81
+          }
+        },
+        "flood": {
+          "level": 3,
+          "exposure": 0.17,
+          "hazard_share": 0.263,
+          "max_class": "high",
+          "share": {
+            "low": 0.082,
+            "high": 0.066,
+            "moderate": 0.115
+          },
+          "samples": 61,
+          "radius_m": 1000,
+          "max_index": 1.0,
+          "flash_share": 0.262,
+          "river_share": 0.0
+        },
+        "occupancy": {
+          "level": 3,
+          "sold": 79,
+          "total": 139,
+          "share": 0.568
+        },
+        "construction": {
+          "level": 3,
+          "sold": 79,
+          "total": 139,
+          "share": 0.568
+        },
+        "overall": 3.5
+      },
+      "caveats": [],
+      "source_url": "https://sikumbang.tapera.go.id/lokasi-perumahan/GRT0320022023T001",
+      "retrieved": "2026-11-15",
+      "distance_m": null
+    },
+    {
+      "id": "talaga-pesona-intan",
+      "source_id": "GRT0320082020T002",
+      "name": "Talaga Pesona Intan",
+      "developer": "Farizi Persada Karya",
+      "association": null,
+      "region": "garut",
+      "kabupaten": "Kabupaten Garut",
+      "kecamatan": "Wanaraja",
+      "desa": "Sindangratu",
+      "address": "",
+      "lon": 107.9974,
+      "lat": -7.18288,
+      "location_precision": "desa",
+      "registered_year": 2020,
+      "units": null,
+      "price_from_idr": null,
+      "price_to_idr": null,
+      "listings": [],
+      "ratings": {
+        "access": {
+          "level": 3,
+          "score": 48,
+          "road": {
+            "name": "Jalan KH. Yusuf Tauzirie",
+            "class": "secondary",
+            "distance_m": 1974,
+            "score": 23
+          },
+          "centre": {
+            "name": "Wanaraja",
+            "distance_m": 2040,
+            "score": 72
+          },
+          "city": {
+            "name": "Alun-Alun Garut",
+            "distance_m": 11229,
+            "score": 63
+          },
+          "station": {
+            "name": "Wanaraja",
+            "distance_m": 3036,
+            "score": 54
+          }
+        },
+        "flood": {
+          "level": 4,
+          "exposure": 0.088,
+          "hazard_share": 0.099,
+          "max_class": "high",
+          "share": {
+            "low": 0.0,
+            "high": 0.066,
+            "moderate": 0.033
+          },
+          "samples": 61,
+          "radius_m": 1000,
+          "max_index": 0.958,
+          "flash_share": 0.098,
+          "river_share": 0.0
+        },
+        "occupancy": {
+          "level": null
+        },
+        "construction": {
+          "level": null
+        },
+        "overall": 3.5
+      },
+      "caveats": [
+        "Rincian unit dan tipe belum terbaca: hanya halaman site plan Sikumbang yang tersedia."
+      ],
+      "source_url": "https://sikumbang.tapera.go.id/lokasi-perumahan/GRT0320082020T002",
+      "retrieved": "2026-11-15",
+      "distance_m": null
+    },
+    {
+      "id": "talaga-pesona-intan-tahap-ii",
+      "source_id": "GRT0320082021T001",
+      "name": "Talaga Pesona Intan Tahap II",
+      "developer": "Farizi Persada Karya",
+      "association": null,
+      "region": "garut",
+      "kabupaten": "Kabupaten Garut",
+      "kecamatan": "Wanaraja",
+      "desa": "Sindangratu",
+      "address": "",
+      "lon": 107.9974,
+      "lat": -7.18288,
+      "location_precision": "desa",
+      "registered_year": 2021,
+      "units": null,
+      "price_from_idr": null,
+      "price_to_idr": null,
+      "listings": [],
+      "ratings": {
+        "access": {
+          "level": 3,
+          "score": 48,
+          "road": {
+            "name": "Jalan KH. Yusuf Tauzirie",
+            "class": "secondary",
+            "distance_m": 1974,
+            "score": 23
+          },
+          "centre": {
+            "name": "Wanaraja",
+            "distance_m": 2040,
+            "score": 72
+          },
+          "city": {
+            "name": "Alun-Alun Garut",
+            "distance_m": 11229,
+            "score": 63
+          },
+          "station": {
+            "name": "Wanaraja",
+            "distance_m": 3036,
+            "score": 54
+          }
+        },
+        "flood": {
+          "level": 4,
+          "exposure": 0.088,
+          "hazard_share": 0.099,
+          "max_class": "high",
+          "share": {
+            "low": 0.0,
+            "high": 0.066,
+            "moderate": 0.033
+          },
+          "samples": 61,
+          "radius_m": 1000,
+          "max_index": 0.958,
+          "flash_share": 0.098,
+          "river_share": 0.0
+        },
+        "occupancy": {
+          "level": null
+        },
+        "construction": {
+          "level": null
+        },
+        "overall": 3.5
+      },
+      "caveats": [
+        "Rincian unit dan tipe belum terbaca: hanya halaman site plan Sikumbang yang tersedia."
+      ],
+      "source_url": "https://sikumbang.tapera.go.id/lokasi-perumahan/GRT0320082021T001",
+      "retrieved": "2026-11-15",
+      "distance_m": null
+    },
+    {
+      "id": "wanakings-garden",
+      "source_id": "GRT0320022026T001",
+      "name": "Wanaking's Garden",
+      "developer": "PT Zoelva Propertindo Zhavran",
+      "association": "APERSI",
+      "region": "garut",
+      "kabupaten": "Kabupaten Garut",
+      "kecamatan": "Wanaraja",
+      "desa": "Wanamekar",
+      "address": "",
+      "lon": 107.98133,
+      "lat": -7.17785,
+      "location_precision": "desa",
+      "registered_year": 2026,
+      "units": {
+        "subsidized_available": 71,
+        "subsidized_sold": 4,
+        "commercial_available": 0,
+        "commercial_sold": 0
+      },
+      "price_from_idr": 166000000,
+      "price_to_idr": 166000000,
+      "listings": [
+        {
+          "name": "Tipe 36/60",
+          "subsidized": true,
+          "price_idr": 166000000,
+          "building_m2": 36,
+          "land_m2": 60,
+          "bedrooms": 2,
+          "bathrooms": 1,
+          "specs": ""
+        }
+      ],
+      "ratings": {
+        "access": {
+          "level": 5,
+          "score": 90,
+          "road": {
+            "name": "Jalan KH. Yusuf Tauzirie",
+            "class": "secondary",
+            "distance_m": 242,
+            "score": 98
+          },
+          "centre": {
+            "name": "Wanaraja",
+            "distance_m": 515,
+            "score": 100
+          },
+          "city": {
+            "name": "Alun-Alun Garut",
+            "distance_m": 9798,
+            "score": 69
+          },
+          "station": {
+            "name": "Wanaraja",
+            "distance_m": 1527,
+            "score": 81
+          }
+        },
+        "flood": {
+          "level": 3,
+          "exposure": 0.17,
+          "hazard_share": 0.263,
+          "max_class": "high",
+          "share": {
+            "low": 0.082,
+            "high": 0.066,
+            "moderate": 0.115
+          },
+          "samples": 61,
+          "radius_m": 1000,
+          "max_index": 1.0,
+          "flash_share": 0.262,
+          "river_share": 0.0
+        },
+        "occupancy": {
+          "level": 1,
+          "sold": 4,
+          "total": 75,
+          "share": 0.053
+        },
+        "construction": {
+          "level": 2,
+          "sold": 4,
+          "total": 75,
+          "share": 0.053
+        },
+        "overall": 2.8
+      },
+      "caveats": [],
+      "source_url": "https://sikumbang.tapera.go.id/lokasi-perumahan/GRT0320022026T001",
+      "retrieved": "2026-11-15",
+      "distance_m": null
+    },
+    {
+      "id": "bukit-neglasari-indah",
+      "source_id": "SOR3210032021T002",
+      "name": "Bukit Neglasari Indah",
+      "developer": "PT Usaharama Budisejahtera",
+      "association": "APERSI",
+      "region": "bandung",
+      "kabupaten": "Kabupaten Bandung",
+      "kecamatan": "Baleendah",
+      "desa": "Manggahang",
+      "address": "",
+      "lon": 107.64632,
+      "lat": -7.01521,
+      "location_precision": "desa",
+      "registered_year": 2021,
+      "units": null,
+      "price_from_idr": 150500000,
+      "price_to_idr": 162000000,
+      "listings": [
+        {
+          "name": "Tipe 30/60",
+          "subsidized": true,
+          "price_idr": 162000000,
+          "building_m2": 30,
+          "land_m2": 60,
+          "bedrooms": 2,
+          "bathrooms": 1,
+          "specs": ""
+        },
+        {
+          "name": "Tipe 30/60 (harga lama)",
+          "subsidized": true,
+          "price_idr": 150500000,
+          "building_m2": 30,
+          "land_m2": 60,
+          "bedrooms": null,
+          "bathrooms": null,
+          "specs": ""
+        }
+      ],
+      "ratings": {
+        "access": {
+          "level": 4,
+          "score": 65,
+          "road": {
+            "name": null,
+            "class": "secondary",
+            "distance_m": 17,
+            "score": 100
+          },
+          "centre": {
+            "name": "Baleendah",
+            "distance_m": 3281,
+            "score": 49
+          },
+          "city": {
+            "name": "Alun-Alun Bandung",
+            "distance_m": 11220,
+            "score": 63
+          },
+          "station": null
+        },
+        "flood": {
+          "level": 1,
+          "exposure": 0.552,
+          "hazard_share": 0.623,
+          "max_class": "high",
+          "share": {
+            "low": 0.0,
+            "high": 0.41,
+            "moderate": 0.213
+          },
+          "samples": 61,
+          "radius_m": 1000,
+          "max_index": 1.0,
+          "flash_share": 0.164,
+          "river_share": 0.623
+        },
+        "occupancy": {
+          "level": null
+        },
+        "construction": {
+          "level": null
+        },
+        "overall": 2.5
+      },
+      "caveats": [
+        "Jumlah unit terjual dan tersedia belum terbaca dari Sikumbang."
+      ],
+      "source_url": "https://sikumbang.tapera.go.id/lokasi-perumahan/SOR3210032021T002",
+      "retrieved": "2026-11-15",
+      "distance_m": null
+    },
+    {
+      "id": "mekar-alam-endah",
+      "source_id": "SOR3210082025T001",
+      "name": "Mekar Alam Endah",
+      "developer": "PT Mitra Usaha Abadikarya",
+      "association": "APERSI",
+      "region": "bandung",
+      "kabupaten": "Kabupaten Bandung",
+      "kecamatan": "Baleendah",
+      "desa": "Wargamekar",
+      "address": "",
+      "lon": 107.6752,
+      "lat": -7.02089,
+      "location_precision": "desa",
+      "registered_year": 2025,
+      "units": {
+        "subsidized_available": 1,
+        "subsidized_sold": 9,
+        "commercial_available": 0,
+        "commercial_sold": 0
+      },
+      "price_from_idr": 166000000,
+      "price_to_idr": 166000000,
+      "listings": [
+        {
+          "name": "Tipe 30/60",
+          "subsidized": true,
+          "price_idr": 166000000,
+          "building_m2": 30,
+          "land_m2": 60,
+          "bedrooms": 2,
+          "bathrooms": 1,
+          "specs": ""
+        }
+      ],
+      "ratings": {
+        "access": {
+          "level": 3,
+          "score": 51,
+          "road": {
+            "name": "Jalan Raya Laswi",
+            "class": "primary",
+            "distance_m": 55,
+            "score": 100
+          },
+          "centre": {
+            "name": "Baleendah",
+            "distance_m": 6438,
+            "score": 0
+          },
+          "city": {
+            "name": "Alun-Alun Bandung",
+            "distance_m": 13310,
+            "score": 53
+          },
+          "station": {
+            "name": "Tegalluar Summarecon",
+            "distance_m": 7680,
+            "score": 0
+          }
+        },
+        "flood": {
+          "level": 1,
+          "exposure": 0.591,
+          "hazard_share": 0.64,
+          "max_class": "high",
+          "share": {
+            "low": 0.0,
+            "high": 0.492,
+            "moderate": 0.148
+          },
+          "samples": 61,
+          "radius_m": 1000,
+          "max_index": 0.987,
+          "flash_share": 0.164,
+          "river_share": 0.623
+        },
+        "occupancy": {
+          "level": 5,
+          "sold": 9,
+          "total": 10,
+          "share": 0.9
+        },
+        "construction": {
+          "level": 4,
+          "sold": 9,
+          "total": 10,
+          "share": 0.9
+        },
+        "overall": 3.2
+      },
+      "caveats": [],
+      "source_url": "https://sikumbang.tapera.go.id/lokasi-perumahan/SOR3210082025T001",
+      "retrieved": "2026-11-15",
+      "distance_m": null
+    },
+    {
+      "id": "kriya-maha-citra",
+      "source_id": "NPH0920052024T001",
+      "name": "Kriya Maha Citra",
+      "developer": "PT Bumi Sejahtera Bersaudara",
+      "association": "APERSI",
+      "region": "bandung",
+      "kabupaten": "Kabupaten Bandung Barat",
+      "kecamatan": "Batujajar",
+      "desa": "Cangkorah",
+      "address": "Kantor pemasaran: Kampung Pengkolan, Cangkorah, Batujajar",
+      "lon": 107.484,
+      "lat": -6.89391,
+      "location_precision": "desa",
+      "registered_year": 2024,
+      "units": {
+        "subsidized_available": 10,
+        "subsidized_sold": 200,
+        "commercial_available": 0,
+        "commercial_sold": 0
+      },
+      "price_from_idr": 166000000,
+      "price_to_idr": 166000000,
+      "listings": [
+        {
+          "name": "Tipe 30",
+          "subsidized": true,
+          "price_idr": 166000000,
+          "building_m2": 30,
+          "land_m2": 60,
+          "bedrooms": 2,
+          "bathrooms": 1,
+          "specs": ""
+        },
+        {
+          "name": "Tipe 36",
+          "subsidized": false,
+          "price_idr": 350000000,
+          "building_m2": 36,
+          "land_m2": null,
+          "bedrooms": null,
+          "bathrooms": null,
+          "specs": ""
+        }
+      ],
+      "ratings": {
+        "access": {
+          "level": 2,
+          "score": 35,
+          "road": {
+            "name": "Jalan Raya Batujajar",
+            "class": "trunk",
+            "distance_m": 2073,
+            "score": 19
+          },
+          "centre": {
+            "name": "Batujajar",
+            "distance_m": 2826,
+            "score": 58
+          },
+          "city": {
+            "name": "Alun-Alun Bandung",
+            "distance_m": 13960,
+            "score": 50
+          },
+          "station": {
+            "name": "Gadobangkong",
+            "distance_m": 4729,
+            "score": 23
+          }
+        },
+        "flood": {
+          "level": 2,
+          "exposure": 0.372,
+          "hazard_share": 0.394,
+          "max_class": "high",
+          "share": {
+            "low": 0.0,
+            "high": 0.328,
+            "moderate": 0.066
+          },
+          "samples": 61,
+          "radius_m": 1000,
+          "max_index": 1.0,
+          "flash_share": 0.0,
+          "river_share": 0.393
+        },
+        "occupancy": {
+          "level": 5,
+          "sold": 200,
+          "total": 210,
+          "share": 0.952
+        },
+        "construction": {
+          "level": 5,
+          "sold": 200,
+          "total": 210,
+          "share": 0.952
+        },
+        "overall": 3.5
+      },
+      "caveats": [],
+      "source_url": "https://sikumbang.tapera.go.id/lokasi-perumahan/NPH0920052024T001",
+      "retrieved": "2026-11-15",
+      "distance_m": null
+    },
+    {
+      "id": "bumi-senja-perdana",
+      "source_id": "SOR4420042020T002",
+      "name": "Bumi Senja Perdana",
+      "developer": "PT Bumi Perdana Propertindo",
+      "association": "APERSI",
+      "region": "bandung",
+      "kabupaten": "Kabupaten Bandung",
+      "kecamatan": "Cangkuang",
+      "desa": "Bandasari",
+      "address": "",
+      "lon": 107.53575,
+      "lat": -7.05351,
+      "location_precision": "desa",
+      "registered_year": 2020,
+      "units": {
+        "subsidized_available": 24,
+        "subsidized_sold": 178,
+        "commercial_available": null,
+        "commercial_sold": null
+      },
+      "price_from_idr": 150500000,
+      "price_to_idr": 150500000,
+      "listings": [
+        {
+          "name": "Tipe 30/60",
+          "subsidized": true,
+          "price_idr": 150500000,
+          "building_m2": 30,
+          "land_m2": 60,
+          "bedrooms": null,
+          "bathrooms": null,
+          "specs": ""
+        }
+      ],
+      "ratings": {
+        "access": {
+          "level": 2,
+          "score": 28,
+          "road": {
+            "name": "Jalan Raya Soreang - Banjaran",
+            "class": "secondary",
+            "distance_m": 2276,
+            "score": 10
+          },
+          "centre": {
+            "name": "Cangkuang",
+            "distance_m": 2322,
+            "score": 67
+          },
+          "city": {
+            "name": "Alun-Alun Bandung",
+            "distance_m": 16587,
+            "score": 38
+          },
+          "station": null
+        },
+        "flood": {
+          "level": 3,
+          "exposure": 0.218,
+          "hazard_share": 0.295,
+          "max_class": "high",
+          "share": {
+            "low": 0.066,
+            "high": 0.131,
+            "moderate": 0.098
+          },
+          "samples": 61,
+          "radius_m": 1000,
+          "max_index": 0.997,
+          "flash_share": 0.246,
+          "river_share": 0.066
+        },
+        "occupancy": {
+          "level": 4,
+          "sold": 178,
+          "total": 202,
+          "share": 0.881
+        },
+        "construction": {
+          "level": 4,
+          "sold": 178,
+          "total": 202,
+          "share": 0.881
+        },
+        "overall": 3.2
+      },
+      "caveats": [],
+      "source_url": "https://sikumbang.tapera.go.id/lokasi-perumahan/SOR4420042020T002",
+      "retrieved": "2026-11-15",
+      "distance_m": null
+    },
+    {
+      "id": "prima-paradisque-residence",
+      "source_id": "SOR4420042024T001",
+      "name": "Prima Paradisque Residence",
+      "developer": "PT Koprima Sandysejahtera",
+      "association": "REI",
+      "region": "bandung",
+      "kabupaten": "Kabupaten Bandung",
+      "kecamatan": "Cangkuang",
+      "desa": "Nagrak",
+      "address": "Kantor pemasaran: Jl. Prima Paradisque Residence No. 33, Nagrak, Cangkuang",
+      "lon": 107.5493,
+      "lat": -7.05521,
+      "location_precision": "desa",
+      "registered_year": 2024,
+      "units": {
+        "subsidized_available": 49,
+        "subsidized_sold": 40,
+        "commercial_available": 2,
+        "commercial_sold": 12
+      },
+      "price_from_idr": 166000000,
+      "price_to_idr": 166000000,
+      "listings": [
+        {
+          "name": "Nature Subsidi 21/60",
+          "subsidized": true,
+          "price_idr": 166000000,
+          "building_m2": 21,
+          "land_m2": 60,
+          "bedrooms": 1,
+          "bathrooms": null,
+          "specs": ""
+        },
+        {
+          "name": "Nature 22/60",
+          "subsidized": false,
+          "price_idr": 266000000,
+          "building_m2": 22,
+          "land_m2": 60,
+          "bedrooms": null,
+          "bathrooms": null,
+          "specs": ""
+        },
+        {
+          "name": "Nature+",
+          "subsidized": false,
+          "price_idr": 299000000,
+          "building_m2": 27,
+          "land_m2": null,
+          "bedrooms": null,
+          "bathrooms": null,
+          "specs": ""
+        },
+        {
+          "name": "Sunrise",
+          "subsidized": false,
+          "price_idr": 348000000,
+          "building_m2": 30,
+          "land_m2": null,
+          "bedrooms": null,
+          "bathrooms": null,
+          "specs": ""
+        },
+        {
+          "name": "Island",
+          "subsidized": false,
+          "price_idr": 415000000,
+          "building_m2": 36,
+          "land_m2": null,
+          "bedrooms": null,
+          "bathrooms": null,
+          "specs": ""
+        },
+        {
+          "name": "Heaven 45/84",
+          "subsidized": false,
+          "price_idr": 493000000,
+          "building_m2": 45,
+          "land_m2": 84,
+          "bedrooms": null,
+          "bathrooms": null,
+          "specs": ""
+        }
+      ],
+      "ratings": {
+        "access": {
+          "level": 3,
+          "score": 46,
+          "road": {
+            "name": "Jalan Raya Soreang - Banjaran",
+            "class": "secondary",
+            "distance_m": 1495,
+            "score": 44
+          },
+          "centre": {
+            "name": "Cangkuang",
+            "distance_m": 1563,
+            "score": 81
+          },
+          "city": {
+            "name": "Alun-Alun Bandung",
+            "distance_m": 16101,
+            "score": 40
+          },
+          "station": null
+        },
+        "flood": {
+          "level": 2,
+          "exposure": 0.307,
+          "hazard_share": 0.378,
+          "max_class": "high",
+          "share": {
+            "low": 0.066,
+            "high": 0.23,
+            "moderate": 0.082
+          },
+          "samples": 61,
+          "radius_m": 1000,
+          "max_index": 1.0,
+          "flash_share": 0.361,
+          "river_share": 0.131
+        },
+        "occupancy": {
+          "level": 3,
+          "sold": 52,
+          "total": 103,
+          "share": 0.505
+        },
+        "construction": {
+          "level": 3,
+          "sold": 52,
+          "total": 103,
+          "share": 0.505
+        },
+        "overall": 2.8
+      },
+      "caveats": [],
+      "source_url": "https://sikumbang.tapera.go.id/lokasi-perumahan/SOR4420042024T001",
+      "retrieved": "2026-11-15",
+      "distance_m": null
+    },
+    {
+      "id": "bukit-cicalengka-lestari",
+      "source_id": "SOR2520102026T001",
+      "name": "Bukit Cicalengka Lestari",
+      "developer": "PT Isaprima Selaras Abadi",
+      "association": "ASPRUMNAS",
+      "region": "bandung",
+      "kabupaten": "Kabupaten Bandung",
+      "kecamatan": "Cicalengka",
+      "desa": "Tenjolaya",
+      "address": "",
+      "lon": 107.83855,
+      "lat": -6.98417,
+      "location_precision": "desa",
+      "registered_year": 2026,
+      "units": {
+        "subsidized_available": 36,
+        "subsidized_sold": 2,
+        "commercial_available": 0,
+        "commercial_sold": 0
+      },
+      "price_from_idr": 166000000,
+      "price_to_idr": 166000000,
+      "listings": [
+        {
+          "name": "Tipe Subsidi 30/60",
+          "subsidized": true,
+          "price_idr": 166000000,
+          "building_m2": 30,
+          "land_m2": 60,
+          "bedrooms": 2,
+          "bathrooms": 1,
+          "specs": ""
+        }
+      ],
+      "ratings": {
+        "access": {
+          "level": 4,
+          "score": 79,
+          "road": {
+            "name": "Jalan Raya Cicalengka",
+            "class": "secondary",
+            "distance_m": 247,
+            "score": 98
+          },
+          "centre": {
+            "name": "Cicalengka",
+            "distance_m": 417,
+            "score": 100
+          },
+          "city": {
+            "name": "Alun-Alun Bandung",
+            "distance_m": 26508,
+            "score": 0
+          },
+          "station": {
+            "name": "Cicalengka",
+            "distance_m": 726,
+            "score": 96
+          }
+        },
+        "flood": {
+          "level": 3,
+          "exposure": 0.11,
+          "hazard_share": 0.148,
+          "max_class": "high",
+          "share": {
+            "low": 0.0,
+            "high": 0.033,
+            "moderate": 0.115
+          },
+          "samples": 61,
+          "radius_m": 1000,
+          "max_index": 0.728,
+          "flash_share": 0.0,
+          "river_share": 0.148
+        },
+        "occupancy": {
+          "level": 1,
+          "sold": 2,
+          "total": 38,
+          "share": 0.053
+        },
+        "construction": {
+          "level": 2,
+          "sold": 2,
+          "total": 38,
+          "share": 0.053
+        },
+        "overall": 2.5
+      },
+      "caveats": [],
+      "source_url": "https://sikumbang.tapera.go.id/lokasi-perumahan/SOR2520102026T001",
+      "retrieved": "2026-11-15",
+      "distance_m": null
+    },
+    {
+      "id": "pesona-cicalengka-residance",
+      "source_id": "SOR2520072020T003",
+      "name": "Pesona Cicalengka Residance",
+      "developer": "PT Hasan Dinar Graha",
+      "association": "REI",
+      "region": "bandung",
+      "kabupaten": "Kabupaten Bandung",
+      "kecamatan": "Cicalengka",
+      "desa": "Narawita",
+      "address": "",
+      "lon": 107.85065,
+      "lat": -7.01136,
+      "location_precision": "desa",
+      "registered_year": 2020,
+      "units": {
+        "subsidized_available": 23,
+        "subsidized_sold": null,
+        "commercial_available": null,
+        "commercial_sold": null
+      },
+      "price_from_idr": 166000000,
+      "price_to_idr": 166000000,
+      "listings": [
+        {
+          "name": "Tipe 30/72",
+          "subsidized": true,
+          "price_idr": 166000000,
+          "building_m2": 30,
+          "land_m2": 72,
+          "bedrooms": null,
+          "bathrooms": null,
+          "specs": ""
+        }
+      ],
+      "ratings": {
+        "access": {
+          "level": 3,
+          "score": 40,
+          "road": {
+            "name": null,
+            "class": "trunk",
+            "distance_m": 1333,
+            "score": 51
+          },
+          "centre": {
+            "name": "Cicalengka",
+            "distance_m": 2878,
+            "score": 57
+          },
+          "city": {
+            "name": "Alun-Alun Bandung",
+            "distance_m": 28698,
+            "score": 0
+          },
+          "station": {
+            "name": "Cicalengka",
+            "distance_m": 3869,
+            "score": 39
+          }
+        },
+        "flood": {
+          "level": 4,
+          "exposure": 0.044,
+          "hazard_share": 0.066,
+          "max_class": "moderate",
+          "share": {
+            "low": 0.0,
+            "high": 0.0,
+            "moderate": 0.066
+          },
+          "samples": 61,
+          "radius_m": 1000,
+          "max_index": 0.63,
+          "flash_share": 0.0,
+          "river_share": 0.066
+        },
+        "occupancy": {
+          "level": null
+        },
+        "construction": {
+          "level": null
+        },
+        "overall": 3.5
+      },
+      "caveats": [
+        "Jumlah unit terjual belum terbaca dari Sikumbang.",
+        "Sikumbang juga mencatat tipe 30/60 di kisaran Rp150–162 juta."
+      ],
+      "source_url": "https://sikumbang.tapera.go.id/lokasi-perumahan/SOR2520072020T003",
+      "retrieved": "2026-11-15",
+      "distance_m": null
+    },
+    {
+      "id": "bumi-citra-indah-2-tahap-4",
+      "source_id": "NPH1020012023T001",
+      "name": "Bumi Citra Indah 2 Tahap 4",
+      "developer": "PT Bestow Harapan Indah",
+      "association": "HIMPERRA",
+      "region": "bandung",
+      "kabupaten": "Kabupaten Bandung Barat",
+      "kecamatan": "Cihampelas",
+      "desa": "Cipatik",
+      "address": "",
+      "lon": 107.50888,
+      "lat": -6.93891,
+      "location_precision": "desa",
+      "registered_year": 2023,
+      "units": {
+        "subsidized_available": 327,
+        "subsidized_sold": 1055,
+        "commercial_available": 0,
+        "commercial_sold": 0
+      },
+      "price_from_idr": 162000000,
+      "price_to_idr": 166000000,
+      "listings": [
+        {
+          "name": "Tipe 30/60",
+          "subsidized": true,
+          "price_idr": 166000000,
+          "building_m2": 30,
+          "land_m2": 60,
+          "bedrooms": null,
+          "bathrooms": null,
+          "specs": ""
+        },
+        {
+          "name": "Tipe 26/72",
+          "subsidized": true,
+          "price_idr": 166000000,
+          "building_m2": 26,
+          "land_m2": 72,
+          "bedrooms": null,
+          "bathrooms": null,
+          "specs": ""
+        },
+        {
+          "name": "Tipe 24/66",
+          "subsidized": true,
+          "price_idr": 166000000,
+          "building_m2": 24,
+          "land_m2": 66,
+          "bedrooms": null,
+          "bathrooms": null,
+          "specs": ""
+        },
+        {
+          "name": "Tipe 27/60",
+          "subsidized": true,
+          "price_idr": 162000000,
+          "building_m2": 27,
+          "land_m2": 60,
+          "bedrooms": null,
+          "bathrooms": null,
+          "specs": ""
+        }
+      ],
+      "ratings": {
+        "access": {
+          "level": 4,
+          "score": 64,
+          "road": {
+            "name": "Jalan Raya Batujajar-Soreang",
+            "class": "trunk",
+            "distance_m": 95,
+            "score": 100
+          },
+          "centre": {
+            "name": "Cihampelas",
+            "distance_m": 3550,
+            "score": 45
+          },
+          "city": {
+            "name": "Alun-Alun Bandung",
+            "distance_m": 11032,
+            "score": 63
+          },
+          "station": {
+            "name": "Cimahi",
+            "distance_m": 6591,
+            "score": 0
+          }
+        },
+        "flood": {
+          "level": 4,
+          "exposure": 0.098,
+          "hazard_share": 0.098,
+          "max_class": "high",
+          "share": {
+            "low": 0.0,
+            "high": 0.098,
+            "moderate": 0.0
+          },
+          "samples": 61,
+          "radius_m": 1000,
+          "max_index": 1.0,
+          "flash_share": 0.0,
+          "river_share": 0.098
+        },
+        "occupancy": {
+          "level": 4,
+          "sold": 1055,
+          "total": 1382,
+          "share": 0.763
+        },
+        "construction": {
+          "level": 4,
+          "sold": 1055,
+          "total": 1382,
+          "share": 0.763
+        },
+        "overall": 4.0
+      },
+      "caveats": [
+        "Sikumbang juga mencatat tipe 22/72 seharga Rp16,6 juta; angka itu tampak salah ketik dan tidak ditampilkan."
+      ],
+      "source_url": "https://sikumbang.tapera.go.id/lokasi-perumahan/NPH1020012023T001",
+      "retrieved": "2026-11-15",
+      "distance_m": null
+    },
+    {
+      "id": "parahyangan-asri-2",
+      "source_id": "NPH1020082024T001",
+      "name": "Parahyangan Asri 2",
+      "developer": "PT Adabaruland Propertindo",
+      "association": "REI",
+      "region": "bandung",
+      "kabupaten": "Kabupaten Bandung Barat",
+      "kecamatan": "Cihampelas",
+      "desa": "Singajaya",
+      "address": "Kantor pemasaran: Blok B1-8, Singajaya, Cihampelas",
+      "lon": 107.47771,
+      "lat": -6.94622,
+      "location_precision": "desa",
+      "registered_year": 2024,
+      "units": {
+        "subsidized_available": 79,
+        "subsidized_sold": 81,
+        "commercial_available": 0,
+        "commercial_sold": 0
+      },
+      "price_from_idr": 166000000,
+      "price_to_idr": 166000000,
+      "listings": [
+        {
+          "name": "Tipe 27",
+          "subsidized": true,
+          "price_idr": 166000000,
+          "building_m2": 27,
+          "land_m2": 60,
+          "bedrooms": 2,
+          "bathrooms": 1,
+          "specs": ""
+        }
+      ],
+      "ratings": {
+        "access": {
+          "level": 3,
+          "score": 55,
+          "road": {
+            "name": "Jalan Cihampelas-Tanjungjaya",
+            "class": "secondary",
+            "distance_m": 826,
+            "score": 73
+          },
+          "centre": {
+            "name": "Cihampelas",
+            "distance_m": 2295,
+            "score": 67
+          },
+          "city": {
+            "name": "Alun-Alun Bandung",
+            "distance_m": 14568,
+            "score": 47
+          },
+          "station": null
+        },
+        "flood": {
+          "level": 4,
+          "exposure": 0.066,
+          "hazard_share": 0.066,
+          "max_class": "high",
+          "share": {
+            "low": 0.0,
+            "high": 0.066,
+            "moderate": 0.0
+          },
+          "samples": 61,
+          "radius_m": 1000,
+          "max_index": 0.889,
+          "flash_share": 0.0,
+          "river_share": 0.066
+        },
+        "occupancy": {
+          "level": 3,
+          "sold": 81,
+          "total": 160,
+          "share": 0.506
+        },
+        "construction": {
+          "level": 3,
+          "sold": 81,
+          "total": 160,
+          "share": 0.506
+        },
+        "overall": 3.2
+      },
+      "caveats": [],
+      "source_url": "https://sikumbang.tapera.go.id/lokasi-perumahan/NPH1020082024T001",
+      "retrieved": "2026-11-15",
+      "distance_m": null
+    },
+    {
+      "id": "buana-cicalengka-raya-2",
+      "source_id": "SOR2720062024T001",
+      "name": "Buana Cicalengka Raya 2",
+      "developer": "PT Cikal Buana Persada",
+      "association": "REI",
+      "region": "bandung",
+      "kabupaten": "Kabupaten Bandung",
+      "kecamatan": "Cikancung",
+      "desa": "Hegarmanah",
+      "address": "Kantor pemasaran: Jalan B8 No. 2, Hegarmanah, Cikancung",
+      "lon": 107.83327,
+      "lat": -7.00275,
+      "location_precision": "desa",
+      "registered_year": 2024,
+      "units": {
+        "subsidized_available": 39,
+        "subsidized_sold": 622,
+        "commercial_available": 133,
+        "commercial_sold": 26
+      },
+      "price_from_idr": 166000000,
+      "price_to_idr": 166000000,
+      "listings": [
+        {
+          "name": "Tipe 27/60",
+          "subsidized": true,
+          "price_idr": 166000000,
+          "building_m2": 27,
+          "land_m2": 60,
+          "bedrooms": 2,
+          "bathrooms": 1,
+          "specs": ""
+        },
+        {
+          "name": "Tipe 34/72",
+          "subsidized": false,
+          "price_idr": 290000000,
+          "building_m2": 34,
+          "land_m2": 72,
+          "bedrooms": null,
+          "bathrooms": null,
+          "specs": ""
+        },
+        {
+          "name": "Tipe 45/84",
+          "subsidized": false,
+          "price_idr": 390000000,
+          "building_m2": 45,
+          "land_m2": 84,
+          "bedrooms": null,
+          "bathrooms": null,
+          "specs": ""
+        }
+      ],
+      "ratings": {
+        "access": {
+          "level": 3,
+          "score": 48,
+          "road": {
+            "name": "Jalan Raya Cicalengka",
+            "class": "secondary",
+            "distance_m": 1548,
+            "score": 41
+          },
+          "centre": {
+            "name": "Cikancung",
+            "distance_m": 1325,
+            "score": 85
+          },
+          "city": {
+            "name": "Alun-Alun Bandung",
+            "distance_m": 26566,
+            "score": 0
+          },
+          "station": {
+            "name": "Cicalengka",
+            "distance_m": 2362,
+            "score": 66
+          }
+        },
+        "flood": {
+          "level": 4,
+          "exposure": 0.093,
+          "hazard_share": 0.131,
+          "max_class": "high",
+          "share": {
+            "low": 0.0,
+            "high": 0.016,
+            "moderate": 0.115
+          },
+          "samples": 61,
+          "radius_m": 1000,
+          "max_index": 0.704,
+          "flash_share": 0.0,
+          "river_share": 0.131
+        },
+        "occupancy": {
+          "level": 4,
+          "sold": 648,
+          "total": 820,
+          "share": 0.79
+        },
+        "construction": {
+          "level": 4,
+          "sold": 648,
+          "total": 820,
+          "share": 0.79
+        },
+        "overall": 3.8
+      },
+      "caveats": [],
+      "source_url": "https://sikumbang.tapera.go.id/lokasi-perumahan/SOR2720062024T001",
+      "retrieved": "2026-11-15",
+      "distance_m": null
+    },
+    {
+      "id": "burgundy-regency",
+      "source_id": "NPH1120062024T001",
+      "name": "Burgundy Regency",
+      "developer": "PT Mitra Dinanti Kreasina",
+      "association": "REI",
+      "region": "bandung",
+      "kabupaten": "Kabupaten Bandung Barat",
+      "kecamatan": "Cililin",
+      "desa": "Karangtanjung",
+      "address": "",
+      "lon": 107.46735,
+      "lat": -6.9483,
+      "location_precision": "desa",
+      "registered_year": 2024,
+      "units": {
+        "subsidized_available": 245,
+        "subsidized_sold": 117,
+        "commercial_available": 0,
+        "commercial_sold": 21
+      },
+      "price_from_idr": 166000000,
+      "price_to_idr": 166000000,
+      "listings": [
+        {
+          "name": "Tipe 30/60",
+          "subsidized": true,
+          "price_idr": 166000000,
+          "building_m2": 30,
+          "land_m2": 60,
+          "bedrooms": 2,
+          "bathrooms": 1,
+          "specs": ""
+        }
+      ],
+      "ratings": {
+        "access": {
+          "level": 4,
+          "score": 71,
+          "road": {
+            "name": "Jalan Cihampelas-Tanjungjaya",
+            "class": "secondary",
+            "distance_m": 55,
+            "score": 100
+          },
+          "centre": {
+            "name": "Cililin",
+            "distance_m": 1083,
+            "score": 89
+          },
+          "city": {
+            "name": "Alun-Alun Bandung",
+            "distance_m": 15736,
+            "score": 42
+          },
+          "station": null
+        },
+        "flood": {
+          "level": 4,
+          "exposure": 0.016,
+          "hazard_share": 0.016,
+          "max_class": "high",
+          "share": {
+            "low": 0.0,
+            "high": 0.016,
+            "moderate": 0.0
+          },
+          "samples": 61,
+          "radius_m": 1000,
+          "max_index": 0.667,
+          "flash_share": 0.0,
+          "river_share": 0.016
+        },
+        "occupancy": {
+          "level": 2,
+          "sold": 138,
+          "total": 383,
+          "share": 0.36
+        },
+        "construction": {
+          "level": 3,
+          "sold": 138,
+          "total": 383,
+          "share": 0.36
+        },
+        "overall": 3.2
+      },
+      "caveats": [
+        "Salinan halaman Sikumbang yang terbaca berumur lebih dari setahun; jumlah unit kemungkinan sudah berubah."
+      ],
+      "source_url": "https://sikumbang.tapera.go.id/lokasi-perumahan/NPH1120062024T001",
+      "retrieved": "2026-11-15",
+      "distance_m": null
+    },
+    {
+      "id": "green-hill-village",
+      "source_id": "SOR2920132025T001",
+      "name": "Green Hill Village",
+      "developer": "PT Tiga Rekan Indonesia",
+      "association": "APERSI",
+      "region": "bandung",
+      "kabupaten": "Kabupaten Bandung",
+      "kecamatan": "Ciparay",
+      "desa": "Bumiwangi",
+      "address": "",
+      "lon": 107.69404,
+      "lat": -7.03218,
+      "location_precision": "desa",
+      "registered_year": 2025,
+      "units": {
+        "subsidized_available": 60,
+        "subsidized_sold": 46,
+        "commercial_available": null,
+        "commercial_sold": null
+      },
+      "price_from_idr": 166000000,
+      "price_to_idr": 166000000,
+      "listings": [
+        {
+          "name": "Tipe 27/60",
+          "subsidized": true,
+          "price_idr": 166000000,
+          "building_m2": 27,
+          "land_m2": 60,
+          "bedrooms": 2,
+          "bathrooms": 1,
+          "specs": ""
+        }
+      ],
+      "ratings": {
+        "access": {
+          "level": 4,
+          "score": 61,
+          "road": {
+            "name": "Jalan Raya Laswi",
+            "class": "primary",
+            "distance_m": 488,
+            "score": 87
+          },
+          "centre": {
+            "name": "Ciparay",
+            "distance_m": 2201,
+            "score": 69
+          },
+          "city": {
+            "name": "Alun-Alun Bandung",
+            "distance_m": 15551,
+            "score": 43
+          },
+          "station": {
+            "name": "Tegalluar Summarecon",
+            "distance_m": 7904,
+            "score": 0
+          }
+        },
+        "flood": {
+          "level": 2,
+          "exposure": 0.355,
+          "hazard_share": 0.426,
+          "max_class": "high",
+          "share": {
+            "low": 0.0,
+            "high": 0.213,
+            "moderate": 0.213
+          },
+          "samples": 61,
+          "radius_m": 1000,
+          "max_index": 1.0,
+          "flash_share": 0.246,
+          "river_share": 0.262
+        },
+        "occupancy": {
+          "level": 3,
+          "sold": 46,
+          "total": 106,
+          "share": 0.434
+        },
+        "construction": {
+          "level": 3,
+          "sold": 46,
+          "total": 106,
+          "share": 0.434
+        },
+        "overall": 3.0
+      },
+      "caveats": [],
+      "source_url": "https://sikumbang.tapera.go.id/lokasi-perumahan/SOR2920132025T001",
+      "retrieved": "2026-11-15",
+      "distance_m": null
+    },
+    {
+      "id": "manggung-asri",
+      "source_id": "SOR2920082023T001",
+      "name": "Manggung Asri",
+      "developer": "PT Mandiri Sakti Perkasa",
+      "association": "APERSI",
+      "region": "bandung",
+      "kabupaten": "Kabupaten Bandung",
+      "kecamatan": "Ciparay",
+      "desa": "Manggungharja",
+      "address": "",
+      "lon": 107.71913,
+      "lat": -7.03985,
+      "location_precision": "desa",
+      "registered_year": 2023,
+      "units": {
+        "subsidized_available": 3,
+        "subsidized_sold": 15,
+        "commercial_available": 0,
+        "commercial_sold": 0
+      },
+      "price_from_idr": 150500000,
+      "price_to_idr": 150500000,
+      "listings": [
+        {
+          "name": "Tipe 22/60",
+          "subsidized": true,
+          "price_idr": 150500000,
+          "building_m2": 22,
+          "land_m2": 60,
+          "bedrooms": null,
+          "bathrooms": null,
+          "specs": ""
+        }
+      ],
+      "ratings": {
+        "access": {
+          "level": 4,
+          "score": 69,
+          "road": {
+            "name": "Jalan Raya Laswi",
+            "class": "primary",
+            "distance_m": 297,
+            "score": 96
+          },
+          "centre": {
+            "name": "Ciparay",
+            "distance_m": 745,
+            "score": 96
+          },
+          "city": {
+            "name": "Alun-Alun Bandung",
+            "distance_m": 18009,
+            "score": 32
+          },
+          "station": {
+            "name": "Tegalluar Summarecon",
+            "distance_m": 8430,
+            "score": 0
+          }
+        },
+        "flood": {
+          "level": 2,
+          "exposure": 0.53,
+          "hazard_share": 0.655,
+          "max_class": "high",
+          "share": {
+            "low": 0.016,
+            "high": 0.295,
+            "moderate": 0.344
+          },
+          "samples": 61,
+          "radius_m": 1000,
+          "max_index": 1.0,
+          "flash_share": 0.016,
+          "river_share": 0.656
+        },
+        "occupancy": {
+          "level": 4,
+          "sold": 15,
+          "total": 18,
+          "share": 0.833
+        },
+        "construction": {
+          "level": 4,
+          "sold": 15,
+          "total": 18,
+          "share": 0.833
+        },
+        "overall": 3.5
+      },
+      "caveats": [],
+      "source_url": "https://sikumbang.tapera.go.id/lokasi-perumahan/SOR2920082023T001",
+      "retrieved": "2026-11-15",
+      "distance_m": null
+    },
+    {
+      "id": "prima-kaori-residence",
+      "source_id": "SOR2920132025T002",
+      "name": "Prima Kaori Residence",
+      "developer": "PT Koprima Sandysejahtera",
+      "association": "REI",
+      "region": "bandung",
+      "kabupaten": "Kabupaten Bandung",
+      "kecamatan": "Ciparay",
+      "desa": "Bumiwangi",
+      "address": "Kantor pemasaran: Kav. Fuji 1, Bumiwangi, Ciparay",
+      "lon": 107.69404,
+      "lat": -7.03218,
+      "location_precision": "desa",
+      "registered_year": 2025,
+      "units": {
+        "subsidized_available": 25,
+        "subsidized_sold": 4,
+        "commercial_available": 0,
+        "commercial_sold": 0
+      },
+      "price_from_idr": 166000000,
+      "price_to_idr": 166000000,
+      "listings": [
+        {
+          "name": "Tipe 25/60",
+          "subsidized": true,
+          "price_idr": 166000000,
+          "building_m2": 25,
+          "land_m2": 60,
+          "bedrooms": null,
+          "bathrooms": null,
+          "specs": ""
+        },
+        {
+          "name": "Tipe 21/60",
+          "subsidized": true,
+          "price_idr": 166000000,
+          "building_m2": 21,
+          "land_m2": 60,
+          "bedrooms": null,
+          "bathrooms": null,
+          "specs": ""
+        }
+      ],
+      "ratings": {
+        "access": {
+          "level": 4,
+          "score": 61,
+          "road": {
+            "name": "Jalan Raya Laswi",
+            "class": "primary",
+            "distance_m": 488,
+            "score": 87
+          },
+          "centre": {
+            "name": "Ciparay",
+            "distance_m": 2201,
+            "score": 69
+          },
+          "city": {
+            "name": "Alun-Alun Bandung",
+            "distance_m": 15551,
+            "score": 43
+          },
+          "station": {
+            "name": "Tegalluar Summarecon",
+            "distance_m": 7904,
+            "score": 0
+          }
+        },
+        "flood": {
+          "level": 2,
+          "exposure": 0.355,
+          "hazard_share": 0.426,
+          "max_class": "high",
+          "share": {
+            "low": 0.0,
+            "high": 0.213,
+            "moderate": 0.213
+          },
+          "samples": 61,
+          "radius_m": 1000,
+          "max_index": 1.0,
+          "flash_share": 0.246,
+          "river_share": 0.262
+        },
+        "occupancy": {
+          "level": 2,
+          "sold": 4,
+          "total": 29,
+          "share": 0.138
+        },
+        "construction": {
+          "level": 2,
+          "sold": 4,
+          "total": 29,
+          "share": 0.138
+        },
+        "overall": 2.5
+      },
+      "caveats": [],
+      "source_url": "https://sikumbang.tapera.go.id/lokasi-perumahan/SOR2920132025T002",
+      "retrieved": "2026-11-15",
+      "distance_m": null
+    },
+    {
+      "id": "bintang-padalarang-regency",
+      "source_id": "NPH0720082022T001",
+      "name": "Bintang Padalarang Regency",
+      "developer": null,
+      "association": "APERSI",
+      "region": "bandung",
+      "kabupaten": "Kabupaten Bandung Barat",
+      "kecamatan": "Cipatat",
+      "desa": "Gunungmasigit",
+      "address": "",
+      "lon": 107.43832,
+      "lat": -6.83204,
+      "location_precision": "desa",
+      "registered_year": 2022,
+      "units": {
+        "subsidized_available": 6,
+        "subsidized_sold": 107,
+        "commercial_available": 0,
+        "commercial_sold": 0
+      },
+      "price_from_idr": 150500000,
+      "price_to_idr": 150500000,
+      "listings": [
+        {
+          "name": "Tipe 30/60",
+          "subsidized": true,
+          "price_idr": 150500000,
+          "building_m2": 30,
+          "land_m2": 60,
+          "bedrooms": 2,
+          "bathrooms": 1,
+          "specs": ""
+        }
+      ],
+      "ratings": {
+        "access": {
+          "level": 3,
+          "score": 48,
+          "road": {
+            "name": "Jalan Orion",
+            "class": "trunk",
+            "distance_m": 42,
+            "score": 100
+          },
+          "centre": {
+            "name": "Cipatat",
+            "distance_m": 7848,
+            "score": 0
+          },
+          "city": {
+            "name": "Alun-Alun Bandung",
+            "distance_m": 21141,
+            "score": 18
+          },
+          "station": {
+            "name": "Cilame",
+            "distance_m": 4223,
+            "score": 32
+          }
+        },
+        "flood": {
+          "level": 5,
+          "exposure": 0.0,
+          "hazard_share": 0.0,
+          "max_class": null,
+          "share": {
+            "low": 0.0,
+            "high": 0.0,
+            "moderate": 0.0
+          },
+          "samples": 61,
+          "radius_m": 1000,
+          "max_index": null,
+          "flash_share": 0.0,
+          "river_share": 0.0
+        },
+        "occupancy": {
+          "level": 5,
+          "sold": 107,
+          "total": 113,
+          "share": 0.947
+        },
+        "construction": {
+          "level": 4,
+          "sold": 107,
+          "total": 113,
+          "share": 0.947
+        },
+        "overall": 4.2
+      },
+      "caveats": [],
+      "source_url": "https://sikumbang.tapera.go.id/lokasi-perumahan/NPH0720082022T001",
+      "retrieved": "2026-11-15",
+      "distance_m": null
+    },
+    {
+      "id": "ambar-bumi-mutiara-regency",
+      "source_id": "SOR3620042020T001",
+      "name": "Ambar Bumi Mutiara Regency",
+      "developer": null,
+      "association": "APERSI",
+      "region": "bandung",
+      "kabupaten": "Kabupaten Bandung",
+      "kecamatan": "Ibun",
+      "desa": "Talun",
+      "address": "Kantor pemasaran: Jl. Raya Talun–Ciekek, Desa Talun, Ibun",
+      "lon": 107.76376,
+      "lat": -7.06892,
+      "location_precision": "desa",
+      "registered_year": 2020,
+      "units": {
+        "subsidized_available": 9,
+        "subsidized_sold": 443,
+        "commercial_available": 0,
+        "commercial_sold": 12
+      },
+      "price_from_idr": 150500000,
+      "price_to_idr": 150500000,
+      "listings": [
+        {
+          "name": "Tipe 29/60",
+          "subsidized": true,
+          "price_idr": 150500000,
+          "building_m2": 29,
+          "land_m2": 60,
+          "bedrooms": 2,
+          "bathrooms": 1,
+          "specs": ""
+        }
+      ],
+      "ratings": {
+        "access": {
+          "level": 3,
+          "score": 49,
+          "road": {
+            "name": null,
+            "class": "secondary",
+            "distance_m": 347,
+            "score": 94
+          },
+          "centre": {
+            "name": "Ibun",
+            "distance_m": 3752,
+            "score": 41
+          },
+          "city": {
+            "name": "Alun-Alun Bandung",
+            "distance_m": 23778,
+            "score": 6
+          },
+          "station": null
+        },
+        "flood": {
+          "level": 3,
+          "exposure": 0.153,
+          "hazard_share": 0.197,
+          "max_class": "high",
+          "share": {
+            "low": 0.0,
+            "high": 0.066,
+            "moderate": 0.131
+          },
+          "samples": 61,
+          "radius_m": 1000,
+          "max_index": 0.827,
+          "flash_share": 0.0,
+          "river_share": 0.197
+        },
+        "occupancy": {
+          "level": 5,
+          "sold": 455,
+          "total": 464,
+          "share": 0.981
+        },
+        "construction": {
+          "level": 5,
+          "sold": 455,
+          "total": 464,
+          "share": 0.981
+        },
+        "overall": 4.0
+      },
+      "caveats": [],
+      "source_url": "https://sikumbang.tapera.go.id/lokasi-perumahan/SOR3620042020T001",
+      "retrieved": "2026-11-15",
+      "distance_m": null
+    },
+    {
+      "id": "grand-majalaya-city",
+      "source_id": "SOR3320092023T001",
+      "name": "Grand Majalaya City",
+      "developer": "PT Mulya Cipta Jaya Property",
+      "association": "HIPNU",
+      "region": "bandung",
+      "kabupaten": "Kabupaten Bandung",
+      "kecamatan": "Majalaya",
+      "desa": "Padaulun",
+      "address": "Kantor pemasaran: Blok A No. 16, Padaulun, Majalaya",
+      "lon": 107.73735,
+      "lat": -7.05123,
+      "location_precision": "desa",
+      "registered_year": 2023,
+      "units": {
+        "subsidized_available": 85,
+        "subsidized_sold": 206,
+        "commercial_available": 0,
+        "commercial_sold": 11
+      },
+      "price_from_idr": 162000000,
+      "price_to_idr": 162000000,
+      "listings": [
+        {
+          "name": "Subsidi 22/60",
+          "subsidized": true,
+          "price_idr": 162000000,
+          "building_m2": 22,
+          "land_m2": 60,
+          "bedrooms": 1,
+          "bathrooms": 1,
+          "specs": ""
+        }
+      ],
+      "ratings": {
+        "access": {
+          "level": 3,
+          "score": 55,
+          "road": {
+            "name": "Jalan Raya Laswi",
+            "class": "primary",
+            "distance_m": 467,
+            "score": 88
+          },
+          "centre": {
+            "name": "Majalaya",
+            "distance_m": 2682,
+            "score": 60
+          },
+          "city": {
+            "name": "Alun-Alun Bandung",
+            "distance_m": 20318,
+            "score": 21
+          },
+          "station": null
+        },
+        "flood": {
+          "level": 3,
+          "exposure": 0.219,
+          "hazard_share": 0.312,
+          "max_class": "high",
+          "share": {
+            "low": 0.0,
+            "high": 0.033,
+            "moderate": 0.279
+          },
+          "samples": 61,
+          "radius_m": 1000,
+          "max_index": 0.827,
+          "flash_share": 0.0,
+          "river_share": 0.311
+        },
+        "occupancy": {
+          "level": 4,
+          "sold": 217,
+          "total": 302,
+          "share": 0.719
+        },
+        "construction": {
+          "level": 4,
+          "sold": 217,
+          "total": 302,
+          "share": 0.719
+        },
+        "overall": 3.5
+      },
+      "caveats": [],
+      "source_url": "https://sikumbang.tapera.go.id/lokasi-perumahan/SOR3320092023T001",
+      "retrieved": "2026-11-15",
+      "distance_m": null
+    },
+    {
+      "id": "permata-residence-majalaya",
+      "source_id": "SOR3320092025T001",
+      "name": "Permata Residence Majalaya",
+      "developer": "Permata Agung Sumedang",
+      "association": "APERSI",
+      "region": "bandung",
+      "kabupaten": "Kabupaten Bandung",
+      "kecamatan": "Majalaya",
+      "desa": "Padaulun",
+      "address": "Kantor pemasaran: Blok A5, Padaulun, Majalaya",
+      "lon": 107.73735,
+      "lat": -7.05123,
+      "location_precision": "desa",
+      "registered_year": 2025,
+      "units": {
+        "subsidized_available": 4,
+        "subsidized_sold": 7,
+        "commercial_available": 0,
+        "commercial_sold": 0
+      },
+      "price_from_idr": 166000000,
+      "price_to_idr": 166000000,
+      "listings": [
+        {
+          "name": "Subsidi 33/60",
+          "subsidized": true,
+          "price_idr": 166000000,
+          "building_m2": 33,
+          "land_m2": 60,
+          "bedrooms": 2,
+          "bathrooms": 1,
+          "specs": ""
+        }
+      ],
+      "ratings": {
+        "access": {
+          "level": 3,
+          "score": 55,
+          "road": {
+            "name": "Jalan Raya Laswi",
+            "class": "primary",
+            "distance_m": 467,
+            "score": 88
+          },
+          "centre": {
+            "name": "Majalaya",
+            "distance_m": 2682,
+            "score": 60
+          },
+          "city": {
+            "name": "Alun-Alun Bandung",
+            "distance_m": 20318,
+            "score": 21
+          },
+          "station": null
+        },
+        "flood": {
+          "level": 3,
+          "exposure": 0.219,
+          "hazard_share": 0.312,
+          "max_class": "high",
+          "share": {
+            "low": 0.0,
+            "high": 0.033,
+            "moderate": 0.279
+          },
+          "samples": 61,
+          "radius_m": 1000,
+          "max_index": 0.827,
+          "flash_share": 0.0,
+          "river_share": 0.311
+        },
+        "occupancy": {
+          "level": 3,
+          "sold": 7,
+          "total": 11,
+          "share": 0.636
+        },
+        "construction": {
+          "level": 4,
+          "sold": 7,
+          "total": 11,
+          "share": 0.636
+        },
+        "overall": 3.2
+      },
+      "caveats": [],
+      "source_url": "https://sikumbang.tapera.go.id/lokasi-perumahan/SOR3320092025T001",
+      "retrieved": "2026-11-15",
+      "distance_m": null
+    },
+    {
+      "id": "puri-rumpu-indah-padaulun",
+      "source_id": "SOR3320092024T001",
+      "name": "Puri Rumpu Indah Padaulun",
+      "developer": "PT Rumpu Indo Trade",
+      "association": "APERSI",
+      "region": "bandung",
+      "kabupaten": "Kabupaten Bandung",
+      "kecamatan": "Majalaya",
+      "desa": "Padaulun",
+      "address": "Kp. Cibeunying RT 01 RW 010, Desa Padaulun, Majalaya",
+      "lon": 107.73735,
+      "lat": -7.05123,
+      "location_precision": "desa",
+      "registered_year": 2024,
+      "units": null,
+      "price_from_idr": 166000000,
+      "price_to_idr": 166000000,
+      "listings": [
+        {
+          "name": "Subsidi 36/60",
+          "subsidized": true,
+          "price_idr": 166000000,
+          "building_m2": 36,
+          "land_m2": 60,
+          "bedrooms": 2,
+          "bathrooms": 1,
+          "specs": ""
+        }
+      ],
+      "ratings": {
+        "access": {
+          "level": 3,
+          "score": 55,
+          "road": {
+            "name": "Jalan Raya Laswi",
+            "class": "primary",
+            "distance_m": 467,
+            "score": 88
+          },
+          "centre": {
+            "name": "Majalaya",
+            "distance_m": 2682,
+            "score": 60
+          },
+          "city": {
+            "name": "Alun-Alun Bandung",
+            "distance_m": 20318,
+            "score": 21
+          },
+          "station": null
+        },
+        "flood": {
+          "level": 3,
+          "exposure": 0.219,
+          "hazard_share": 0.312,
+          "max_class": "high",
+          "share": {
+            "low": 0.0,
+            "high": 0.033,
+            "moderate": 0.279
+          },
+          "samples": 61,
+          "radius_m": 1000,
+          "max_index": 0.827,
+          "flash_share": 0.0,
+          "river_share": 0.311
+        },
+        "occupancy": {
+          "level": null
+        },
+        "construction": {
+          "level": null
+        },
+        "overall": 3.0
+      },
+      "caveats": [
+        "Jumlah unit terjual dan tersedia belum terbaca dari Sikumbang."
+      ],
+      "source_url": "https://sikumbang.tapera.go.id/lokasi-perumahan/SOR3320092024T001",
+      "retrieved": "2026-11-15",
+      "distance_m": null
+    },
+    {
+      "id": "lembah-batujajar-village",
+      "source_id": "NPH0820102020T001",
+      "name": "Lembah Batujajar Village",
+      "developer": "PT Tebojong Gerot Suang",
+      "association": "HIMPERRA",
+      "region": "bandung",
+      "kabupaten": "Kabupaten Bandung Barat",
+      "kecamatan": "Padalarang",
+      "desa": "Laksanamekar",
+      "address": "",
+      "lon": 107.50276,
+      "lat": -6.88115,
+      "location_precision": "desa",
+      "registered_year": 2020,
+      "units": {
+        "subsidized_available": 105,
+        "subsidized_sold": 29,
+        "commercial_available": 5,
+        "commercial_sold": 0
+      },
+      "price_from_idr": 150000000,
+      "price_to_idr": 166000000,
+      "listings": [
+        {
+          "name": "Subsidi 30/60",
+          "subsidized": true,
+          "price_idr": 166000000,
+          "building_m2": 30,
+          "land_m2": 60,
+          "bedrooms": null,
+          "bathrooms": null,
+          "specs": ""
+        },
+        {
+          "name": "Tipe 30/60",
+          "subsidized": true,
+          "price_idr": 150000000,
+          "building_m2": 30,
+          "land_m2": 60,
+          "bedrooms": null,
+          "bathrooms": null,
+          "specs": ""
+        },
+        {
+          "name": "Tipe 36/70",
+          "subsidized": false,
+          "price_idr": 275000000,
+          "building_m2": 36,
+          "land_m2": 70,
+          "bedrooms": null,
+          "bathrooms": null,
+          "specs": ""
+        }
+      ],
+      "ratings": {
+        "access": {
+          "level": 4,
+          "score": 64,
+          "road": {
+            "name": "Jalan Raya Batujajar",
+            "class": "trunk",
+            "distance_m": 164,
+            "score": 100
+          },
+          "centre": {
+            "name": "Padalarang",
+            "distance_m": 5471,
+            "score": 10
+          },
+          "city": {
+            "name": "Alun-Alun Bandung",
+            "distance_m": 12384,
+            "score": 57
+          },
+          "station": {
+            "name": "Gadobangkong",
+            "distance_m": 2283,
+            "score": 68
+          }
+        },
+        "flood": {
+          "level": 3,
+          "exposure": 0.114,
+          "hazard_share": 0.147,
+          "max_class": "high",
+          "share": {
+            "low": 0.0,
+            "high": 0.049,
+            "moderate": 0.098
+          },
+          "samples": 61,
+          "radius_m": 1000,
+          "max_index": 0.852,
+          "flash_share": 0.0,
+          "river_share": 0.148
+        },
+        "occupancy": {
+          "level": 2,
+          "sold": 29,
+          "total": 139,
+          "share": 0.209
+        },
+        "construction": {
+          "level": 3,
+          "sold": 29,
+          "total": 139,
+          "share": 0.209
+        },
+        "overall": 3.0
+      },
+      "caveats": [],
+      "source_url": "https://sikumbang.tapera.go.id/lokasi-perumahan/NPH0820102020T001",
+      "retrieved": "2026-11-15",
+      "distance_m": null
+    },
+    {
+      "id": "tamaland-cipedes",
+      "source_id": "SOR3520022026T001",
+      "name": "Tamaland Cipedes",
+      "developer": "PT Swakarsa Properti Tama",
+      "association": "APERSI",
+      "region": "bandung",
+      "kabupaten": "Kabupaten Bandung",
+      "kecamatan": "Paseh",
+      "desa": "Cipedes",
+      "address": "Kantor pemasaran: Kp. Cipedes No. 01, Paseh",
+      "lon": 107.79401,
+      "lat": -7.03237,
+      "location_precision": "desa",
+      "registered_year": 2026,
+      "units": {
+        "subsidized_available": 67,
+        "subsidized_sold": 2,
+        "commercial_available": 0,
+        "commercial_sold": 0
+      },
+      "price_from_idr": 166000000,
+      "price_to_idr": 166000000,
+      "listings": [
+        {
+          "name": "Tipe 32/60",
+          "subsidized": true,
+          "price_idr": 166000000,
+          "building_m2": 32,
+          "land_m2": 60,
+          "bedrooms": 2,
+          "bathrooms": 1,
+          "specs": ""
+        }
+      ],
+      "ratings": {
+        "access": {
+          "level": 3,
+          "score": 57,
+          "road": {
+            "name": "Jalan Raya Majalaya - Cicalengka",
+            "class": "primary",
+            "distance_m": 725,
+            "score": 77
+          },
+          "centre": {
+            "name": "Paseh",
+            "distance_m": 16,
+            "score": 100
+          },
+          "city": {
+            "name": "Alun-Alun Bandung",
+            "distance_m": 24021,
+            "score": 4
+          },
+          "station": {
+            "name": "Haurpugur",
+            "distance_m": 5764,
+            "score": 4
+          }
+        },
+        "flood": {
+          "level": 3,
+          "exposure": 0.158,
+          "hazard_share": 0.229,
+          "max_class": "high",
+          "share": {
+            "low": 0.0,
+            "high": 0.016,
+            "moderate": 0.213
+          },
+          "samples": 61,
+          "radius_m": 1000,
+          "max_index": 0.728,
+          "flash_share": 0.0,
+          "river_share": 0.23
+        },
+        "occupancy": {
+          "level": 1,
+          "sold": 2,
+          "total": 69,
+          "share": 0.029
+        },
+        "construction": {
+          "level": 2,
+          "sold": 2,
+          "total": 69,
+          "share": 0.029
+        },
+        "overall": 2.2
+      },
+      "caveats": [],
+      "source_url": "https://sikumbang.tapera.go.id/lokasi-perumahan/SOR3520022026T001",
+      "retrieved": "2026-11-15",
+      "distance_m": null
+    },
+    {
+      "id": "griya-pindad-asri-3",
+      "source_id": "SOR2820052023T001",
+      "name": "Griya Pindad Asri 3",
+      "developer": "PT Asatu Realty Asri",
+      "association": "HIMPERRA",
+      "region": "bandung",
+      "kabupaten": "Kabupaten Bandung",
+      "kecamatan": "Rancaekek",
+      "desa": "Jelegong",
+      "address": "",
+      "lon": 107.77496,
+      "lat": -6.96604,
+      "location_precision": "desa",
+      "registered_year": 2023,
+      "units": {
+        "subsidized_available": 3,
+        "subsidized_sold": 270,
+        "commercial_available": 0,
+        "commercial_sold": 24
+      },
+      "price_from_idr": 150500000,
+      "price_to_idr": 150500000,
+      "listings": [
+        {
+          "name": "Tipe 28/60",
+          "subsidized": true,
+          "price_idr": 150500000,
+          "building_m2": 28,
+          "land_m2": 60,
+          "bedrooms": null,
+          "bathrooms": null,
+          "specs": ""
+        },
+        {
+          "name": "Tipe 23/60",
+          "subsidized": true,
+          "price_idr": 150500000,
+          "building_m2": 23,
+          "land_m2": 60,
+          "bedrooms": null,
+          "bathrooms": null,
+          "specs": ""
+        },
+        {
+          "name": "Tipe 36/60",
+          "subsidized": false,
+          "price_idr": 343000000,
+          "building_m2": 36,
+          "land_m2": 60,
+          "bedrooms": null,
+          "bathrooms": null,
+          "specs": ""
+        },
+        {
+          "name": "Tipe 36/72",
+          "subsidized": false,
+          "price_idr": 357000000,
+          "building_m2": 36,
+          "land_m2": 72,
+          "bedrooms": null,
+          "bathrooms": null,
+          "specs": ""
+        }
+      ],
+      "ratings": {
+        "access": {
+          "level": 3,
+          "score": 60,
+          "road": {
+            "name": "Jalan Raya Cicalengka",
+            "class": "trunk",
+            "distance_m": 1037,
+            "score": 64
+          },
+          "centre": {
+            "name": "Rancaekek",
+            "distance_m": 1915,
+            "score": 74
+          },
+          "city": {
+            "name": "Alun-Alun Bandung",
+            "distance_m": 19196,
+            "score": 26
+          },
+          "station": {
+            "name": "Rancaekek",
+            "distance_m": 2104,
+            "score": 71
+          }
+        },
+        "flood": {
+          "level": 3,
+          "exposure": 0.289,
+          "hazard_share": 0.393,
+          "max_class": "high",
+          "share": {
+            "low": 0.0,
+            "high": 0.082,
+            "moderate": 0.311
+          },
+          "samples": 61,
+          "radius_m": 1000,
+          "max_index": 0.802,
+          "flash_share": 0.016,
+          "river_share": 0.393
+        },
+        "occupancy": {
+          "level": 5,
+          "sold": 294,
+          "total": 297,
+          "share": 0.99
+        },
+        "construction": {
+          "level": 5,
+          "sold": 294,
+          "total": 297,
+          "share": 0.99
+        },
+        "overall": 4.0
+      },
+      "caveats": [],
+      "source_url": "https://sikumbang.tapera.go.id/lokasi-perumahan/SOR2820052023T001",
+      "retrieved": "2026-11-15",
+      "distance_m": null
+    },
+    {
+      "id": "pesona-linggar-residence",
+      "source_id": "SOR2820062022T001",
+      "name": "Pesona Linggar Residence",
+      "developer": "PT Agung Mulya Grup",
+      "association": "HIMPERRA",
+      "region": "bandung",
+      "kabupaten": "Kabupaten Bandung",
+      "kecamatan": "Rancaekek",
+      "desa": "Linggar",
+      "address": "",
+      "lon": 107.79716,
+      "lat": -6.96455,
+      "location_precision": "desa",
+      "registered_year": 2022,
+      "units": {
+        "subsidized_available": 43,
+        "subsidized_sold": 106,
+        "commercial_available": 0,
+        "commercial_sold": 0
+      },
+      "price_from_idr": 150500000,
+      "price_to_idr": 166000000,
+      "listings": [
+        {
+          "name": "Rumah Tapak (Subsidi Plus) 30/60",
+          "subsidized": true,
+          "price_idr": 166000000,
+          "building_m2": 30,
+          "land_m2": 60,
+          "bedrooms": null,
+          "bathrooms": null,
+          "specs": ""
+        },
+        {
+          "name": "Rumah Tapak 30/60",
+          "subsidized": true,
+          "price_idr": 150500000,
+          "building_m2": 30,
+          "land_m2": 60,
+          "bedrooms": null,
+          "bathrooms": null,
+          "specs": ""
+        }
+      ],
+      "ratings": {
+        "access": {
+          "level": 4,
+          "score": 63,
+          "road": {
+            "name": "Raya Cangkuang",
+            "class": "secondary",
+            "distance_m": 110,
+            "score": 100
+          },
+          "centre": {
+            "name": "Rancaekek",
+            "distance_m": 4241,
+            "score": 32
+          },
+          "city": {
+            "name": "Alun-Alun Bandung",
+            "distance_m": 21541,
+            "score": 16
+          },
+          "station": {
+            "name": "Haurpugur",
+            "distance_m": 1785,
+            "score": 77
+          }
+        },
+        "flood": {
+          "level": 1,
+          "exposure": 0.748,
+          "hazard_share": 0.852,
+          "max_class": "high",
+          "share": {
+            "low": 0.0,
+            "high": 0.541,
+            "moderate": 0.311
+          },
+          "samples": 61,
+          "radius_m": 1000,
+          "max_index": 1.0,
+          "flash_share": 0.672,
+          "river_share": 0.607
+        },
+        "occupancy": {
+          "level": 4,
+          "sold": 106,
+          "total": 149,
+          "share": 0.711
+        },
+        "construction": {
+          "level": 4,
+          "sold": 106,
+          "total": 149,
+          "share": 0.711
+        },
+        "overall": 3.2
+      },
+      "caveats": [],
+      "source_url": "https://sikumbang.tapera.go.id/lokasi-perumahan/SOR2820062022T001",
+      "retrieved": "2026-11-15",
+      "distance_m": null
+    }
+  ]
+}

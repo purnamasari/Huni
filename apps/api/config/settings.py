@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     "django.contrib.gis",
     "core",
     "transit",
+    "housing",
 ]
 
 MIDDLEWARE = [

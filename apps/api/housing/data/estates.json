@@ -1,0 +1,781 @@
+{
+  "meta": {
+    "retrieved": "2026-11-15",
+    "source": "Sikumbang (BP Tapera), sikumbang.tapera.go.id/lokasi-perumahan/<id>",
+    "method": "Read from the public location pages as held in a web search index. The site rejects automated clients, so nothing was fetched from it directly; a page's snapshot may be months old.",
+    "counters": "Sikumbang shows 'Subsidi : N Unit' (still for sale) and 'Terjual Subsidi : N Unit' (sold), and the same pair for commercial units.",
+    "excluded": [
+      "GRT0920062020T001 Kalea Pasopati (Cangkuang, Leles): registered with no units and no types",
+      "GRT0320082023T002 Dinamika Lestari Residence (Sindangratu, Wanaraja): a third registration with no readable detail",
+      "BDG2310042021T003 Pesona Ciwastra Village Tahap 2 (Rancasari, Kota Bandung): commercial units only"
+    ]
+  },
+  "estates": [
+    {
+      "id": "GRT0920062024T002",
+      "name": "Ridwan Regency Leles",
+      "developer": "PT Ridwan Berkah Jaya",
+      "association": "APERSI",
+      "region": "garut",
+      "kabupaten": "Kabupaten Garut",
+      "kecamatan": "Leles",
+      "desa": "Cangkuang",
+      "address": "Kantor pemasaran: Blok A, Cangkuang, Leles",
+      "units": { "subsidized_available": 49, "subsidized_sold": 159, "commercial_available": 0, "commercial_sold": 0 },
+      "listings": [
+        { "name": "Tipe 34", "subsidized": true, "price_idr": 166000000, "building_m2": 34, "land_m2": 60, "bedrooms": 2, "bathrooms": 2, "specs": "Atap spandek pasir, dinding bata merah, lantai keramik, pondasi batu belah" }
+      ]
+    },
+    {
+      "id": "GRT0920062024T001",
+      "name": "Renjana Pasopati",
+      "developer": "PT Terra Renjana Adyatama",
+      "association": "ASPRUMNAS",
+      "region": "garut",
+      "kabupaten": "Kabupaten Garut",
+      "kecamatan": "Leles",
+      "desa": "Cangkuang",
+      "units": { "subsidized_available": 56, "subsidized_sold": 76, "commercial_available": 3, "commercial_sold": 0 },
+      "listings": [
+        { "name": "Tipe 34/60", "subsidized": true, "price_idr": 166000000, "building_m2": 34, "land_m2": 60, "bedrooms": 2, "bathrooms": 1 },
+        { "name": "Tipe 36/60", "subsidized": false, "price_idr": 250000000, "building_m2": 36, "land_m2": 60 }
+      ],
+      "caveats": ["Luas bangunan tipe 34/60 tercatat 34 m² di satu entri Sikumbang dan 30 m² di entri lain."]
+    },
+    {
+      "id": "GRT0920092025T001",
+      "name": "Tamaland",
+      "developer": "PT Ingsu Tama Lubista",
+      "association": "ASPRUMNAS",
+      "region": "garut",
+      "kabupaten": "Kabupaten Garut",
+      "kecamatan": "Leles",
+      "desa": "Margaluyu",
+      "units": { "subsidized_available": 243, "subsidized_sold": 0, "commercial_available": 163, "commercial_sold": 0 },
+      "listings": [
+        { "name": "Tipe Meru 32/60", "subsidized": true, "price_idr": 166000000, "building_m2": 32, "land_m2": 60, "bedrooms": 2, "bathrooms": 1 }
+      ]
+    },
+    {
+      "id": "GRT0920092023T002",
+      "name": "Grand Tunas Regency",
+      "developer": "Tunas Prima Buana",
+      "association": "REI",
+      "region": "garut",
+      "kabupaten": "Kabupaten Garut",
+      "kecamatan": "Leles",
+      "desa": "Margaluyu",
+      "address": "Kantor pemasaran: Jl. Pasopati RT 002 RW 005, Margaluyu, Leles",
+      "street": "Jalan Pasopati",
+      "units": { "subsidized_available": 196, "subsidized_sold": 14, "commercial_available": 33, "commercial_sold": 0 },
+      "listings": [
+        { "name": "Tipe 30", "subsidized": true, "price_idr": 162000000, "building_m2": 30, "land_m2": 60, "bedrooms": 2, "bathrooms": 1 },
+        { "name": "Tipe 36", "subsidized": false, "price_idr": 250000000, "building_m2": 36, "land_m2": 72 }
+      ]
+    },
+    {
+      "id": "GRT0920092024T001",
+      "name": "Hijra Pasopati Land",
+      "developer": "Hijra Amanah Property",
+      "association": "APERSI",
+      "region": "garut",
+      "kabupaten": "Kabupaten Garut",
+      "kecamatan": "Leles",
+      "desa": "Margaluyu",
+      "units": { "subsidized_available": 44, "subsidized_sold": 169, "commercial_available": 0, "commercial_sold": 0 },
+      "listings": [
+        { "name": "Tipe 36/60", "subsidized": true, "price_idr": 166000000, "building_m2": 36, "land_m2": 60, "bedrooms": 2, "bathrooms": 1 }
+      ]
+    },
+    {
+      "id": "GRT0920092024T002",
+      "name": "Ghani Margaluyu Residence",
+      "developer": "PT Ghani Rahma Lesmana",
+      "association": "APERSI",
+      "region": "garut",
+      "kabupaten": "Kabupaten Garut",
+      "kecamatan": "Leles",
+      "desa": "Margaluyu",
+      "units": { "subsidized_available": 238, "subsidized_sold": 11, "commercial_available": null, "commercial_sold": null },
+      "listings": [
+        { "name": "Tipe 36/60 (PMK 2024)", "subsidized": true, "price_idr": 166000000, "building_m2": 36, "land_m2": 60, "bedrooms": 2, "bathrooms": 1 }
+      ]
+    },
+    {
+      "id": "GRT0920092020T001",
+      "name": "Bumi Margaluyu Indah",
+      "developer": "PT Karya Keluarga Bersama",
+      "association": "ASPRUMNAS",
+      "region": "garut",
+      "kabupaten": "Kabupaten Garut",
+      "kecamatan": "Leles",
+      "desa": "Margaluyu",
+      "units": { "subsidized_available": 111, "subsidized_sold": 60, "commercial_available": 17, "commercial_sold": 0 },
+      "listings": [
+        { "name": "Rumah subsidi 30/60", "subsidized": true, "price_idr": 148000000, "building_m2": 30, "land_m2": 60 },
+        { "name": "Ruko", "subsidized": false, "price_idr": 175000000, "building_m2": 31, "land_m2": 24 }
+      ]
+    },
+    {
+      "id": "GRT0920042024T001",
+      "name": "Sindangsuka Regency",
+      "developer": "Cahaya Lestari Land",
+      "association": "APERSI",
+      "region": "garut",
+      "kabupaten": "Kabupaten Garut",
+      "kecamatan": "Leles",
+      "desa": "Sukarame",
+      "address": "Kantor pemasaran: Jl. Desa Sukarame No. 68, Leles",
+      "units": { "subsidized_available": 61, "subsidized_sold": 5, "commercial_available": 0, "commercial_sold": 0 },
+      "listings": [
+        { "name": "Tipe 30", "subsidized": true, "price_idr": 166000000, "building_m2": 30, "land_m2": 60, "bedrooms": 2, "bathrooms": 1 }
+      ]
+    },
+    {
+      "id": "GRT0920082023T001",
+      "name": "Griya Rengganis",
+      "developer": "Bumi Sekar Rengganis",
+      "association": null,
+      "region": "garut",
+      "kabupaten": "Kabupaten Garut",
+      "kecamatan": "Leles",
+      "desa": "Kandangmukti",
+      "units": null,
+      "listings": [],
+      "caveats": ["Rincian unit dan tipe belum terbaca: hanya halaman site plan Sikumbang yang tersedia."]
+    },
+    {
+      "id": "GRT1220042024T001",
+      "name": "AKA Sindangsuka Cibatu",
+      "developer": "PT AKA Rafasya Putra",
+      "association": "APERSI",
+      "region": "garut",
+      "kabupaten": "Kabupaten Garut",
+      "kecamatan": "Cibatu",
+      "desa": "Sindangsuka",
+      "address": "Kantor pemasaran: Blok A No. 6, Sindangsuka, Cibatu",
+      "units": { "subsidized_available": 3, "subsidized_sold": 100, "commercial_available": 0, "commercial_sold": 0 },
+      "listings": [
+        { "name": "Tipe 30/60", "subsidized": true, "price_idr": 166000000, "building_m2": 30, "land_m2": 60, "bedrooms": 2, "bathrooms": 1 }
+      ]
+    },
+    {
+      "id": "GRT1220032020T001",
+      "name": "Bunar Indah",
+      "developer": "PT Lebak Nangka Al Nusantara",
+      "association": "APERSI",
+      "region": "garut",
+      "kabupaten": "Kabupaten Garut",
+      "kecamatan": "Cibatu",
+      "desa": "Cibunar",
+      "units": { "subsidized_available": 0, "subsidized_sold": 102, "commercial_available": null, "commercial_sold": null },
+      "listings": [
+        { "name": "Tipe 36/72", "subsidized": true, "price_idr": 130000000, "building_m2": 36, "land_m2": 72 },
+        { "name": "Tipe 45/108", "subsidized": false, "price_idr": 100000000, "building_m2": 45, "land_m2": 108 }
+      ],
+      "caveats": [
+        "Harga berasal dari registrasi 2020 dan tampak belum diperbarui.",
+        "Sikumbang juga mencatat tipe 22/65 seharga Rp45 juta; angka itu tampak keliru dan tidak ditampilkan."
+      ]
+    },
+    {
+      "id": "GRT1220032023T001",
+      "name": "Graha Paramarta",
+      "developer": "PT Paramarta Birru Pratama",
+      "association": "APERSI",
+      "region": "garut",
+      "kabupaten": "Kabupaten Garut",
+      "kecamatan": "Cibatu",
+      "desa": "Cibunar",
+      "address": "Kantor pemasaran: Blok C1-9, Cibunar, Cibatu",
+      "units": { "subsidized_available": 38, "subsidized_sold": 3, "commercial_available": 0, "commercial_sold": 0 },
+      "listings": [
+        { "name": "Tipe Standard 36/60", "subsidized": true, "price_idr": 150000000, "building_m2": 36, "land_m2": 60, "bedrooms": 2, "bathrooms": 1 }
+      ]
+    },
+    {
+      "id": "GRT1220082022T001",
+      "name": "Bukit Biduri Indah",
+      "developer": "Biduri Adi Pratama",
+      "association": "HIMPERRA",
+      "region": "garut",
+      "kabupaten": "Kabupaten Garut",
+      "kecamatan": "Cibatu",
+      "desa": "Karyamukti",
+      "units": { "subsidized_available": 2, "subsidized_sold": 46, "commercial_available": null, "commercial_sold": null },
+      "listings": [
+        { "name": "Tipe A 36/72", "subsidized": true, "price_idr": 150000000, "building_m2": 36, "land_m2": 72 },
+        { "name": "Tipe B, C, D 36/72", "subsidized": true, "price_idr": 145000000, "building_m2": 36, "land_m2": 72 }
+      ]
+    },
+    {
+      "id": "GRT1220082023T001",
+      "name": "Al Faatihah Residence",
+      "developer": "Alfaatihah Indonesia Raya",
+      "association": null,
+      "region": "garut",
+      "kabupaten": "Kabupaten Garut",
+      "kecamatan": "Cibatu",
+      "desa": "Karyamukti",
+      "units": null,
+      "listings": [],
+      "caveats": ["Rincian unit dan tipe belum terbaca: hanya halaman site plan Sikumbang yang tersedia."]
+    },
+    {
+      "id": "GRT1220022025T001",
+      "name": "Bukit Rovita Indah",
+      "developer": "Rovita Propertindo Sukses",
+      "association": "APERSI",
+      "region": "garut",
+      "kabupaten": "Kabupaten Garut",
+      "kecamatan": "Cibatu",
+      "desa": "Mekarsari",
+      "address": "Kantor pemasaran: Jl. Raya Nasional III, Kp. Bunisari No. 3, Mekarsari, Cibatu",
+      "kampung": "Bunisari",
+      "units": { "subsidized_available": 315, "subsidized_sold": 0, "commercial_available": 15, "commercial_sold": 0 },
+      "listings": [
+        { "name": "Tipe 36/60", "subsidized": true, "price_idr": 166000000, "building_m2": 36, "land_m2": 60 }
+      ]
+    },
+    {
+      "id": "GRT1220112022T001",
+      "name": "Green Wanakerta",
+      "developer": "Askara Berkah Saudara",
+      "association": null,
+      "region": "garut",
+      "kabupaten": "Kabupaten Garut",
+      "kecamatan": "Cibatu",
+      "desa": "Wanakerta",
+      "units": null,
+      "listings": [],
+      "caveats": ["Rincian unit dan tipe belum terbaca: hanya halaman site plan Sikumbang yang tersedia."]
+    },
+    {
+      "id": "GRT0320082023T003",
+      "name": "Aka Kanaya Wanaraja",
+      "developer": "Kanaya Arafah Putri",
+      "association": "APERSI",
+      "region": "garut",
+      "kabupaten": "Kabupaten Garut",
+      "kecamatan": "Wanaraja",
+      "desa": "Sindangratu",
+      "address": "Kantor pemasaran: Blok A-2, Jl. Ciamana, Sindangratu, Wanaraja",
+      "street": "Jalan Ciamana",
+      "units": { "subsidized_available": 1, "subsidized_sold": 101, "commercial_available": 0, "commercial_sold": 0 },
+      "listings": [
+        { "name": "Tipe 30 New", "subsidized": true, "price_idr": 162000000, "building_m2": 30, "land_m2": 60, "bedrooms": 2, "bathrooms": 1 },
+        { "name": "Tipe 30/60", "subsidized": true, "price_idr": 150500000, "building_m2": 30, "land_m2": 60, "bedrooms": 2, "bathrooms": 1 }
+      ]
+    },
+    {
+      "id": "GRT0320012022T001",
+      "name": "Ghani Cinunuk Indah",
+      "developer": "Ghani Rahma Lesmana",
+      "association": "APERSI",
+      "region": "garut",
+      "kabupaten": "Kabupaten Garut",
+      "kecamatan": "Wanaraja",
+      "desa": "Wanaraja",
+      "address": "Kantor pemasaran: Perumahan Aulia Wanaraja Blok D No. 09, RT 001 RW 009, Desa Wanaraja",
+      "units": { "subsidized_available": 19, "subsidized_sold": 90, "commercial_available": null, "commercial_sold": null },
+      "listings": [
+        { "name": "Tipe 36/60", "subsidized": true, "price_idr": 150500000, "building_m2": 36, "land_m2": 60, "bedrooms": 2, "bathrooms": 1 }
+      ]
+    },
+    {
+      "id": "GRT0320082022T001",
+      "name": "Bumi Sindangratu Indah",
+      "developer": "PT Patraya Cipta Sarana",
+      "association": "APERSI",
+      "region": "garut",
+      "kabupaten": "Kabupaten Garut",
+      "kecamatan": "Wanaraja",
+      "desa": "Sindangratu",
+      "address": "Kantor pemasaran: Perum Bumi Sindangratu Indah Blok A No. 19, Sindangratu",
+      "units": { "subsidized_available": 5, "subsidized_sold": 81, "commercial_available": 0, "commercial_sold": 0 },
+      "listings": [
+        { "name": "Tipe 36/60", "subsidized": true, "price_idr": 148000000, "building_m2": 36, "land_m2": 60, "bedrooms": 2, "bathrooms": 1 }
+      ]
+    },
+    {
+      "id": "GRT0320082020T002",
+      "name": "Talaga Pesona Intan",
+      "developer": "Farizi Persada Karya",
+      "association": null,
+      "region": "garut",
+      "kabupaten": "Kabupaten Garut",
+      "kecamatan": "Wanaraja",
+      "desa": "Sindangratu",
+      "units": null,
+      "listings": [],
+      "caveats": ["Rincian unit dan tipe belum terbaca: hanya halaman site plan Sikumbang yang tersedia."]
+    },
+    {
+      "id": "GRT0320082021T001",
+      "name": "Talaga Pesona Intan Tahap II",
+      "developer": "Farizi Persada Karya",
+      "association": null,
+      "region": "garut",
+      "kabupaten": "Kabupaten Garut",
+      "kecamatan": "Wanaraja",
+      "desa": "Sindangratu",
+      "units": null,
+      "listings": [],
+      "caveats": ["Rincian unit dan tipe belum terbaca: hanya halaman site plan Sikumbang yang tersedia."]
+    },
+    {
+      "id": "GRT0320082022T002",
+      "name": "Dinamika Lestari Residence",
+      "developer": "Artha Dinamika Property",
+      "association": "APERSI",
+      "region": "garut",
+      "kabupaten": "Kabupaten Garut",
+      "kecamatan": "Wanaraja",
+      "desa": "Sindangratu",
+      "units": { "subsidized_available": 4, "subsidized_sold": 16, "commercial_available": null, "commercial_sold": null },
+      "listings": [
+        { "name": "Subsidi 34/60", "subsidized": true, "price_idr": 150500000, "building_m2": 34, "land_m2": 60, "bedrooms": 2, "bathrooms": 1 },
+        { "name": "Komersil 42/84", "subsidized": false, "price_idr": 300000000, "building_m2": 42, "land_m2": 84, "bedrooms": 2, "bathrooms": 1 },
+        { "name": "Ruko", "subsidized": false, "price_idr": 450000000, "building_m2": 80, "land_m2": 40, "bathrooms": 2 }
+      ]
+    },
+    {
+      "id": "GRT0320082023T001",
+      "name": "Dinamika Lestari Residence (registrasi 2023)",
+      "developer": "Artha Dinamika Property",
+      "association": "APERSI",
+      "region": "garut",
+      "kabupaten": "Kabupaten Garut",
+      "kecamatan": "Wanaraja",
+      "desa": "Sindangratu",
+      "units": { "subsidized_available": 0, "subsidized_sold": 1, "commercial_available": null, "commercial_sold": null },
+      "listings": [
+        { "name": "Subsidi 34/60", "subsidized": true, "price_idr": 150500000, "building_m2": 34, "land_m2": 60, "bedrooms": 2, "bathrooms": 1 }
+      ],
+      "caveats": ["Registrasi kedua untuk perumahan yang sama; hanya 1 unit tercatat."]
+    },
+    {
+      "id": "GRT0320022023T001",
+      "name": "Syifa Graha Wanamekar",
+      "developer": "Kaylla Putra Pratama",
+      "association": "APERSI",
+      "region": "garut",
+      "kabupaten": "Kabupaten Garut",
+      "kecamatan": "Wanaraja",
+      "desa": "Wanamekar",
+      "units": { "subsidized_available": 59, "subsidized_sold": 77, "commercial_available": 1, "commercial_sold": 2 },
+      "listings": [
+        { "name": "Subsidi 30/60", "subsidized": true, "price_idr": 150500000, "building_m2": 30, "land_m2": 60, "bedrooms": 2, "bathrooms": 1 }
+      ]
+    },
+    {
+      "id": "GRT0320012020T001",
+      "name": "Aulia Wanaraja",
+      "developer": "Aulia Mitra Kreasi",
+      "association": "APERSI",
+      "region": "garut",
+      "kabupaten": "Kabupaten Garut",
+      "kecamatan": "Wanaraja",
+      "desa": "Wanaraja",
+      "units": { "subsidized_available": 10, "subsidized_sold": 229, "commercial_available": 22, "commercial_sold": 39 },
+      "listings": [
+        { "name": "Tipe 36/72 (PMK 2024)", "subsidized": true, "price_idr": 166000000, "building_m2": 36, "land_m2": 72 },
+        { "name": "Tipe 36/72", "subsidized": true, "price_idr": 150000000, "building_m2": 36, "land_m2": 72 },
+        { "name": "Tipe 36/72", "subsidized": false, "price_idr": 217800000, "building_m2": 36, "land_m2": 72 },
+        { "name": "Tipe 42/72", "subsidized": false, "price_idr": 261150000, "building_m2": 42, "land_m2": 72 },
+        { "name": "Tipe 45/84", "subsidized": false, "price_idr": 282050000, "building_m2": 45, "land_m2": 84 },
+        { "name": "Tipe 40/70", "subsidized": false, "price_idr": 291400000, "building_m2": 40, "land_m2": 70 }
+      ]
+    },
+    {
+      "id": "GRT0320022026T001",
+      "name": "Wanaking's Garden",
+      "developer": "PT Zoelva Propertindo Zhavran",
+      "association": "APERSI",
+      "region": "garut",
+      "kabupaten": "Kabupaten Garut",
+      "kecamatan": "Wanaraja",
+      "desa": "Wanamekar",
+      "units": { "subsidized_available": 71, "subsidized_sold": 4, "commercial_available": 0, "commercial_sold": 0 },
+      "listings": [
+        { "name": "Tipe 36/60", "subsidized": true, "price_idr": 166000000, "building_m2": 36, "land_m2": 60, "bedrooms": 2, "bathrooms": 1 }
+      ]
+    },
+    {
+      "id": "GRT0320022020T002",
+      "name": "Mughni Wanamekar Asri",
+      "developer": null,
+      "association": null,
+      "region": "garut",
+      "kabupaten": "Kabupaten Garut",
+      "kecamatan": "Wanaraja",
+      "desa": "Wanamekar",
+      "address": "Jalan Bebedahan, Wanamekar, Wanaraja",
+      "street": "Jalan Bebedahan",
+      "units": null,
+      "listings": [],
+      "caveats": ["Rincian unit dan tipe belum terbaca dari Sikumbang."]
+    },
+    {
+      "id": "SOR3320092023T001",
+      "name": "Grand Majalaya City",
+      "developer": "PT Mulya Cipta Jaya Property",
+      "association": "HIPNU",
+      "region": "bandung",
+      "kabupaten": "Kabupaten Bandung",
+      "kecamatan": "Majalaya",
+      "desa": "Padaulun",
+      "address": "Kantor pemasaran: Blok A No. 16, Padaulun, Majalaya",
+      "units": { "subsidized_available": 85, "subsidized_sold": 206, "commercial_available": 0, "commercial_sold": 11 },
+      "listings": [
+        { "name": "Subsidi 22/60", "subsidized": true, "price_idr": 162000000, "building_m2": 22, "land_m2": 60, "bedrooms": 1, "bathrooms": 1 }
+      ]
+    },
+    {
+      "id": "SOR3320092025T001",
+      "name": "Permata Residence Majalaya",
+      "developer": "Permata Agung Sumedang",
+      "association": "APERSI",
+      "region": "bandung",
+      "kabupaten": "Kabupaten Bandung",
+      "kecamatan": "Majalaya",
+      "desa": "Padaulun",
+      "address": "Kantor pemasaran: Blok A5, Padaulun, Majalaya",
+      "units": { "subsidized_available": 4, "subsidized_sold": 7, "commercial_available": 0, "commercial_sold": 0 },
+      "listings": [
+        { "name": "Subsidi 33/60", "subsidized": true, "price_idr": 166000000, "building_m2": 33, "land_m2": 60, "bedrooms": 2, "bathrooms": 1 }
+      ]
+    },
+    {
+      "id": "SOR3320092024T001",
+      "name": "Puri Rumpu Indah Padaulun",
+      "developer": "PT Rumpu Indo Trade",
+      "association": "APERSI",
+      "region": "bandung",
+      "kabupaten": "Kabupaten Bandung",
+      "kecamatan": "Majalaya",
+      "desa": "Padaulun",
+      "address": "Kp. Cibeunying RT 01 RW 010, Desa Padaulun, Majalaya",
+      "kampung": "Cibeunying",
+      "units": null,
+      "listings": [
+        { "name": "Subsidi 36/60", "subsidized": true, "price_idr": 166000000, "building_m2": 36, "land_m2": 60, "bedrooms": 2, "bathrooms": 1 }
+      ],
+      "caveats": ["Jumlah unit terjual dan tersedia belum terbaca dari Sikumbang."]
+    },
+    {
+      "id": "SOR3620042020T001",
+      "name": "Ambar Bumi Mutiara Regency",
+      "developer": null,
+      "association": "APERSI",
+      "region": "bandung",
+      "kabupaten": "Kabupaten Bandung",
+      "kecamatan": "Ibun",
+      "desa": "Talun",
+      "address": "Kantor pemasaran: Jl. Raya Talun–Ciekek, Desa Talun, Ibun",
+      "units": { "subsidized_available": 9, "subsidized_sold": 443, "commercial_available": 0, "commercial_sold": 12 },
+      "listings": [
+        { "name": "Tipe 29/60", "subsidized": true, "price_idr": 150500000, "building_m2": 29, "land_m2": 60, "bedrooms": 2, "bathrooms": 1 }
+      ]
+    },
+    {
+      "id": "SOR3520022026T001",
+      "name": "Tamaland Cipedes",
+      "developer": "PT Swakarsa Properti Tama",
+      "association": "APERSI",
+      "region": "bandung",
+      "kabupaten": "Kabupaten Bandung",
+      "kecamatan": "Paseh",
+      "desa": "Cipedes",
+      "address": "Kantor pemasaran: Kp. Cipedes No. 01, Paseh",
+      "units": { "subsidized_available": 67, "subsidized_sold": 2, "commercial_available": 0, "commercial_sold": 0 },
+      "listings": [
+        { "name": "Tipe 32/60", "subsidized": true, "price_idr": 166000000, "building_m2": 32, "land_m2": 60, "bedrooms": 2, "bathrooms": 1 }
+      ]
+    },
+    {
+      "id": "SOR2920132025T001",
+      "name": "Green Hill Village",
+      "developer": "PT Tiga Rekan Indonesia",
+      "association": "APERSI",
+      "region": "bandung",
+      "kabupaten": "Kabupaten Bandung",
+      "kecamatan": "Ciparay",
+      "desa": "Bumiwangi",
+      "units": { "subsidized_available": 60, "subsidized_sold": 46, "commercial_available": null, "commercial_sold": null },
+      "listings": [
+        { "name": "Tipe 27/60", "subsidized": true, "price_idr": 166000000, "building_m2": 27, "land_m2": 60, "bedrooms": 2, "bathrooms": 1 }
+      ]
+    },
+    {
+      "id": "SOR2920132025T002",
+      "name": "Prima Kaori Residence",
+      "developer": "PT Koprima Sandysejahtera",
+      "association": "REI",
+      "region": "bandung",
+      "kabupaten": "Kabupaten Bandung",
+      "kecamatan": "Ciparay",
+      "desa": "Bumiwangi",
+      "address": "Kantor pemasaran: Kav. Fuji 1, Bumiwangi, Ciparay",
+      "units": { "subsidized_available": 25, "subsidized_sold": 4, "commercial_available": 0, "commercial_sold": 0 },
+      "listings": [
+        { "name": "Tipe 25/60", "subsidized": true, "price_idr": 166000000, "building_m2": 25, "land_m2": 60 },
+        { "name": "Tipe 21/60", "subsidized": true, "price_idr": 166000000, "building_m2": 21, "land_m2": 60 }
+      ]
+    },
+    {
+      "id": "SOR2920082023T001",
+      "name": "Manggung Asri",
+      "developer": "PT Mandiri Sakti Perkasa",
+      "association": "APERSI",
+      "region": "bandung",
+      "kabupaten": "Kabupaten Bandung",
+      "kecamatan": "Ciparay",
+      "desa": "Manggungharja",
+      "units": { "subsidized_available": 3, "subsidized_sold": 15, "commercial_available": 0, "commercial_sold": 0 },
+      "listings": [
+        { "name": "Tipe 22/60", "subsidized": true, "price_idr": 150500000, "building_m2": 22, "land_m2": 60 }
+      ]
+    },
+    {
+      "id": "SOR3210082025T001",
+      "name": "Mekar Alam Endah",
+      "developer": "PT Mitra Usaha Abadikarya",
+      "association": "APERSI",
+      "region": "bandung",
+      "kabupaten": "Kabupaten Bandung",
+      "kecamatan": "Baleendah",
+      "desa": "Wargamekar",
+      "units": { "subsidized_available": 1, "subsidized_sold": 9, "commercial_available": 0, "commercial_sold": 0 },
+      "listings": [
+        { "name": "Tipe 30/60", "subsidized": true, "price_idr": 166000000, "building_m2": 30, "land_m2": 60, "bedrooms": 2, "bathrooms": 1 }
+      ]
+    },
+    {
+      "id": "SOR3210032021T002",
+      "name": "Bukit Neglasari Indah",
+      "developer": "PT Usaharama Budisejahtera",
+      "association": "APERSI",
+      "region": "bandung",
+      "kabupaten": "Kabupaten Bandung",
+      "kecamatan": "Baleendah",
+      "desa": "Manggahang",
+      "units": null,
+      "listings": [
+        { "name": "Tipe 30/60", "subsidized": true, "price_idr": 162000000, "building_m2": 30, "land_m2": 60, "bedrooms": 2, "bathrooms": 1 },
+        { "name": "Tipe 30/60 (harga lama)", "subsidized": true, "price_idr": 150500000, "building_m2": 30, "land_m2": 60 }
+      ],
+      "caveats": ["Jumlah unit terjual dan tersedia belum terbaca dari Sikumbang."]
+    },
+    {
+      "id": "SOR2820052023T001",
+      "name": "Griya Pindad Asri 3",
+      "developer": "PT Asatu Realty Asri",
+      "association": "HIMPERRA",
+      "region": "bandung",
+      "kabupaten": "Kabupaten Bandung",
+      "kecamatan": "Rancaekek",
+      "desa": "Jelegong",
+      "units": { "subsidized_available": 3, "subsidized_sold": 270, "commercial_available": 0, "commercial_sold": 24 },
+      "listings": [
+        { "name": "Tipe 28/60", "subsidized": true, "price_idr": 150500000, "building_m2": 28, "land_m2": 60 },
+        { "name": "Tipe 23/60", "subsidized": true, "price_idr": 150500000, "building_m2": 23, "land_m2": 60 },
+        { "name": "Tipe 36/60", "subsidized": false, "price_idr": 343000000, "building_m2": 36, "land_m2": 60 },
+        { "name": "Tipe 36/72", "subsidized": false, "price_idr": 357000000, "building_m2": 36, "land_m2": 72 }
+      ]
+    },
+    {
+      "id": "SOR2820062022T001",
+      "name": "Pesona Linggar Residence",
+      "developer": "PT Agung Mulya Grup",
+      "association": "HIMPERRA",
+      "region": "bandung",
+      "kabupaten": "Kabupaten Bandung",
+      "kecamatan": "Rancaekek",
+      "desa": "Linggar",
+      "units": { "subsidized_available": 43, "subsidized_sold": 106, "commercial_available": 0, "commercial_sold": 0 },
+      "listings": [
+        { "name": "Rumah Tapak (Subsidi Plus) 30/60", "subsidized": true, "price_idr": 166000000, "building_m2": 30, "land_m2": 60 },
+        { "name": "Rumah Tapak 30/60", "subsidized": true, "price_idr": 150500000, "building_m2": 30, "land_m2": 60 }
+      ]
+    },
+    {
+      "id": "SOR2520072020T003",
+      "name": "Pesona Cicalengka Residance",
+      "developer": "PT Hasan Dinar Graha",
+      "association": "REI",
+      "region": "bandung",
+      "kabupaten": "Kabupaten Bandung",
+      "kecamatan": "Cicalengka",
+      "desa": "Narawita",
+      "units": { "subsidized_available": 23, "subsidized_sold": null, "commercial_available": null, "commercial_sold": null },
+      "listings": [
+        { "name": "Tipe 30/72", "subsidized": true, "price_idr": 166000000, "building_m2": 30, "land_m2": 72 }
+      ],
+      "caveats": [
+        "Jumlah unit terjual belum terbaca dari Sikumbang.",
+        "Sikumbang juga mencatat tipe 30/60 di kisaran Rp150–162 juta."
+      ]
+    },
+    {
+      "id": "SOR2520102026T001",
+      "name": "Bukit Cicalengka Lestari",
+      "developer": "PT Isaprima Selaras Abadi",
+      "association": "ASPRUMNAS",
+      "region": "bandung",
+      "kabupaten": "Kabupaten Bandung",
+      "kecamatan": "Cicalengka",
+      "desa": "Tenjolaya",
+      "units": { "subsidized_available": 36, "subsidized_sold": 2, "commercial_available": 0, "commercial_sold": 0 },
+      "listings": [
+        { "name": "Tipe Subsidi 30/60", "subsidized": true, "price_idr": 166000000, "building_m2": 30, "land_m2": 60, "bedrooms": 2, "bathrooms": 1 }
+      ]
+    },
+    {
+      "id": "SOR2720062024T001",
+      "name": "Buana Cicalengka Raya 2",
+      "developer": "PT Cikal Buana Persada",
+      "association": "REI",
+      "region": "bandung",
+      "kabupaten": "Kabupaten Bandung",
+      "kecamatan": "Cikancung",
+      "desa": "Hegarmanah",
+      "address": "Kantor pemasaran: Jalan B8 No. 2, Hegarmanah, Cikancung",
+      "units": { "subsidized_available": 39, "subsidized_sold": 622, "commercial_available": 133, "commercial_sold": 26 },
+      "listings": [
+        { "name": "Tipe 27/60", "subsidized": true, "price_idr": 166000000, "building_m2": 27, "land_m2": 60, "bedrooms": 2, "bathrooms": 1 },
+        { "name": "Tipe 34/72", "subsidized": false, "price_idr": 290000000, "building_m2": 34, "land_m2": 72 },
+        { "name": "Tipe 45/84", "subsidized": false, "price_idr": 390000000, "building_m2": 45, "land_m2": 84 }
+      ]
+    },
+    {
+      "id": "SOR4420042024T001",
+      "name": "Prima Paradisque Residence",
+      "developer": "PT Koprima Sandysejahtera",
+      "association": "REI",
+      "region": "bandung",
+      "kabupaten": "Kabupaten Bandung",
+      "kecamatan": "Cangkuang",
+      "desa": "Nagrak",
+      "address": "Kantor pemasaran: Jl. Prima Paradisque Residence No. 33, Nagrak, Cangkuang",
+      "units": { "subsidized_available": 49, "subsidized_sold": 40, "commercial_available": 2, "commercial_sold": 12 },
+      "listings": [
+        { "name": "Nature Subsidi 21/60", "subsidized": true, "price_idr": 166000000, "building_m2": 21, "land_m2": 60, "bedrooms": 1 },
+        { "name": "Nature 22/60", "subsidized": false, "price_idr": 266000000, "building_m2": 22, "land_m2": 60 },
+        { "name": "Nature+", "subsidized": false, "price_idr": 299000000, "building_m2": 27 },
+        { "name": "Sunrise", "subsidized": false, "price_idr": 348000000, "building_m2": 30 },
+        { "name": "Island", "subsidized": false, "price_idr": 415000000, "building_m2": 36 },
+        { "name": "Heaven 45/84", "subsidized": false, "price_idr": 493000000, "building_m2": 45, "land_m2": 84 }
+      ]
+    },
+    {
+      "id": "SOR4420042020T002",
+      "name": "Bumi Senja Perdana",
+      "developer": "PT Bumi Perdana Propertindo",
+      "association": "APERSI",
+      "region": "bandung",
+      "kabupaten": "Kabupaten Bandung",
+      "kecamatan": "Cangkuang",
+      "desa": "Bandasari",
+      "units": { "subsidized_available": 24, "subsidized_sold": 178, "commercial_available": null, "commercial_sold": null },
+      "listings": [
+        { "name": "Tipe 30/60", "subsidized": true, "price_idr": 150500000, "building_m2": 30, "land_m2": 60 }
+      ]
+    },
+    {
+      "id": "NPH1020012023T001",
+      "name": "Bumi Citra Indah 2 Tahap 4",
+      "developer": "PT Bestow Harapan Indah",
+      "association": "HIMPERRA",
+      "region": "bandung",
+      "kabupaten": "Kabupaten Bandung Barat",
+      "kecamatan": "Cihampelas",
+      "desa": "Cipatik",
+      "units": { "subsidized_available": 327, "subsidized_sold": 1055, "commercial_available": 0, "commercial_sold": 0 },
+      "listings": [
+        { "name": "Tipe 30/60", "subsidized": true, "price_idr": 166000000, "building_m2": 30, "land_m2": 60 },
+        { "name": "Tipe 26/72", "subsidized": true, "price_idr": 166000000, "building_m2": 26, "land_m2": 72 },
+        { "name": "Tipe 24/66", "subsidized": true, "price_idr": 166000000, "building_m2": 24, "land_m2": 66 },
+        { "name": "Tipe 27/60", "subsidized": true, "price_idr": 162000000, "building_m2": 27, "land_m2": 60 }
+      ],
+      "caveats": ["Sikumbang juga mencatat tipe 22/72 seharga Rp16,6 juta; angka itu tampak salah ketik dan tidak ditampilkan."]
+    },
+    {
+      "id": "NPH1020082024T001",
+      "name": "Parahyangan Asri 2",
+      "developer": "PT Adabaruland Propertindo",
+      "association": "REI",
+      "region": "bandung",
+      "kabupaten": "Kabupaten Bandung Barat",
+      "kecamatan": "Cihampelas",
+      "desa": "Singajaya",
+      "address": "Kantor pemasaran: Blok B1-8, Singajaya, Cihampelas",
+      "units": { "subsidized_available": 79, "subsidized_sold": 81, "commercial_available": 0, "commercial_sold": 0 },
+      "listings": [
+        { "name": "Tipe 27", "subsidized": true, "price_idr": 166000000, "building_m2": 27, "land_m2": 60, "bedrooms": 2, "bathrooms": 1 }
+      ]
+    },
+    {
+      "id": "NPH1120062024T001",
+      "name": "Burgundy Regency",
+      "developer": "PT Mitra Dinanti Kreasina",
+      "association": "REI",
+      "region": "bandung",
+      "kabupaten": "Kabupaten Bandung Barat",
+      "kecamatan": "Cililin",
+      "desa": "Karangtanjung",
+      "units": { "subsidized_available": 245, "subsidized_sold": 117, "commercial_available": 0, "commercial_sold": 21 },
+      "listings": [
+        { "name": "Tipe 30/60", "subsidized": true, "price_idr": 166000000, "building_m2": 30, "land_m2": 60, "bedrooms": 2, "bathrooms": 1 }
+      ],
+      "caveats": ["Salinan halaman Sikumbang yang terbaca berumur lebih dari setahun; jumlah unit kemungkinan sudah berubah."]
+    },
+    {
+      "id": "NPH0920052024T001",
+      "name": "Kriya Maha Citra",
+      "developer": "PT Bumi Sejahtera Bersaudara",
+      "association": "APERSI",
+      "region": "bandung",
+      "kabupaten": "Kabupaten Bandung Barat",
+      "kecamatan": "Batujajar",
+      "desa": "Cangkorah",
+      "address": "Kantor pemasaran: Kampung Pengkolan, Cangkorah, Batujajar",
+      "kampung": "Pengkolan",
+      "units": { "subsidized_available": 10, "subsidized_sold": 200, "commercial_available": 0, "commercial_sold": 0 },
+      "listings": [
+        { "name": "Tipe 30", "subsidized": true, "price_idr": 166000000, "building_m2": 30, "land_m2": 60, "bedrooms": 2, "bathrooms": 1 },
+        { "name": "Tipe 36", "subsidized": false, "price_idr": 350000000, "building_m2": 36 }
+      ]
+    },
+    {
+      "id": "NPH0720082022T001",
+      "name": "Bintang Padalarang Regency",
+      "developer": null,
+      "association": "APERSI",
+      "region": "bandung",
+      "kabupaten": "Kabupaten Bandung Barat",
+      "kecamatan": "Cipatat",
+      "desa": "Gunungmasigit",
+      "units": { "subsidized_available": 6, "subsidized_sold": 107, "commercial_available": 0, "commercial_sold": 0 },
+      "listings": [
+        { "name": "Tipe 30/60", "subsidized": true, "price_idr": 150500000, "building_m2": 30, "land_m2": 60, "bedrooms": 2, "bathrooms": 1 }
+      ]
+    },
+    {
+      "id": "NPH0820102020T001",
+      "name": "Lembah Batujajar Village",
+      "developer": "PT Tebojong Gerot Suang",
+      "association": "HIMPERRA",
+      "region": "bandung",
+      "kabupaten": "Kabupaten Bandung Barat",
+      "kecamatan": "Padalarang",
+      "desa": "Laksanamekar",
+      "units": { "subsidized_available": 105, "subsidized_sold": 29, "commercial_available": 5, "commercial_sold": 0 },
+      "listings": [
+        { "name": "Subsidi 30/60", "subsidized": true, "price_idr": 166000000, "building_m2": 30, "land_m2": 60 },
+        { "name": "Tipe 30/60", "subsidized": true, "price_idr": 150000000, "building_m2": 30, "land_m2": 60 },
+        { "name": "Tipe 36/70", "subsidized": false, "price_idr": 275000000, "building_m2": 36, "land_m2": 70 }
+      ]
+    }
+  ]
+}

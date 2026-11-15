@@ -1,0 +1,1044 @@
+{
+  "generated": "2026-11-15",
+  "sources": {
+    "roads_and_stations": "OpenStreetMap via OpenFreeMap vector tiles (planet 20261101_080013_pt); © OpenStreetMap contributors",
+    "flood": "BNPB inaRISK: INDEKS_BAHAYA_BANJIR and INDEKS_BAHAYA_BANJIRBANDANG, 100 m rasters"
+  },
+  "locations": {
+    "107.43832,-6.83204": {
+      "access": {
+        "road": {
+          "distance_m": 42,
+          "class": "trunk",
+          "name": "Jalan Orion"
+        },
+        "centre": {
+          "distance_m": 7848,
+          "name": "Cipatat"
+        },
+        "city": {
+          "distance_m": 21141,
+          "name": "Alun-Alun Bandung"
+        },
+        "station": {
+          "distance_m": 4223,
+          "name": "Cilame"
+        }
+      },
+      "flood": {
+        "radius_m": 1000,
+        "samples": 61,
+        "share": {
+          "low": 0.0,
+          "moderate": 0.0,
+          "high": 0.0
+        },
+        "max_index": null,
+        "river_share": 0.0,
+        "flash_share": 0.0
+      }
+    },
+    "107.46735,-6.94830": {
+      "access": {
+        "road": {
+          "distance_m": 55,
+          "class": "secondary",
+          "name": "Jalan Cihampelas-Tanjungjaya"
+        },
+        "centre": {
+          "distance_m": 1083,
+          "name": "Cililin"
+        },
+        "city": {
+          "distance_m": 15736,
+          "name": "Alun-Alun Bandung"
+        },
+        "station": null
+      },
+      "flood": {
+        "radius_m": 1000,
+        "samples": 61,
+        "share": {
+          "low": 0.0,
+          "moderate": 0.0,
+          "high": 0.016
+        },
+        "max_index": 0.667,
+        "river_share": 0.016,
+        "flash_share": 0.0
+      }
+    },
+    "107.47771,-6.94622": {
+      "access": {
+        "road": {
+          "distance_m": 826,
+          "class": "secondary",
+          "name": "Jalan Cihampelas-Tanjungjaya"
+        },
+        "centre": {
+          "distance_m": 2295,
+          "name": "Cihampelas"
+        },
+        "city": {
+          "distance_m": 14568,
+          "name": "Alun-Alun Bandung"
+        },
+        "station": null
+      },
+      "flood": {
+        "radius_m": 1000,
+        "samples": 61,
+        "share": {
+          "low": 0.0,
+          "moderate": 0.0,
+          "high": 0.066
+        },
+        "max_index": 0.889,
+        "river_share": 0.066,
+        "flash_share": 0.0
+      }
+    },
+    "107.48400,-6.89391": {
+      "access": {
+        "road": {
+          "distance_m": 2073,
+          "class": "trunk",
+          "name": "Jalan Raya Batujajar"
+        },
+        "centre": {
+          "distance_m": 2826,
+          "name": "Batujajar"
+        },
+        "city": {
+          "distance_m": 13960,
+          "name": "Alun-Alun Bandung"
+        },
+        "station": {
+          "distance_m": 4729,
+          "name": "Gadobangkong"
+        }
+      },
+      "flood": {
+        "radius_m": 1000,
+        "samples": 61,
+        "share": {
+          "low": 0.0,
+          "moderate": 0.066,
+          "high": 0.328
+        },
+        "max_index": 1.0,
+        "river_share": 0.393,
+        "flash_share": 0.0
+      }
+    },
+    "107.50276,-6.88115": {
+      "access": {
+        "road": {
+          "distance_m": 164,
+          "class": "trunk",
+          "name": "Jalan Raya Batujajar"
+        },
+        "centre": {
+          "distance_m": 5471,
+          "name": "Padalarang"
+        },
+        "city": {
+          "distance_m": 12384,
+          "name": "Alun-Alun Bandung"
+        },
+        "station": {
+          "distance_m": 2283,
+          "name": "Gadobangkong"
+        }
+      },
+      "flood": {
+        "radius_m": 1000,
+        "samples": 61,
+        "share": {
+          "low": 0.0,
+          "moderate": 0.098,
+          "high": 0.049
+        },
+        "max_index": 0.852,
+        "river_share": 0.148,
+        "flash_share": 0.0
+      }
+    },
+    "107.50888,-6.93891": {
+      "access": {
+        "road": {
+          "distance_m": 95,
+          "class": "trunk",
+          "name": "Jalan Raya Batujajar-Soreang"
+        },
+        "centre": {
+          "distance_m": 3550,
+          "name": "Cihampelas"
+        },
+        "city": {
+          "distance_m": 11032,
+          "name": "Alun-Alun Bandung"
+        },
+        "station": {
+          "distance_m": 6591,
+          "name": "Cimahi"
+        }
+      },
+      "flood": {
+        "radius_m": 1000,
+        "samples": 61,
+        "share": {
+          "low": 0.0,
+          "moderate": 0.0,
+          "high": 0.098
+        },
+        "max_index": 1.0,
+        "river_share": 0.098,
+        "flash_share": 0.0
+      }
+    },
+    "107.53575,-7.05351": {
+      "access": {
+        "road": {
+          "distance_m": 2276,
+          "class": "secondary",
+          "name": "Jalan Raya Soreang - Banjaran"
+        },
+        "centre": {
+          "distance_m": 2322,
+          "name": "Cangkuang"
+        },
+        "city": {
+          "distance_m": 16587,
+          "name": "Alun-Alun Bandung"
+        },
+        "station": null
+      },
+      "flood": {
+        "radius_m": 1000,
+        "samples": 61,
+        "share": {
+          "low": 0.066,
+          "moderate": 0.098,
+          "high": 0.131
+        },
+        "max_index": 0.997,
+        "river_share": 0.066,
+        "flash_share": 0.246
+      }
+    },
+    "107.54930,-7.05521": {
+      "access": {
+        "road": {
+          "distance_m": 1495,
+          "class": "secondary",
+          "name": "Jalan Raya Soreang - Banjaran"
+        },
+        "centre": {
+          "distance_m": 1563,
+          "name": "Cangkuang"
+        },
+        "city": {
+          "distance_m": 16101,
+          "name": "Alun-Alun Bandung"
+        },
+        "station": null
+      },
+      "flood": {
+        "radius_m": 1000,
+        "samples": 61,
+        "share": {
+          "low": 0.066,
+          "moderate": 0.082,
+          "high": 0.23
+        },
+        "max_index": 1.0,
+        "river_share": 0.131,
+        "flash_share": 0.361
+      }
+    },
+    "107.64632,-7.01521": {
+      "access": {
+        "road": {
+          "distance_m": 17,
+          "class": "secondary",
+          "name": null
+        },
+        "centre": {
+          "distance_m": 3281,
+          "name": "Baleendah"
+        },
+        "city": {
+          "distance_m": 11220,
+          "name": "Alun-Alun Bandung"
+        },
+        "station": null
+      },
+      "flood": {
+        "radius_m": 1000,
+        "samples": 61,
+        "share": {
+          "low": 0.0,
+          "moderate": 0.213,
+          "high": 0.41
+        },
+        "max_index": 1.0,
+        "river_share": 0.623,
+        "flash_share": 0.164
+      }
+    },
+    "107.67520,-7.02089": {
+      "access": {
+        "road": {
+          "distance_m": 55,
+          "class": "primary",
+          "name": "Jalan Raya Laswi"
+        },
+        "centre": {
+          "distance_m": 6438,
+          "name": "Baleendah"
+        },
+        "city": {
+          "distance_m": 13310,
+          "name": "Alun-Alun Bandung"
+        },
+        "station": {
+          "distance_m": 7680,
+          "name": "Tegalluar Summarecon"
+        }
+      },
+      "flood": {
+        "radius_m": 1000,
+        "samples": 61,
+        "share": {
+          "low": 0.0,
+          "moderate": 0.148,
+          "high": 0.492
+        },
+        "max_index": 0.987,
+        "river_share": 0.623,
+        "flash_share": 0.164
+      }
+    },
+    "107.69404,-7.03218": {
+      "access": {
+        "road": {
+          "distance_m": 488,
+          "class": "primary",
+          "name": "Jalan Raya Laswi"
+        },
+        "centre": {
+          "distance_m": 2201,
+          "name": "Ciparay"
+        },
+        "city": {
+          "distance_m": 15551,
+          "name": "Alun-Alun Bandung"
+        },
+        "station": {
+          "distance_m": 7904,
+          "name": "Tegalluar Summarecon"
+        }
+      },
+      "flood": {
+        "radius_m": 1000,
+        "samples": 61,
+        "share": {
+          "low": 0.0,
+          "moderate": 0.213,
+          "high": 0.213
+        },
+        "max_index": 1.0,
+        "river_share": 0.262,
+        "flash_share": 0.246
+      }
+    },
+    "107.71913,-7.03985": {
+      "access": {
+        "road": {
+          "distance_m": 297,
+          "class": "primary",
+          "name": "Jalan Raya Laswi"
+        },
+        "centre": {
+          "distance_m": 745,
+          "name": "Ciparay"
+        },
+        "city": {
+          "distance_m": 18009,
+          "name": "Alun-Alun Bandung"
+        },
+        "station": {
+          "distance_m": 8430,
+          "name": "Tegalluar Summarecon"
+        }
+      },
+      "flood": {
+        "radius_m": 1000,
+        "samples": 61,
+        "share": {
+          "low": 0.016,
+          "moderate": 0.344,
+          "high": 0.295
+        },
+        "max_index": 1.0,
+        "river_share": 0.656,
+        "flash_share": 0.016
+      }
+    },
+    "107.73735,-7.05123": {
+      "access": {
+        "road": {
+          "distance_m": 467,
+          "class": "primary",
+          "name": "Jalan Raya Laswi"
+        },
+        "centre": {
+          "distance_m": 2682,
+          "name": "Majalaya"
+        },
+        "city": {
+          "distance_m": 20318,
+          "name": "Alun-Alun Bandung"
+        },
+        "station": null
+      },
+      "flood": {
+        "radius_m": 1000,
+        "samples": 61,
+        "share": {
+          "low": 0.0,
+          "moderate": 0.279,
+          "high": 0.033
+        },
+        "max_index": 0.827,
+        "river_share": 0.311,
+        "flash_share": 0.0
+      }
+    },
+    "107.76376,-7.06892": {
+      "access": {
+        "road": {
+          "distance_m": 347,
+          "class": "secondary",
+          "name": null
+        },
+        "centre": {
+          "distance_m": 3752,
+          "name": "Ibun"
+        },
+        "city": {
+          "distance_m": 23778,
+          "name": "Alun-Alun Bandung"
+        },
+        "station": null
+      },
+      "flood": {
+        "radius_m": 1000,
+        "samples": 61,
+        "share": {
+          "low": 0.0,
+          "moderate": 0.131,
+          "high": 0.066
+        },
+        "max_index": 0.827,
+        "river_share": 0.197,
+        "flash_share": 0.0
+      }
+    },
+    "107.77496,-6.96604": {
+      "access": {
+        "road": {
+          "distance_m": 1037,
+          "class": "trunk",
+          "name": "Jalan Raya Cicalengka"
+        },
+        "centre": {
+          "distance_m": 1915,
+          "name": "Rancaekek"
+        },
+        "city": {
+          "distance_m": 19196,
+          "name": "Alun-Alun Bandung"
+        },
+        "station": {
+          "distance_m": 2104,
+          "name": "Rancaekek"
+        }
+      },
+      "flood": {
+        "radius_m": 1000,
+        "samples": 61,
+        "share": {
+          "low": 0.0,
+          "moderate": 0.311,
+          "high": 0.082
+        },
+        "max_index": 0.802,
+        "river_share": 0.393,
+        "flash_share": 0.016
+      }
+    },
+    "107.79401,-7.03237": {
+      "access": {
+        "road": {
+          "distance_m": 725,
+          "class": "primary",
+          "name": "Jalan Raya Majalaya - Cicalengka"
+        },
+        "centre": {
+          "distance_m": 16,
+          "name": "Paseh"
+        },
+        "city": {
+          "distance_m": 24021,
+          "name": "Alun-Alun Bandung"
+        },
+        "station": {
+          "distance_m": 5764,
+          "name": "Haurpugur"
+        }
+      },
+      "flood": {
+        "radius_m": 1000,
+        "samples": 61,
+        "share": {
+          "low": 0.0,
+          "moderate": 0.213,
+          "high": 0.016
+        },
+        "max_index": 0.728,
+        "river_share": 0.23,
+        "flash_share": 0.0
+      }
+    },
+    "107.79716,-6.96455": {
+      "access": {
+        "road": {
+          "distance_m": 110,
+          "class": "secondary",
+          "name": "Raya Cangkuang"
+        },
+        "centre": {
+          "distance_m": 4241,
+          "name": "Rancaekek"
+        },
+        "city": {
+          "distance_m": 21541,
+          "name": "Alun-Alun Bandung"
+        },
+        "station": {
+          "distance_m": 1785,
+          "name": "Haurpugur"
+        }
+      },
+      "flood": {
+        "radius_m": 1000,
+        "samples": 61,
+        "share": {
+          "low": 0.0,
+          "moderate": 0.311,
+          "high": 0.541
+        },
+        "max_index": 1.0,
+        "river_share": 0.607,
+        "flash_share": 0.672
+      }
+    },
+    "107.83327,-7.00275": {
+      "access": {
+        "road": {
+          "distance_m": 1548,
+          "class": "secondary",
+          "name": "Jalan Raya Cicalengka"
+        },
+        "centre": {
+          "distance_m": 1325,
+          "name": "Cikancung"
+        },
+        "city": {
+          "distance_m": 26566,
+          "name": "Alun-Alun Bandung"
+        },
+        "station": {
+          "distance_m": 2362,
+          "name": "Cicalengka"
+        }
+      },
+      "flood": {
+        "radius_m": 1000,
+        "samples": 61,
+        "share": {
+          "low": 0.0,
+          "moderate": 0.115,
+          "high": 0.016
+        },
+        "max_index": 0.704,
+        "river_share": 0.131,
+        "flash_share": 0.0
+      }
+    },
+    "107.83855,-6.98417": {
+      "access": {
+        "road": {
+          "distance_m": 247,
+          "class": "secondary",
+          "name": "Jalan Raya Cicalengka"
+        },
+        "centre": {
+          "distance_m": 417,
+          "name": "Cicalengka"
+        },
+        "city": {
+          "distance_m": 26508,
+          "name": "Alun-Alun Bandung"
+        },
+        "station": {
+          "distance_m": 726,
+          "name": "Cicalengka"
+        }
+      },
+      "flood": {
+        "radius_m": 1000,
+        "samples": 61,
+        "share": {
+          "low": 0.0,
+          "moderate": 0.115,
+          "high": 0.033
+        },
+        "max_index": 0.728,
+        "river_share": 0.148,
+        "flash_share": 0.0
+      }
+    },
+    "107.85065,-7.01136": {
+      "access": {
+        "road": {
+          "distance_m": 1333,
+          "class": "trunk",
+          "name": null
+        },
+        "centre": {
+          "distance_m": 2878,
+          "name": "Cicalengka"
+        },
+        "city": {
+          "distance_m": 28698,
+          "name": "Alun-Alun Bandung"
+        },
+        "station": {
+          "distance_m": 3869,
+          "name": "Cicalengka"
+        }
+      },
+      "flood": {
+        "radius_m": 1000,
+        "samples": 61,
+        "share": {
+          "low": 0.0,
+          "moderate": 0.066,
+          "high": 0.0
+        },
+        "max_index": 0.63,
+        "river_share": 0.066,
+        "flash_share": 0.0
+      }
+    },
+    "107.88898,-7.10328": {
+      "access": {
+        "road": {
+          "distance_m": 1008,
+          "class": "primary",
+          "name": "Jalan Otto Iskandar Dinata"
+        },
+        "centre": {
+          "distance_m": 1489,
+          "name": "Leles"
+        },
+        "city": {
+          "distance_m": 12583,
+          "name": "Alun-Alun Garut"
+        },
+        "station": {
+          "distance_m": 2402,
+          "name": "Leles"
+        }
+      },
+      "flood": {
+        "radius_m": 1000,
+        "samples": 61,
+        "share": {
+          "low": 0.049,
+          "moderate": 0.082,
+          "high": 0.066
+        },
+        "max_index": 0.935,
+        "river_share": 0.049,
+        "flash_share": 0.164
+      }
+    },
+    "107.91117,-7.10312": {
+      "access": {
+        "road": {
+          "distance_m": 902,
+          "class": "primary",
+          "name": null
+        },
+        "centre": {
+          "distance_m": 1415,
+          "name": "Leles"
+        },
+        "city": {
+          "distance_m": 12570,
+          "name": "Alun-Alun Garut"
+        },
+        "station": {
+          "distance_m": 2268,
+          "name": "Karangsari"
+        }
+      },
+      "flood": {
+        "radius_m": 1000,
+        "samples": 61,
+        "share": {
+          "low": 0.016,
+          "moderate": 0.033,
+          "high": 0.033
+        },
+        "max_index": 0.791,
+        "river_share": 0.082,
+        "flash_share": 0.049
+      }
+    },
+    "107.91178,-7.11624": {
+      "access": {
+        "road": {
+          "distance_m": 537,
+          "class": "primary",
+          "name": null
+        },
+        "centre": {
+          "distance_m": 1413,
+          "name": "Leles"
+        },
+        "city": {
+          "distance_m": 11131,
+          "name": "Alun-Alun Garut"
+        },
+        "station": {
+          "distance_m": 2917,
+          "name": "Karangsari"
+        }
+      },
+      "flood": {
+        "radius_m": 1000,
+        "samples": 61,
+        "share": {
+          "low": 0.0,
+          "moderate": 0.0,
+          "high": 0.0
+        },
+        "max_index": null,
+        "river_share": 0.0,
+        "flash_share": 0.0
+      }
+    },
+    "107.92714,-7.11816": {
+      "access": {
+        "road": {
+          "distance_m": 282,
+          "class": "primary",
+          "name": null
+        },
+        "centre": {
+          "distance_m": 3072,
+          "name": "Leles"
+        },
+        "city": {
+          "distance_m": 11224,
+          "name": "Alun-Alun Garut"
+        },
+        "station": {
+          "distance_m": 2242,
+          "name": "Karangsari"
+        }
+      },
+      "flood": {
+        "radius_m": 1000,
+        "samples": 61,
+        "share": {
+          "low": 0.0,
+          "moderate": 0.0,
+          "high": 0.033
+        },
+        "max_index": 0.833,
+        "river_share": 0.033,
+        "flash_share": 0.0
+      }
+    },
+    "107.98100,-7.08086": {
+      "access": {
+        "road": {
+          "distance_m": 25,
+          "class": "primary",
+          "name": "Jalan Kihajar Dewantara"
+        },
+        "centre": {
+          "distance_m": 2176,
+          "name": "Cibatu"
+        },
+        "city": {
+          "distance_m": 17377,
+          "name": "Alun-Alun Garut"
+        },
+        "station": {
+          "distance_m": 2128,
+          "name": "Cibatu"
+        }
+      },
+      "flood": {
+        "radius_m": 1000,
+        "samples": 61,
+        "share": {
+          "low": 0.033,
+          "moderate": 0.066,
+          "high": 0.049
+        },
+        "max_index": 0.929,
+        "river_share": 0.098,
+        "flash_share": 0.115
+      }
+    },
+    "107.98133,-7.17785": {
+      "access": {
+        "road": {
+          "distance_m": 242,
+          "class": "secondary",
+          "name": "Jalan KH. Yusuf Tauzirie"
+        },
+        "centre": {
+          "distance_m": 515,
+          "name": "Wanaraja"
+        },
+        "city": {
+          "distance_m": 9798,
+          "name": "Alun-Alun Garut"
+        },
+        "station": {
+          "distance_m": 1527,
+          "name": "Wanaraja"
+        }
+      },
+      "flood": {
+        "radius_m": 1000,
+        "samples": 61,
+        "share": {
+          "low": 0.082,
+          "moderate": 0.115,
+          "high": 0.066
+        },
+        "max_index": 1.0,
+        "river_share": 0.0,
+        "flash_share": 0.262
+      }
+    },
+    "107.98169,-7.17321": {
+      "access": {
+        "road": {
+          "distance_m": 57,
+          "class": "secondary",
+          "name": "Jalan KH. Yusuf Tauzirie"
+        },
+        "centre": {
+          "distance_m": 0,
+          "name": "Wanaraja"
+        },
+        "city": {
+          "distance_m": 10067,
+          "name": "Alun-Alun Garut"
+        },
+        "station": {
+          "distance_m": 1077,
+          "name": "Wanaraja"
+        }
+      },
+      "flood": {
+        "radius_m": 1000,
+        "samples": 61,
+        "share": {
+          "low": 0.066,
+          "moderate": 0.115,
+          "high": 0.049
+        },
+        "max_index": 1.0,
+        "river_share": 0.016,
+        "flash_share": 0.213
+      }
+    },
+    "107.98214,-7.05611": {
+      "access": {
+        "road": {
+          "distance_m": 231,
+          "class": "primary",
+          "name": "Jalan Kihajar Dewantara"
+        },
+        "centre": {
+          "distance_m": 4914,
+          "name": "Cibatu"
+        },
+        "city": {
+          "distance_m": 19845,
+          "name": "Alun-Alun Garut"
+        },
+        "station": {
+          "distance_m": 2910,
+          "name": "Warungbandrek"
+        }
+      },
+      "flood": {
+        "radius_m": 1000,
+        "samples": 61,
+        "share": {
+          "low": 0.016,
+          "moderate": 0.082,
+          "high": 0.115
+        },
+        "max_index": 0.817,
+        "river_share": 0.115,
+        "flash_share": 0.115
+      }
+    },
+    "107.98723,-7.10405": {
+      "access": {
+        "road": {
+          "distance_m": 47,
+          "class": "secondary",
+          "name": "Jalan Letjen H. Mashudi"
+        },
+        "centre": {
+          "distance_m": 724,
+          "name": "Cibatu"
+        },
+        "city": {
+          "distance_m": 15626,
+          "name": "Alun-Alun Garut"
+        },
+        "station": {
+          "distance_m": 971,
+          "name": "Cibatu"
+        }
+      },
+      "flood": {
+        "radius_m": 1000,
+        "samples": 61,
+        "share": {
+          "low": 0.0,
+          "moderate": 0.0,
+          "high": 0.0
+        },
+        "max_index": null,
+        "river_share": 0.0,
+        "flash_share": 0.0
+      }
+    },
+    "107.99732,-7.05426": {
+      "access": {
+        "road": {
+          "distance_m": 306,
+          "class": "trunk",
+          "name": "Jalan Raya Limbangan - Malangbong"
+        },
+        "centre": {
+          "distance_m": 5401,
+          "name": "Cibatu"
+        },
+        "city": {
+          "distance_m": 20830,
+          "name": "Alun-Alun Garut"
+        },
+        "station": {
+          "distance_m": 1578,
+          "name": "Warungbandrek"
+        }
+      },
+      "flood": {
+        "radius_m": 1000,
+        "samples": 61,
+        "share": {
+          "low": 0.016,
+          "moderate": 0.148,
+          "high": 0.049
+        },
+        "max_index": 1.0,
+        "river_share": 0.148,
+        "flash_share": 0.098
+      }
+    },
+    "107.99740,-7.18288": {
+      "access": {
+        "road": {
+          "distance_m": 1974,
+          "class": "secondary",
+          "name": "Jalan KH. Yusuf Tauzirie"
+        },
+        "centre": {
+          "distance_m": 2040,
+          "name": "Wanaraja"
+        },
+        "city": {
+          "distance_m": 11229,
+          "name": "Alun-Alun Garut"
+        },
+        "station": {
+          "distance_m": 3036,
+          "name": "Wanaraja"
+        }
+      },
+      "flood": {
+        "radius_m": 1000,
+        "samples": 61,
+        "share": {
+          "low": 0.0,
+          "moderate": 0.033,
+          "high": 0.066
+        },
+        "max_index": 0.958,
+        "river_share": 0.0,
+        "flash_share": 0.098
+      }
+    },
+    "107.99836,-7.08339": {
+      "access": {
+        "road": {
+          "distance_m": 1844,
+          "class": "primary",
+          "name": "Jalan Kihajar Dewantara"
+        },
+        "centre": {
+          "distance_m": 2640,
+          "name": "Cibatu"
+        },
+        "city": {
+          "distance_m": 18196,
+          "name": "Alun-Alun Garut"
+        },
+        "station": {
+          "distance_m": 2275,
+          "name": "Warungbandrek"
+        }
+      },
+      "flood": {
+        "radius_m": 1000,
+        "samples": 61,
+        "share": {
+          "low": 0.0,
+          "moderate": 0.0,
+          "high": 0.0
+        },
+        "max_index": null,
+        "river_share": 0.0,
+        "flash_share": 0.0
+      }
+    }
+  }
+}
