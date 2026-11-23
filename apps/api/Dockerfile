@@ -22,4 +22,6 @@ RUN uv sync --locked --no-install-project
 COPY . .
 
 EXPOSE 8000
-CMD ["sh", "-c", "python manage.py migrate --noinput && python manage.py runserver 0.0.0.0:8000"]
+# On first start, load the transit routes from data/ (the committed seed unless raw/ has a
+# newer download). Later starts skip it; run `import_routes` by hand to refresh.
+CMD ["sh", "-c", "python manage.py migrate --noinput && python manage.py import_routes --if-empty && python manage.py runserver 0.0.0.0:8000"]

@@ -9,7 +9,7 @@ This repo is a scaffold. The spatial work (models, imports, CRS handling, spatia
 ```
 apps/api/         Django + GeoDjango + Django Ninja (PostGIS), uv, pytest, ruff
 apps/web/         React + TypeScript + Vite + MapLibre GL JS, pnpm, Vitest
-data/             Source data; data/raw/ is git-ignored (see data/README.md)
+data/             Source data: committed seeds in data/seed/, local downloads in data/raw/ (git-ignored)
 docs/decisions/   Architecture decision records
 docs/notes/       Per-slice write-ups (copy _template.md)
 ```
@@ -46,12 +46,14 @@ pnpm dev
 
 ## Transit routes and trip planning
 
-Put the Transport for Bandung route exports in `data/raw/` (see [`data/README.md`](data/README.md)), then:
+The Transport for Bandung route exports are committed in [`data/seed/transit/`](data/seed/transit/README.md), so there is nothing to download. The `api` container imports them on its first start (about 30 s) and skips the import on later starts. To import again, for example after editing the service profiles:
 
 ```sh
 docker compose run --rm api python manage.py import_routes
-# or: uv run --env-file ../../.env python manage.py import_routes --shp path.zip --kml path.zip
+# or: uv run --env-file ../../.env python manage.py import_routes [--shp path.zip --kml path.zip]
 ```
+
+A newer export saved in `data/raw/` with the same file names takes precedence over the seed.
 
 The import rebuilds each route in travel order, places boarding points and prints a QA report
 (also at `/api/transit/imports/latest`). Fares, speeds, headways and hours are placeholders per
